@@ -6,7 +6,6 @@ public class FiniteStateMachine : MonoBehaviour
 {
     public State initialState;
     private State currentState;
-    private GameObject gameObject;
 
     // Start is called before the first frame update
     void Start()

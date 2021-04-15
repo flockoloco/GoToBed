@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
-  m_Name: Stand
+  m_Name: Chase
   m_EditorClassIdentifier: 
   entryAction: {fileID: 0}
-  stateActions:
-  - {fileID: 11400000, guid: 9a9d9c32d7cd9364599a5991da04def8, type: 2}
+  stateActions: []
   exitAction: {fileID: 0}
   transitions: []
