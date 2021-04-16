@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class Action : ScriptableObject
 {
-
-    public abstract void Act(FiniteStateMachine fsm);
+    public abstract void Act(FiniteStateMachine fsm, PlayerStats playerStats);
+    public abstract void Act(FiniteStateMachine fsm, EnemyStats enemyStats);
 }

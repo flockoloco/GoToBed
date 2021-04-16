@@ -4,23 +4,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Player/Walk")]
 public class WalkAction : Action
 {
-    public CharacterController playerController;
-
-    public float speed = 6f;
-    public float gravity = -19.62f;
-
-    public Transform groundCheck;
-    public float groundDistance = 0.3f;
-    public LayerMask groundmask;
-
     Vector3 velocity;
     bool isGrounded;
 
-
-    public override void Act(FiniteStateMachine fsm)
+    public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundmask);
+        isGrounded = Physics.CheckSphere(playerStats.GroundCheck.position, playerStats.GroundDistance, playerStats.Groundmask);
 
         if (isGrounded && velocity.y < 0)
         {
@@ -32,10 +21,15 @@ public class WalkAction : Action
 
         Vector3 move = fsm.transform.right * x + fsm.transform.forward * z;
 
-        playerController.Move(move * speed * Time.deltaTime);
+        playerStats.PlayerController.Move(move * playerStats.MoveSpeed * Time.deltaTime);
 
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += playerStats.Gravity * Time.deltaTime;
 
-        playerController.Move(velocity * Time.deltaTime);
+        playerStats.PlayerController.Move(velocity * Time.deltaTime);
+        Debug.Log(move);
+    }
+    public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
+    {
+        throw new System.NotImplementedException();
     }
 }

@@ -7,11 +7,12 @@ public class FiniteStateMachine : MonoBehaviour
     public State initialState;
     private State currentState;
 
-    // Start is called before the first frame update
+    [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private EnemyStats enemyStats;
+
     void Start()
     {
-        currentState = initialState;
-        
+        currentState = initialState; 
     }
 
     public GameObject GetObject()
@@ -62,7 +63,14 @@ public class FiniteStateMachine : MonoBehaviour
         {
             if (a != null)
             {
-                a.Act(this);
+                if (playerStats != null)
+                {
+                    a.Act(this, playerStats);
+                }
+                else
+                {
+                    a.Act(this, enemyStats);
+                }
             }
         }
     }

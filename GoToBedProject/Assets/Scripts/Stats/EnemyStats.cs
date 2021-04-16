@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-internal class EnemiesStats : Stats
+public class EnemyStats : Stats
 {
     private float _visionDetection;
     private float _soundDetection;

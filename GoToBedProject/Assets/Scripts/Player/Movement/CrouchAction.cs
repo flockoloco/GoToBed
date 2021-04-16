@@ -4,9 +4,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Player/Crouch")]
 public class CrouchAction : Action
 {
-    public override void Act(FiniteStateMachine fsm)
+    public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        Debug.Log("Aaa");
+        throw new System.NotImplementedException();
     }
 
+    public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
+    {
+        throw new System.NotImplementedException();
+    }
 }
