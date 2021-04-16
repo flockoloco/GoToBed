@@ -5,8 +5,9 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public float mouseSensitivity = 180f;
-    private float cameraXAxis = 0;
-    private float cameraYAxis = 0;
+    public Transform playerBody;
+    private float cameraXAxis = 0f;
+    private float cameraYAxis = 0f;
     public static void setMouseLock(bool locked)
     {
         if (locked)
@@ -32,12 +33,13 @@ public class CameraMovement : MonoBehaviour
     {
         if (Cursor.lockState == CursorLockMode.Locked)
         {
-            float mouseYInput = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensitivity;
-            float mouseXInput = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity;
+            float mouseYInput = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            float mouseXInput = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             cameraXAxis -= mouseYInput;
-            cameraYAxis += mouseXInput;
-            cameraXAxis = Mathf.Clamp(cameraXAxis, -90, 90);
-            transform.localEulerAngles = new Vector3(cameraXAxis, cameraYAxis, 0f);
+            //cameraYAxis += mouseXInput;
+            cameraXAxis = Mathf.Clamp(cameraXAxis, -90f, 90f);
+            transform.localEulerAngles = new Vector3(cameraXAxis, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseXInput);
         }
     }
 }
