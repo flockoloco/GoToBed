@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: Crouch
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 0}
-  stateActions: []
-  exitAction: {fileID: 0}
-  transitions: []
+  entryAction: {fileID: 11400000, guid: 794f5b34b32fc6048a3a090b11960064, type: 2}
+  stateActions:
+  - {fileID: 11400000, guid: b21ed92e6eda6cc499f1e7748a972934, type: 2}
+  exitAction: {fileID: 11400000, guid: f27501806e8c7b94aa5b9d1aad382b41, type: 2}
+  transitions:
+  - {fileID: 11400000, guid: efa2fe9c7c27d3f4fbf90fb23c1e18b8, type: 2}
