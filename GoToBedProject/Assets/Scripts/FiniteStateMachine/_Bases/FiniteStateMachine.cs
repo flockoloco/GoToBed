@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FiniteStateMachine : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class FiniteStateMachine : MonoBehaviour
     [SerializeField] private PlayerStats playerStats;
     [SerializeField] private EnemyStats enemyStats;
 
+    private WaypointsPatrol navMeshAgent;
+
     public State InitialState { get => _initialState; set => _initialState = value; }
     public State CurrentState { get => _currentState; set => _currentState = value; }
 
@@ -22,7 +25,10 @@ public class FiniteStateMachine : MonoBehaviour
     {
         CurrentState = InitialState; 
     }
-
+    public WaypointsPatrol GetAgent()
+    {
+        return navMeshAgent;
+    }
     public GameObject GetObject()
     {
         return gameObject;

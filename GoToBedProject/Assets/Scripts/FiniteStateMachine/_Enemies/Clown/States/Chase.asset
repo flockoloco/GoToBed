@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: Chase
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 0}
-  stateActions: []
+  entryAction: {fileID: 11400000, guid: 93c4370bbba5f9740b9f243ab3954705, type: 2}
+  stateActions:
+  - {fileID: 11400000, guid: 157a9173ffc9b0f4d9252c19aca85e23, type: 2}
   exitAction: {fileID: 0}
-  transitions: []
+  transitions:
+  - {fileID: 0}
+  - {fileID: 0}
