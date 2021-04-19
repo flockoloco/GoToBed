@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8f98a5b428f1c44cae7e4d602c3da24, type: 3}
-  m_Name: New Enemy Can See Condition
+  m_Name: New Enemy Can Not See Condition 1
   m_EditorClassIdentifier: 
-  negation: 0
+  negation: 1
   viewAngle: 80
-  viewDistance: 10
+  viewDistance: 11

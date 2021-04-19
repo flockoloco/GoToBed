@@ -8,11 +8,13 @@ public class ClownPatrolAction : Action
     {
         if (fsm.GetAgent().IsAtDestination())
         {
+            Debug.Log("im not comming here");
             fsm.GetAgent().GoToNextWaypoint();
         }
     }
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
+        Debug.Log("im not comming here");
         throw new System.NotImplementedException();
     }
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)

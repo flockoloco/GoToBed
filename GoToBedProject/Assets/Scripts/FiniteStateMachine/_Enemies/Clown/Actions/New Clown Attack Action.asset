@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8f98a5b428f1c44cae7e4d602c3da24, type: 3}
-  m_Name: New Enemy Can See Condition
+  m_Script: {fileID: 11500000, guid: 08dc220b54b266541abe1a848e985c2c, type: 3}
+  m_Name: New Clown Attack Action
   m_EditorClassIdentifier: 
-  negation: 0
-  viewAngle: 80
-  viewDistance: 10

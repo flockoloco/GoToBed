@@ -23,7 +23,8 @@ public class FiniteStateMachine : MonoBehaviour
 
     void Start()
     {
-        CurrentState = InitialState; 
+        CurrentState = InitialState;
+        navMeshAgent = GetComponent<WaypointsPatrol>();
     }
     public WaypointsPatrol GetAgent()
     {
@@ -33,7 +34,6 @@ public class FiniteStateMachine : MonoBehaviour
     {
         return gameObject;
     }
-
     // Update is called once per frame
     void Update()
     {

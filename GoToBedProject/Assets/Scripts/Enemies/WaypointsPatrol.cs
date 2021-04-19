@@ -9,14 +9,12 @@ public class WaypointsPatrol : MonoBehaviour
     public Transform[] waypoints;
     public int currentWaypoint;
     public Transform target;
-
-    // Start is called before the first frame update
-    void Start()
+    public void GoToNextWaypoint()
     {
-        agent = GetComponent<NavMeshAgent>();
-        GoToNextWaypoint();
+        //select a random waypoint to go
+        currentWaypoint = Random.Range(0, waypoints.Length);
+        agent.SetDestination(waypoints[currentWaypoint].position);
     }
-
     public bool IsAtDestination()
     {
         if (!agent.pathPending)
@@ -31,7 +29,6 @@ public class WaypointsPatrol : MonoBehaviour
         }
         return false;
     }
-
     public void GoToTarget()
     {
         agent.SetDestination(target.position);
@@ -42,10 +39,9 @@ public class WaypointsPatrol : MonoBehaviour
         agent.isStopped = true;
         agent.ResetPath();
     }
-    public void GoToNextWaypoint()
+    void Start()
     {
-        //select a random waypoint to go
-        currentWaypoint = Random.Range(0, waypoints.Length);
-        agent.SetDestination(waypoints[currentWaypoint].position);
+        agent = GetComponent<NavMeshAgent>();
+        GoToNextWaypoint();
     }
 }
