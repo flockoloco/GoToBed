@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Player/Move")]
 public class PlayerMoveAction : Action
 {
+    
     Vector3 velocity;
     bool isGrounded;
 

@@ -14,7 +14,6 @@ public class CrouchExitAction : Action
         playerStats.gameObject.transform.position -= (postFeetPosition - initialFeetPosition) * 0.9f;
         playerStats.MoveSpeed = playerStats.MoveSpeed * 2;
 
-        //add a check to see if the player shouldnt be able to uncrouch
     }
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
