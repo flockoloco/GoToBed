@@ -6,7 +6,7 @@ public class StandEntry : Action
 {
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        Debug.Log("Stand Entry");
+        Debug.Log("STAND ENTRY");
         Vector3 initialFeetPosition = playerStats.GroundCheck.position;
         playerStats.gameObject.transform.localScale = new Vector3(1, 1.253025f, 1);
         Vector3 postFeetPosition = playerStats.GroundCheck.position;

@@ -22,7 +22,6 @@ public class PlayerRunCondition : Condition
         }
         else if (Input.GetKey(KeyCode.LeftShift))
         {
-            Debug.Log("Player pressed Shift");
             return !negation;
         }
         return negation;
