@@ -609,7 +609,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2121796932607356837, guid: 7a75a6bec21e7944ba8efa63f572eea9, type: 3}
       propertyPath: m_Name
-      value: Closet example (1)
+      value: closet
       objectReference: {fileID: 0}
     - target: {fileID: 2121796932607356837, guid: 7a75a6bec21e7944ba8efa63f572eea9, type: 3}
       propertyPath: m_NavMeshLayer
@@ -2655,7 +2655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2121796932607356837, guid: 7a75a6bec21e7944ba8efa63f572eea9, type: 3}
       propertyPath: m_Name
-      value: Closet example
+      value: closet
       objectReference: {fileID: 0}
     - target: {fileID: 2121796932607356837, guid: 7a75a6bec21e7944ba8efa63f572eea9, type: 3}
       propertyPath: m_NavMeshLayer

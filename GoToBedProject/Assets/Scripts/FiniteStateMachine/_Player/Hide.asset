@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: Hide
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 11400000, guid: 19e843874824cd047b99dcf92a299413, type: 2}
+  entryAction: {fileID: 0}
   stateActions:
   - {fileID: 11400000, guid: 907856eb57c761a4fb083a047a5663f5, type: 2}
-  exitAction: {fileID: 0}
-  transitions: []
+  exitAction: {fileID: 11400000, guid: 20dc73b2900c0f94ca56349b5c3f19cc, type: 2}
+  transitions:
+  - {fileID: 11400000, guid: d37a4e7d2dfdc5e468e5cdbc05440410, type: 2}

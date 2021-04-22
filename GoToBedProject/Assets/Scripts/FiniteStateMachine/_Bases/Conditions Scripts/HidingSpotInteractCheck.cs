@@ -10,7 +10,8 @@ public class HidingSpotInteractCheck : Condition
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         if (playerStats.LookingAtInteractable == true && Input.GetKeyUp(KeyCode.E))
-        { 
+        {
+            Debug.Log("hello");
             if (playerStats.InteractingObject.name == "closet")//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
             {
                 return !negation;
