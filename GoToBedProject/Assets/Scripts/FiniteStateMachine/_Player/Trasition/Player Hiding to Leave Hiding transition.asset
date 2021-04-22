@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99ebad738e39a7a449ef0fdb5ab12a5c, type: 3}
-  m_Name: New Leave Hiding Spot Action
+  m_Script: {fileID: 11500000, guid: 7d14b5946533f3740ae48f8c675dfa05, type: 3}
+  m_Name: Player Hiding to Leave Hiding transition
   m_EditorClassIdentifier: 
-  _hidingAction: {fileID: 11400000, guid: 907856eb57c761a4fb083a047a5663f5, type: 2}
+  decision: {fileID: 0}
+  action: {fileID: 0}
+  targetState: {fileID: 0}

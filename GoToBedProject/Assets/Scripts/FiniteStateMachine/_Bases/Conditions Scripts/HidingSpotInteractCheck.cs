@@ -7,8 +7,6 @@ public class HidingSpotInteractCheck : Condition
 {
     [SerializeField]
     private bool negation;
-    [SerializeField]
-    private int numero;
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         if (Input.GetKeyUp(KeyCode.E))
