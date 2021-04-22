@@ -11,18 +11,31 @@ public class HidingSpotInteractCheck : Condition
     private int numero;
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        if (playerStats.LookingAtInteractable == true && Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.E))
         {
-            numero++;
-            Debug.Log("hello" + numero);
-
-            if (playerStats.InteractingObject.name == "closet")//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
+            if (playerStats.InsideHidingObject == false && playerStats.InteractionCoolDown > playerStats.InteractionCooldownValue)
             {
-                return !negation;
-            }    
-                
+                if (playerStats.LookingAtInteractable == true)
+                {
+                    //add ifs for different objects that need different animations?
+                    if (playerStats.InteractingObject.name == "closet")//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
+                    {
+                        playerStats.InteractionCoolDown = 0;
+                        return !negation;
+                    }
+                }
+            }
+            else if (playerStats.InsideHidingObject == true)
+            {
+                if (playerStats.InteractingObject.name == "closet")//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
+                {
+                    playerStats.InteractionCoolDown = 0;
+                    return !negation;
+                }
+            }
         }
         return negation;
+
     }
 
     public override bool Test(FiniteStateMachine fsm, EnemyStats enemyStats)

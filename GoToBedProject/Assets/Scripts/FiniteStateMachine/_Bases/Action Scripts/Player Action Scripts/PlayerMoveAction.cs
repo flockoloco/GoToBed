@@ -10,6 +10,11 @@ public class PlayerMoveAction : Action
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
+        //remove later, make into a separate action that only messes with the cds
+        playerStats.InteractionCoolDown += Time.deltaTime;
+
+
+
         isGrounded = Physics.CheckSphere(playerStats.GroundCheck.position, playerStats.GroundDistance, playerStats.Groundmask);
 
         if (isGrounded && velocity.y < 0)

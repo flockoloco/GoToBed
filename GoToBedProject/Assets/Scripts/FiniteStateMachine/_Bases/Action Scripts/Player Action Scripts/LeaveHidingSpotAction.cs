@@ -4,17 +4,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Player/Exit Hiding")]
 public class LeaveHidingSpotAction : Action
 {
+    [SerializeField]
+    PlayerHidingAction _hidingAction;
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         
         HidingObjectInfo hidingObject = playerStats.InteractingObject.GetComponent<HidingObjectInfo>();
-        
-        playerStats.gameObject.transform.position = hidingObject.EntryPosition.transform.position;
-        Debug.Log(playerStats.transform.position);
-        Debug.Log(hidingObject.EntryPosition.transform.position);
-        playerStats.gameObject.transform.rotation = hidingObject.HiddenPosition.transform.rotation;
+        _hidingAction.timer = 0;
+        playerStats.transform.position = hidingObject.EntryPosition.transform.position;
+        playerStats.transform.rotation = hidingObject.HiddenPosition.transform.rotation;
         playerStats.InsideHidingObject = false;
-        Debug.Log(hidingObject);
+        
     }
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
