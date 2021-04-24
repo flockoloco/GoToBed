@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Leaving Hiding Spot
   m_EditorClassIdentifier: 
   entryAction: {fileID: 0}
-  stateActions: []
+  stateActions:
+  - {fileID: 11400000, guid: 20dc73b2900c0f94ca56349b5c3f19cc, type: 2}
   exitAction: {fileID: 0}
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: ad7e241b816388143925f728068bcb65, type: 2}

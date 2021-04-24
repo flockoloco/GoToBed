@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d14b5946533f3740ae48f8c675dfa05, type: 3}
-  m_Name: Player Leave Hiding Spot To Stand
+  m_Name: Player Leave Hiding To Stand
   m_EditorClassIdentifier: 
-  decision: {fileID: 0}
+  decision: {fileID: 11400000, guid: 73943cbc11ef7b1458beffa721eadad8, type: 2}
   action: {fileID: 0}
-  targetState: {fileID: 0}
+  targetState: {fileID: 11400000, guid: c41e2f2285179eb4f8597af49c1829f8, type: 2}
