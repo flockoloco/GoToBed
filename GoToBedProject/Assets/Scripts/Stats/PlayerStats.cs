@@ -27,12 +27,11 @@ public sealed class PlayerStats : Stats
     [SerializeField]
     private bool _insideHidingObject;
     [SerializeField]
-    private float staminaBar = 100;
-    [SerializeField]
     private float _interactionCooldown;
     [SerializeField]
     private float _interactionCooldownValue = 2;
-
+    [SerializeField]
+    private GameObject staminaObject;
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
     public float NoiseValue { get => _noiseValue; set => _noiseValue = value; }
@@ -45,7 +44,7 @@ public sealed class PlayerStats : Stats
     public GameObject InteractingObject { get => _interactingObject; set => _interactingObject = value; }
     public GameObject PlayerCamera { get => _playerCamera; set => _playerCamera = value; }
     public bool InsideHidingObject { get => _insideHidingObject; set => _insideHidingObject = value; }
-    public float StaminaBar { get => staminaBar; set => staminaBar = value; }
     public float InteractionCoolDown { get => _interactionCooldown; set => _interactionCooldown = value; }
     public float InteractionCooldownValue { get => _interactionCooldownValue; set => _interactionCooldownValue = value; }
+    public GameObject StaminaObject { get => staminaObject; set => staminaObject = value; }
 }

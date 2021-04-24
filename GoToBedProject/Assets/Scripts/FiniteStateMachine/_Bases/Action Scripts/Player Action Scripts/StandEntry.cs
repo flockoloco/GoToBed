@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Player/Stand Entry Action")]
 public class StandEntry : Action
 {
@@ -12,6 +13,7 @@ public class StandEntry : Action
         Vector3 postFeetPosition = playerStats.GroundCheck.position;
         playerStats.gameObject.transform.position -= (postFeetPosition - initialFeetPosition) * 0.9f;
         playerStats.MoveSpeed = 6;
+
     }
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {

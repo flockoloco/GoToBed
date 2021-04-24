@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "Finite State Machine/Conditions/Player Run Condition")]
 public class PlayerRunCondition : Condition
@@ -15,14 +16,22 @@ public class PlayerRunCondition : Condition
             {
                 return !negation;
             }
+            else if (playerStats.StaminaObject.GetComponent<Image>().fillAmount <= 0.001f)
+            {
+                return !negation;
+            }
             else
             {
                 return negation;
             }
+            
         }
         else if (Input.GetKey(KeyCode.LeftShift))
         {
-            return !negation;
+            if (playerStats.StaminaObject.GetComponent<Image>().fillAmount > 0.5f)
+            {
+                return !negation;
+            } 
         }
         return negation;
     }

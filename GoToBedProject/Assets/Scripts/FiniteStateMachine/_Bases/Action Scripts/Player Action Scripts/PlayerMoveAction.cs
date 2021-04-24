@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Player/Move")]
 public class PlayerMoveAction : Action
 {
@@ -12,8 +13,6 @@ public class PlayerMoveAction : Action
     {
         //remove later, make into a separate action that only messes with the cds
         playerStats.InteractionCoolDown += Time.deltaTime;
-
-
 
         isGrounded = Physics.CheckSphere(playerStats.GroundCheck.position, playerStats.GroundDistance, playerStats.Groundmask);
 
@@ -33,6 +32,7 @@ public class PlayerMoveAction : Action
         velocity.y += playerStats.Gravity * Time.deltaTime;
 
         playerStats.PlayerController.Move(velocity * Time.deltaTime);
+
     }
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
