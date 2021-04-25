@@ -5,6 +5,7 @@ using UnityEngine;
 public sealed class PlayerStats : Stats
 {
     private float _staminaValue;
+    [SerializeField]
     private float _concealmentValue;
     private float _noiseValue;
 
@@ -31,7 +32,9 @@ public sealed class PlayerStats : Stats
     [SerializeField]
     private float _interactionCooldownValue = 2;
     [SerializeField]
-    private GameObject staminaObject;
+    private GameObject _staminaObject;
+    [SerializeField]
+    private List<GameObject> _lightsInRange = new List<GameObject>();
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
     public float NoiseValue { get => _noiseValue; set => _noiseValue = value; }
@@ -46,5 +49,6 @@ public sealed class PlayerStats : Stats
     public bool InsideHidingObject { get => _insideHidingObject; set => _insideHidingObject = value; }
     public float InteractionCoolDown { get => _interactionCooldown; set => _interactionCooldown = value; }
     public float InteractionCooldownValue { get => _interactionCooldownValue; set => _interactionCooldownValue = value; }
-    public GameObject StaminaObject { get => staminaObject; set => staminaObject = value; }
+    public GameObject StaminaObject { get => _staminaObject; set => _staminaObject = value; }
+    public List<GameObject> LightsInRange { get => _lightsInRange; set => _lightsInRange = value; }
 }
