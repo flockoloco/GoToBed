@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f9b20312e3a2e49b9471dd8b2b3eac, type: 3}
+  m_Name: New Calculate Concealment Action
+  m_EditorClassIdentifier: 
+  surfaceColor: {r: 0.45751953, g: 0.50927734, b: 0.5854492, a: 1}
+  brightness1: 0.50472003
+  brightness2: 0.5047233
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
