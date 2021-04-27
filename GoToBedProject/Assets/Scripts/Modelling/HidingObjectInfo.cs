@@ -20,5 +20,6 @@ public class HidingObjectInfo : MonoBehaviour
     public Transform HiddenPosition { get => _hiddenPosition; set => _hiddenPosition = value; }
     public typeOfHiding HiddingAnimation { get => _hiddingAnimation; set => _hiddingAnimation = value; }
 
+
     
 }

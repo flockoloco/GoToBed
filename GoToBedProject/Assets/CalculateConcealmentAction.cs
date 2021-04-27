@@ -17,9 +17,38 @@ public class CalculateConcealmentAction : Action
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
+        if(fsm.CurrentState.name == "Stand")
+        {
+            Calculate(fsm,playerStats);
+            playerStats.ConcealmentValue = brightness1;
+        }
+        else if(fsm.CurrentState.name == "Crouch")
+        {
+            Calculate(fsm, playerStats);
+            playerStats.ConcealmentValue = brightness1 / 2;
+        }
+        else if(fsm.CurrentState.name == "Run")
+        {
+            Calculate(fsm, playerStats);
+            playerStats.ConcealmentValue = brightness1 * 2;
+        }
+        else if (fsm.CurrentState.name == "Hide")
+        {
+            playerStats.ConcealmentValue = 0;
+        }
+    }
 
+    public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
+    {
+        throw new System.NotImplementedException();
+    }
 
-
+    public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
+    {
+        throw new System.NotImplementedException();
+    }
+    void Calculate(FiniteStateMachine fsm , PlayerStats playerStats)
+    {
         RaycastHit hit;
         Ray ray = new Ray(playerStats.transform.position, Vector3.down);
         Debug.DrawRay(ray.origin, ray.direction * 5);
@@ -33,26 +62,16 @@ public class CalculateConcealmentAction : Action
             Debug.Log("this is the pixel x and y: " + pixelUV);
             Color surfaceColor = lightmapTex.GetPixelBilinear(pixelUV.x, pixelUV.y);
             this.surfaceColor = surfaceColor;
+            Color aaaaa = surfaceColor.linear;
+            Debug.Log("please work " + aaaaa);
         }
 
         // BRIGHTNESS APPROX
         brightness1 = (surfaceColor.r + surfaceColor.r + surfaceColor.b + surfaceColor.g + surfaceColor.g + surfaceColor.g) / 6;
+        Debug.Log("weeeeeeeeeeeeeeeeee" + surfaceColor.gamma);
 
         // BRIGHTNESS
         brightness2 = Mathf.Sqrt((surfaceColor.r * surfaceColor.r * 0.2126f + surfaceColor.g * surfaceColor.g * 0.7152f + surfaceColor.b * surfaceColor.b * 0.0722f));
 
-
-
-
-    }
-
-    public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
-    {
-        throw new System.NotImplementedException();
     }
 }

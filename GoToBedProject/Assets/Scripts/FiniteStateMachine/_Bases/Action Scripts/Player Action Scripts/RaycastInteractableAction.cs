@@ -14,12 +14,13 @@ public class RaycastInteractableAction : Action
             if (hit.collider.tag == "Interactable")
             {
                 //add canvas thing saying "Interact"
-                playerStats.InteractingObject = hit.collider.transform.parent.gameObject;
+                playerStats.InteractingObject = FindParentWithTag( hit.collider.gameObject, "Closet");
                 playerStats.LookingAtInteractable = true;
 
             }
             else
             {
+                playerStats.InteractingObject = null;
                 playerStats.LookingAtInteractable = false;
 
             }
@@ -27,6 +28,7 @@ public class RaycastInteractableAction : Action
         }
         else
         {
+            playerStats.InteractingObject = null;
             playerStats.LookingAtInteractable = false;
         }
     }
@@ -40,5 +42,17 @@ public class RaycastInteractableAction : Action
     {
         throw new System.NotImplementedException();
     }
-   
+    private GameObject FindParentWithTag(GameObject childObject, string tag) //method gotten from a forum
+    {
+        Transform t = childObject.transform;
+        while (t.parent != null)
+        {
+            if (t.parent.tag == tag)
+            {
+                return t.parent.gameObject;
+            }
+            t = t.parent.transform;
+        }
+        return null; // Could not find a parent with given tag.
+    }
 }

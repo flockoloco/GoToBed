@@ -893,10 +893,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 810243365278091129, guid: 7a75a6bec21e7944ba8efa63f572eea9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.66
-      objectReference: {fileID: 0}
     - target: {fileID: 2121796932607356837, guid: 7a75a6bec21e7944ba8efa63f572eea9, type: 3}
       propertyPath: m_Name
       value: closet
@@ -1879,8 +1875,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5.08
-  m_Range: 58.78
+  m_Intensity: 1
+  m_Range: 5
   m_SpotAngle: 142
   m_InnerSpotAngle: 2
   m_CookieSize: 10
@@ -1937,7 +1933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911215370}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.86, y: 5.87, z: 3.44}
+  m_LocalPosition: {x: 1.86, y: 3.62, z: 3.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
