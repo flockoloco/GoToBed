@@ -6,6 +6,7 @@ public class EnemyStats : Stats
 {
     private float _visionDetection;
     private float _soundDetection;
+    [SerializeField]
     private GameObject _target;
     public float VisionDetection { get => _visionDetection; set => _visionDetection = value; }
     public float SoundDetection { get => _soundDetection; set => _soundDetection = value; }
