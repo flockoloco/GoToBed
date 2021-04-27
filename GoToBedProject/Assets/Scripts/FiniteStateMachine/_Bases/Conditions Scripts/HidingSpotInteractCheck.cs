@@ -16,7 +16,7 @@ public class HidingSpotInteractCheck : Condition
                 if (playerStats.LookingAtInteractable == true)
                 {
                     //add ifs for different objects that need different animations?
-                    if (playerStats.InteractingObject.name == "closet")//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
+                    if (playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddingAnimation == HidingObjectInfo.typeOfHiding.Closet)//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
                     {
                         playerStats.InteractionCoolDown = 0;
                         return !negation;
@@ -25,7 +25,7 @@ public class HidingSpotInteractCheck : Condition
             }
             else if (playerStats.InsideHidingObject == true)
             {
-                if (playerStats.InteractingObject.name == "closet")//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
+                if (playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddingAnimation == HidingObjectInfo.typeOfHiding.Closet)//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
                 {
                     playerStats.InteractionCoolDown = 0;
                     return !negation;
@@ -44,5 +44,18 @@ public class HidingSpotInteractCheck : Condition
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
     {
         throw new System.NotImplementedException();
+    }
+    private GameObject FindParentWithTag(GameObject childObject, string tag) //method gotten from a forum
+    {
+        Transform t = childObject.transform;
+        while (t.parent != null)
+        {
+            if (t.parent.tag == tag)
+            {
+                return t.parent.gameObject;
+            }
+            t = t.parent.transform;
+        }
+        return null; // Could not find a parent with given tag.
     }
 }

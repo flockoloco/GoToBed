@@ -3,7 +3,17 @@ guid: 03e5c8c398ef8704e967cef62c3da8c4
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: e19900a346dc03340970cbc1e7f8044a, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark-wood-rustic-texture-free-photo
+    second: {fileID: 2800000, guid: c48ed3d8c8767ab4c81d03aae6eb5178, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
