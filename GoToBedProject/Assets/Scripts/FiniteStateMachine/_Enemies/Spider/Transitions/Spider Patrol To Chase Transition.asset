@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d14b5946533f3740ae48f8c675dfa05, type: 3}
+  m_Name: Spider Patrol To Chase Transition
+  m_EditorClassIdentifier: 
+  decision: {fileID: 11400000, guid: c16bc25de40c2b34e90689f537bbf618, type: 2}
+  action: {fileID: 0}
+  targetState: {fileID: 11400000, guid: 07110e93f35c1964bb6b190931fc12e0, type: 2}

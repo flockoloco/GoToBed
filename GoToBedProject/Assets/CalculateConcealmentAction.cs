@@ -54,21 +54,21 @@ public class CalculateConcealmentAction : Action
         Debug.DrawRay(ray.origin, ray.direction * 5);
         if (Physics.Raycast(playerStats.transform.position, Vector3.down, out hit))
         {
-            Debug.Log("another try " + hit.lightmapCoord.x);
+
             Renderer hitRenderer = hit.collider.GetComponent<Renderer>();
             LightmapData lightmapData = LightmapSettings.lightmaps[hitRenderer.lightmapIndex];
             Texture2D lightmapTex = lightmapData.lightmapColor;
             Vector2 pixelUV = hit.lightmapCoord;
-            Debug.Log("this is the pixel x and y: " + pixelUV);
+
             Color surfaceColor = lightmapTex.GetPixelBilinear(pixelUV.x, pixelUV.y);
             this.surfaceColor = surfaceColor;
             Color aaaaa = surfaceColor.linear;
-            Debug.Log("please work " + aaaaa);
+
         }
 
         // BRIGHTNESS APPROX
         brightness1 = (surfaceColor.r + surfaceColor.r + surfaceColor.b + surfaceColor.g + surfaceColor.g + surfaceColor.g) / 6;
-        Debug.Log("weeeeeeeeeeeeeeeeee" + surfaceColor.gamma);
+
 
         // BRIGHTNESS
         brightness2 = Mathf.Sqrt((surfaceColor.r * surfaceColor.r * 0.2126f + surfaceColor.g * surfaceColor.g * 0.7152f + surfaceColor.b * surfaceColor.b * 0.0722f));

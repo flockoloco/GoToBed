@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyStats : Stats
 {
+    [SerializeField]
     private float _visionDetection;
+    [SerializeField]
     private float _soundDetection;
     [SerializeField]
     private GameObject _target;

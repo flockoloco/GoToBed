@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
-  m_Name: Attack
+  m_Name: SpiderAttack
   m_EditorClassIdentifier: 
   entryAction: {fileID: 11400000, guid: 93c4370bbba5f9740b9f243ab3954705, type: 2}
   stateActions:
-  - {fileID: 11400000, guid: 8afaff4dadaf4ea4a91a58249f583b71, type: 2}
+  - {fileID: 11400000, guid: d90d11908a555c34da3747a790aeceae, type: 2}
   exitAction: {fileID: 0}
   transitions:
-  - {fileID: 11400000, guid: 4f886ccd4b9e60444bb96f9bbdfe15a8, type: 2}
+  - {fileID: 0}

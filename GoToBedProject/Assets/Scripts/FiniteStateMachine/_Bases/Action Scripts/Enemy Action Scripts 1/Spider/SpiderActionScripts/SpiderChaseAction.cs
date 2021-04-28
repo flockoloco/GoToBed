@@ -14,6 +14,7 @@ public class SpiderChaseAction : Action
         if (fsm.GetAgent().IsAtDestination())
         {
             fsm.GetAgent().GoToTarget();
+            //animation
         }
     }
 

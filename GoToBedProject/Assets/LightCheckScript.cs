@@ -7,7 +7,6 @@ public class LightCheckScript : MonoBehaviour
     public PlayerStats playerStats;
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(gameObject.name+ " was triggered with " + other.gameObject.name);
         if (other.tag == "Light")
         {
             playerStats.LightsInRange.Add(other.gameObject);

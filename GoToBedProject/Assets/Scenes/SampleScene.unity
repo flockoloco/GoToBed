@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cf2a87f5dc4fd164ba7253369c309c72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.65
+      value: -22.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cf2a87f5dc4fd164ba7253369c309c72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3312,6 +3312,14 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1904712853}
+    - target: {fileID: 2065146570027192482, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
+      propertyPath: _visionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065146570027192483, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
+      propertyPath: _initialState
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f50556b9ae5d1746b88841e77943425, type: 2}
     - target: {fileID: 2065146570027192507, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: m_Name
       value: Spider

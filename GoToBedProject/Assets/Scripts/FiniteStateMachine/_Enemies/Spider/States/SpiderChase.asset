@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
+  m_Name: SpiderChase
+  m_EditorClassIdentifier: 
+  entryAction: {fileID: 11400000, guid: 93c4370bbba5f9740b9f243ab3954705, type: 2}
+  stateActions:
+  - {fileID: 11400000, guid: 0a7852c499f6bff4e8d677a5f808dccd, type: 2}
+  exitAction: {fileID: 0}
+  transitions:
+  - {fileID: 11400000, guid: cbd42f1eed41d7c42a3f0b5093399fda, type: 2}

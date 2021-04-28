@@ -13,32 +13,35 @@ public class EnemyCanSeeCondition : Condition
     private float viewDistance;
     [SerializeField]
     private bool useRaycast;
-
+    private float concPlayer;
+    private float distanceToTarget;
     public override bool Test(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        Vector3 targetDirection = fsm.GetAgent().target.transform.position - fsm.transform.position; //not normalized
-        float angle = Vector3.Angle(targetDirection.normalized, fsm.transform.forward);
-        float distance = targetDirection.magnitude;
-        if ((angle <= viewAngle) && (distance <= viewDistance))
+        viewDistance = 20f;
+        concPlayer = enemyStats.Target.GetComponent<PlayerStats>().ConcealmentValue;
+        distanceToTarget = Vector3.Distance(enemyStats.Target.transform.position, fsm.gameObject.transform.position);
+        if ((concPlayer / distanceToTarget) > enemyStats.VisionDetection)
         {
             if (useRaycast)
             {
-                Ray ray = new Ray(fsm.transform.position + (fsm.transform.forward / 2), targetDirection.normalized);
                 RaycastHit hit;
-                Debug.DrawRay(ray.origin, ray.direction, Color.red);
-                if (Physics.Raycast(ray, out hit, viewDistance, LayerMask.GetMask("Level")))
+                if (Physics.Raycast(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, out hit, Mathf.Infinity, LayerMask.GetMask("Player")))
                 {
-                    Debug.Log(hit.transform.name);
-                    if (hit.transform.tag == fsm.GetAgent().target.tag)
+                    if (hit.transform.tag == enemyStats.Target.gameObject.tag)
                     {
-                        return !negation;
+                        float lookingDirection = Vector3.Angle(fsm.transform.position, fsm.transform.position - enemyStats.Target.transform.position);
+                        if (lookingDirection < 180f)
+                        {
+                            Debug.Log(lookingDirection);
+                            return !negation;
+                        }
                     }
                 }
             }
             else
             {
-                return !negation;
-            }                     
+                return negation;
+            }
         }
         return negation;
     }
