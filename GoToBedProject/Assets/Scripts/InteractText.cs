@@ -13,9 +13,10 @@ public class InteractText : MonoBehaviour
         textBox.text = text;
         //maybe add keys
     }
-    public void ChangeText()
+    public void ChangeText(bool activate )
     {
-        parentObject.SetActive(false);
-        //maybe add keys
+       
+            parentObject.SetActive(activate);
+        
     }
 }
