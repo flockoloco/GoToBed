@@ -15,18 +15,24 @@ public class RaycastInteractableAction : Action
                 if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Closet.ToString(),playerStats) != null)
                 {
                     playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
-                    //add ui
+                }
+                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Table.ToString(), playerStats) != null)
+                {
+                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
                 }
                 else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Lantern.ToString(),playerStats) != null)
                 {
                     playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                    //add ui
+                   
+
+
                 }
                 else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Bed.ToString(), playerStats) != null)
                 {
                     playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
                     //add ui
                 }
+                
             }
             else
             {
@@ -39,6 +45,7 @@ public class RaycastInteractableAction : Action
             playerStats.InteractingObject = null;
             playerStats.LookingAtInteractable = Globals.InteractingObjects.None;
         }
+        AddInteractText(playerStats);
     }
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
@@ -62,5 +69,27 @@ public class RaycastInteractableAction : Action
             t = t.parent.transform;
         }
         return null; // Could not find a parent with given tag.
+    }
+    private void AddInteractText(PlayerStats playerStats)
+    {
+        if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Hiding))
+        {
+            playerStats.UIInteractionTextObject.ChangeText("Hide");
+        }
+        else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Item))
+        {
+            if (playerStats.EquippedItem.Equals(null))
+            {
+                playerStats.UIInteractionTextObject.ChangeText("Pick Up");
+            }
+            else
+            {
+                playerStats.UIInteractionTextObject.ChangeText("Drop & Pick");
+            }
+        }
+        else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.None))
+        {
+            playerStats.UIInteractionTextObject.ChangeText();
+        }
     }
 }

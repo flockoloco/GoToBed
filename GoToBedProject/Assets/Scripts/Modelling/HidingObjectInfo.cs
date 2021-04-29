@@ -9,16 +9,11 @@ public class HidingObjectInfo : MonoBehaviour
     [SerializeField]
     Transform _hiddenPosition;
     [SerializeField]
-    typeOfHiding _hiddingAnimation;
-    public enum typeOfHiding //move this out of here, put in modelling
-    {
-        Closet,
-        Bed
-            //....
-    }
+    Globals.typeOfHiding _hiddingAnimation;
+    
     public Transform EntryPosition { get => _entryPosition; set => _entryPosition = value; }
     public Transform HiddenPosition { get => _hiddenPosition; set => _hiddenPosition = value; }
-    public typeOfHiding HiddingAnimation { get => _hiddingAnimation; set => _hiddingAnimation = value; }
+    public Globals.typeOfHiding HiddingAnimation { get => _hiddingAnimation; set => _hiddingAnimation = value; }
 
 
     

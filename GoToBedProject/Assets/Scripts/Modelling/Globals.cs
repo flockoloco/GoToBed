@@ -19,12 +19,22 @@ public static class Globals
         Closet, 
         HidingObject, 
         Lantern,
-        Bed
+        Waypoint,
+        Bed,
+        Table,
+        Scissors
     }
     public enum InteractingObjects
     {
         None,
         Hiding,
         Item
+    }
+    public enum typeOfHiding //move this out of here, put in modelling
+    {
+        Closet,
+        Bed,
+        Table
+        //....
     }
 }

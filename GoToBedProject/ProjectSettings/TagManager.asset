@@ -10,6 +10,9 @@ TagManager:
   - HidingObject
   - Lantern
   - Waypoint
+  - Bed
+  - Table
+  - Scissors
   layers:
   - Default
   - TransparentFX

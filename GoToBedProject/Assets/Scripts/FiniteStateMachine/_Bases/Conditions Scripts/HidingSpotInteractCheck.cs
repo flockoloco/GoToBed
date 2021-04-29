@@ -15,16 +15,15 @@ public class HidingSpotInteractCheck : Condition
             {
                 if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Hiding))
                 {
-                    if (playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddingAnimation.Equals(HidingObjectInfo.typeOfHiding.Closet))//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
-                    {
+                    
                         playerStats.InteractionCoolDown = 0;
                         return !negation;
-                    }
+                    
                 }
             }
             else if (playerStats.InsideHidingObject.Equals(true))
             {
-                if (playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddingAnimation.Equals(HidingObjectInfo.typeOfHiding.Closet))//maybe change? maybe create multiple tags system https://answers.unity.com/questions/1470694/multiple-tags-for-one-gameobject.html
+                if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Hiding))
                 {
                     playerStats.InteractionCoolDown = 0;
                     return !negation;

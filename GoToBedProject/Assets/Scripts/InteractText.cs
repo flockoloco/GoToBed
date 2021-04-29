@@ -5,9 +5,17 @@ using TMPro;
 
 public class InteractText : MonoBehaviour
 {
-    public TextMeshPro text;
-    public void ChangeText(string text, int keyUsed)
+    public TMP_Text textBox;
+    public GameObject parentObject;
+    public void ChangeText(string text)
     {
-
+        parentObject.SetActive(true);
+        textBox.text = text;
+        //maybe add keys
+    }
+    public void ChangeText()
+    {
+        parentObject.SetActive(false);
+        //maybe add keys
     }
 }
