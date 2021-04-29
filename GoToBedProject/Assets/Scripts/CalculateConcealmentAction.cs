@@ -66,11 +66,11 @@ public class CalculateConcealmentAction : Action
             //Debug.Log(surfaceColor.grayscale);
 
         }
-
+        
         // BRIGHTNESS APPROX
-        brightness1 = (surfaceColor.r + surfaceColor.r + surfaceColor.b + surfaceColor.g + surfaceColor.g + surfaceColor.g) / 6;
-
-
+        float br1 = (surfaceColor.r + surfaceColor.r + surfaceColor.b + surfaceColor.g + surfaceColor.g + surfaceColor.g) / 6;
+        brightness1 = (br1 - 0.4f) / (5f - 0.4f);
+        
         // BRIGHTNESS
         brightness2 = Mathf.Sqrt((surfaceColor.r * surfaceColor.r * 0.2126f + surfaceColor.g * surfaceColor.g * 0.7152f + surfaceColor.b * surfaceColor.b * 0.0722f));
 

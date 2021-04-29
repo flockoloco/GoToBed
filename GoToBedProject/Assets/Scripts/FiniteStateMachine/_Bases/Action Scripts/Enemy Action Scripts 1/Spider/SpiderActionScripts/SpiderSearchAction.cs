@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class SpiderSearchAction : MonoBehaviour
+[CreateAssetMenu(menuName = "Finite State Machine/Actions/Enemy/Spider/Search Action")]
+public class SpiderSearchAction : Action
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        
+        throw new System.NotImplementedException();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        
+        throw new System.NotImplementedException();
+    }
+
+    public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
+    {
+        throw new System.NotImplementedException();
     }
 }

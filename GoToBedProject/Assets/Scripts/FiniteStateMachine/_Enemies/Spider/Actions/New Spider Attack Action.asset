@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: New Spider Attack Action
   m_EditorClassIdentifier: 
   deathTimer: 0
+  deadState: {fileID: 11400000, guid: 84032d3260aa87d4380311354c4708d8, type: 2}

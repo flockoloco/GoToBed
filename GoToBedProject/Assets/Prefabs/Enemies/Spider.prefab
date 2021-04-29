@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOrEnemy: 1
-  _initialState: {fileID: 11400000, guid: 7b1ce0592edfb7040baa4a4be6617033, type: 2}
+  _initialState: {fileID: 11400000, guid: 5f50556b9ae5d1746b88841e77943425, type: 2}
   _currentState: {fileID: 0}
   playerStats: {fileID: 0}
   enemyStats: {fileID: 2065146570027192482}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 4
   _gravity: -9.81
-  _visionDetection: 0.05
+  _visionDetection: 0.5
   _soundDetection: 5
   _target: {fileID: 0}
 --- !u!114 &2065146570027192509

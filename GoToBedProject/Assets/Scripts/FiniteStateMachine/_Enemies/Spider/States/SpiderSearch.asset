@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SpiderSearch
   m_EditorClassIdentifier: 
   entryAction: {fileID: 0}
-  stateActions: []
+  stateActions:
+  - {fileID: 0}
   exitAction: {fileID: 0}
   transitions: []

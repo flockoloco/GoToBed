@@ -8,8 +8,6 @@ public class EnemyCanSeeCondition : Condition
     [SerializeField]
     private bool negation;
     [SerializeField]
-    private float viewAngle;
-    [SerializeField]
     private bool useRaycast;
     private float concPlayer;
     private float distanceToTarget;
@@ -19,8 +17,10 @@ public class EnemyCanSeeCondition : Condition
         distanceToTarget = Vector3.Distance(enemyStats.Target.transform.position, fsm.gameObject.transform.position);
         //aumentar o RADIOUS do inimigo, colocar uma sphere!!
         //fsm.gameObject.transform.GetChild(0).gameObject.transform.localScale = Vector3.one * (concPlayer / distanceToTarget);
-        if ((concPlayer / distanceToTarget) > enemyStats.VisionDetection)
+        Debug.Log((concPlayer * 10) / distanceToTarget);
+        if (((concPlayer * 10) / distanceToTarget) > enemyStats.VisionDetection)
         {
+            
             if (useRaycast)
             {
                 RaycastHit hit;

@@ -9,6 +9,7 @@ TagManager:
   - Closet
   - HidingObject
   - Lantern
+  - Waypoint
   layers:
   - Default
   - TransparentFX
