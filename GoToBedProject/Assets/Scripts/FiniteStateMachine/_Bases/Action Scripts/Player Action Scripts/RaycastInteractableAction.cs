@@ -6,30 +6,38 @@ public class RaycastInteractableAction : Action
 {
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-       RaycastHit hit;
-
-        
+        RaycastHit hit;   
         if (Physics.Raycast(playerStats.PlayerCamera.transform.position, playerStats.PlayerCamera.transform.forward,out hit, playerStats.InteractRange))
         {
-            if (hit.collider.tag == "Interactable")
+            if (hit.collider.CompareTag(Globals.GameTags.Interactable.ToString()))
             {
                 //add canvas thing saying "Interact"
-                playerStats.InteractingObject = FindParentWithTag( hit.collider.gameObject, "Closet");
-                playerStats.LookingAtInteractable = true;
-
+                if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Closet.ToString(),playerStats) != null)
+                {
+                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
+                    //add ui
+                }
+                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Lantern.ToString(),playerStats) != null)
+                {
+                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    //add ui
+                }
+                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Bed.ToString(), playerStats) != null)
+                {
+                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
+                    //add ui
+                }
             }
             else
             {
                 playerStats.InteractingObject = null;
-                playerStats.LookingAtInteractable = false;
-
+                playerStats.LookingAtInteractable = Globals.InteractingObjects.None;
             }
-           //other ifs
         }
         else
         {
             playerStats.InteractingObject = null;
-            playerStats.LookingAtInteractable = false;
+            playerStats.LookingAtInteractable = Globals.InteractingObjects.None;
         }
     }
 
@@ -37,18 +45,18 @@ public class RaycastInteractableAction : Action
     {
         throw new System.NotImplementedException();
     }
-
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
     {
         throw new System.NotImplementedException();
     }
-    private GameObject FindParentWithTag(GameObject childObject, string tag) //method gotten from a forum
+    private GameObject FindParentWithTag(GameObject childObject, string tag,PlayerStats playerStats) //method gotten from a forum
     {
         Transform t = childObject.transform;
         while (t.parent != null)
         {
-            if (t.parent.tag == tag)
-            {
+            if (t.parent.CompareTag(tag))
+            { 
+                playerStats.InteractingObject = t.parent.gameObject;
                 return t.parent.gameObject;
             }
             t = t.parent.transform;

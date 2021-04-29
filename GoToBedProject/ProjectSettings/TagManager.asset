@@ -8,6 +8,7 @@ TagManager:
   - Light
   - Closet
   - HidingObject
+  - Lantern
   layers:
   - Default
   - TransparentFX

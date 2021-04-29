@@ -52,7 +52,7 @@ public class CalculateConcealmentAction : Action
         RaycastHit hit;
         Ray ray = new Ray(playerStats.transform.position, Vector3.down);
         Debug.DrawRay(ray.origin, ray.direction * 5);
-        if (Physics.Raycast(playerStats.transform.position, Vector3.down, out hit))
+        if (Physics.Raycast(playerStats.transform.position, Vector3.down, out hit,Mathf.Infinity, 6))
         {
 
             Renderer hitRenderer = hit.collider.GetComponent<Renderer>();

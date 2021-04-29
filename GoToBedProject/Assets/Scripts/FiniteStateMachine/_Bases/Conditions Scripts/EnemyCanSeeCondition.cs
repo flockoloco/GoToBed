@@ -32,7 +32,6 @@ public class EnemyCanSeeCondition : Condition
                         float lookingDirection = Vector3.Angle(fsm.transform.position, fsm.transform.position - enemyStats.Target.transform.position);
                         if (lookingDirection < 180f)
                         {
-                            Debug.Log(lookingDirection);
                             return !negation;
                         }
                     }
