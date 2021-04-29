@@ -62,7 +62,8 @@ public class CalculateConcealmentAction : Action
 
             Color surfaceColor = lightmapTex.GetPixelBilinear(pixelUV.x, pixelUV.y);
             this.surfaceColor = surfaceColor;
-            Color aaaaa = surfaceColor.linear;
+            //Color aaaaa = surfaceColor.grayscale;
+            //Debug.Log(surfaceColor.grayscale);
 
         }
 

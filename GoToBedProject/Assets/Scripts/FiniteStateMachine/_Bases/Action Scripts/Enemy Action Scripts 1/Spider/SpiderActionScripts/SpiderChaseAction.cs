@@ -11,11 +11,7 @@ public class SpiderChaseAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if (fsm.GetAgent().IsAtDestination())
-        {
-            fsm.GetAgent().GoToTarget();
-            //animation
-        }
+        fsm.GetAgent().GoToTarget();
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
