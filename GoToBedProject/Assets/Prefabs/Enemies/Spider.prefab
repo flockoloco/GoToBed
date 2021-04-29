@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 4
   _gravity: -9.81
-  _visionDetection: 0.5
+  _visionDetection: 0.05
   _soundDetection: 5
   _target: {fileID: 0}
 --- !u!114 &2065146570027192509

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.446576, g: 0.49641192, b: 0.5748169, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657624, g: 0.49641252, b: 0.57481736, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2950,10 +2950,6 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1904712853}
-    - target: {fileID: 2065146570027192482, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
-      propertyPath: _visionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2065146570027192483, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: _initialState
       value: 
@@ -2967,8 +2963,12 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2065146570027192508, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065146570027192508, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.69
+      value: 4.58
       objectReference: {fileID: 0}
     - target: {fileID: 2065146570027192508, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2976,7 +2976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2065146570027192508, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.07
+      value: 17.3
       objectReference: {fileID: 0}
     - target: {fileID: 2065146570027192508, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3105,6 +3105,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2825290448104186075, guid: 10a58d4a00bf19944b0c31eecefd3782, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825290449040920881, guid: 10a58d4a00bf19944b0c31eecefd3782, type: 3}
+      propertyPath: m_HDR
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

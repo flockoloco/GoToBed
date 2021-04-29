@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(menuName = "Finite State Machine/Conditions/EnemyCanSee")]
-public class EnemyCanSeeCondition : Condition
+[CreateAssetMenu(menuName = "Finite State Machine/Conditions/EnemyCanAttack")]
+public class EnemyCanAttack : Condition
 {
     [SerializeField]
     private bool negation;
     [SerializeField]
-    private float viewAngle;
-    [SerializeField]
     private bool useRaycast;
-    private float concPlayer;
-    private float distanceToTarget;
+    public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override bool Test(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        concPlayer = enemyStats.Target.GetComponent<PlayerStats>().ConcealmentValue;
-        distanceToTarget = Vector3.Distance(enemyStats.Target.transform.position, fsm.gameObject.transform.position);
-        //aumentar o RADIOUS do inimigo, colocar uma sphere!!
-        //fsm.gameObject.transform.GetChild(0).gameObject.transform.localScale = Vector3.one * (concPlayer / distanceToTarget);
-        if ((concPlayer / distanceToTarget) > enemyStats.VisionDetection)
+        float distanceBetween = Vector3.Distance(enemyStats.Target.gameObject.transform.position, fsm.gameObject.transform.position);
+        
+        if (distanceBetween < 5f)
         {
             if (useRaycast)
             {
@@ -37,16 +35,12 @@ public class EnemyCanSeeCondition : Condition
                     }
                 }
             }
-            else
-            {
-                return negation;
-            }
+        }
+        else
+        {
+            return negation;
         }
         return negation;
-    }
-    public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
-    {
-        throw new System.NotImplementedException();
     }
 
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
