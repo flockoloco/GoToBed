@@ -40,20 +40,25 @@ public class FiniteStateMachine : MonoBehaviour
         Transition triggeredTransition = null;
         foreach (Transition t in CurrentState.GetTransitions())
         {
-            if (playerOrEnemy == false)
+            if (t != null)
             {
-                if (t.IsTriggered(this, playerStats))
+
+
+                if (playerOrEnemy == false)
                 {
-                    triggeredTransition = t;
-                    break;
+                    if (t.IsTriggered(this, playerStats))
+                    {
+                        triggeredTransition = t;
+                        break;
+                    }
                 }
-            }
-            else
-            {
-                if (t.IsTriggered(this,enemyStats))
+                else
                 {
-                    triggeredTransition = t;
-                    break;
+                    if (t.IsTriggered(this, enemyStats))
+                    {
+                        triggeredTransition = t;
+                        break;
+                    }
                 }
             }
         }
