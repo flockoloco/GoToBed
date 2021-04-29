@@ -119,7 +119,7 @@ MonoBehaviour:
   _gravity: -19.62
   _concealmentValue: 0
   _equippedItem: {fileID: 0}
-  _itemPickUpAnimationTimer: 0
+  _handPosition: {fileID: 0}
   _itemPickUpAnimationBool: 0
   _playerController: {fileID: 2825290448104186068}
   _groundCheck: {fileID: 2825290449981707988}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07937b7933ee6274ea2554cad6b83991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 90
+  mouseSensitivity: 120
   playerBody: {fileID: 2825290448104186075}
 --- !u!1 &2825290449981707991
 GameObject:

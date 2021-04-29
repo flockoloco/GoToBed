@@ -15,7 +15,7 @@ public class Transition : ScriptableObject
 
     public bool IsTriggered(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        return decision.Test(fsm, playerStats );
+        return decision.Test(fsm, playerStats);
     }
     public bool IsTriggered(FiniteStateMachine fsm, EnemyStats enemyStats)
     {

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: SpiderSearch
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 0}
+  entryAction: {fileID: 11400000, guid: d2a7f8fa86548c8429e78dfaca947f7d, type: 2}
   stateActions:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e25bfe445267a5345b2dea0118056812, type: 2}
   exitAction: {fileID: 0}
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: bf2317ab9818f074aa6f5369dc9d5919, type: 2}
+  - {fileID: 11400000, guid: c64fa6b59b594d3438350bcb88adef37, type: 2}

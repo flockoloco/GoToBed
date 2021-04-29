@@ -155,6 +155,7 @@ MonoBehaviour:
   _visionDetection: 0.5
   _soundDetection: 5
   _target: {fileID: 0}
+  _searching: 0
 --- !u!114 &2065146570027192509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,15 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83268e3296dc4d45b3eff0f43b2e5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: []
   currentWaypoint: 0
   target: {fileID: 0}

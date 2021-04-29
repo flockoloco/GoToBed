@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d14b5946533f3740ae48f8c675dfa05, type: 3}
   m_Name: Spider Search To Chase Transition
   m_EditorClassIdentifier: 
-  decision: {fileID: 0}
+  decision: {fileID: 11400000, guid: 37636d88d67cfd343ac75d6430aed4a9, type: 2}
   action: {fileID: 0}
   targetState: {fileID: 11400000, guid: 07110e93f35c1964bb6b190931fc12e0, type: 2}
