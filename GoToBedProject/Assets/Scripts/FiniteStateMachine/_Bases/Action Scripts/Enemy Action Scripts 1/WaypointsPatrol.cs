@@ -9,6 +9,7 @@ public class WaypointsPatrol : MonoBehaviour
     public List<Transform> waypoints = new List<Transform>();
     public int currentWaypoint;
     public Transform target;
+    public float searchArea = 20f;
     public void GoToNextWaypoint()
     {
         //select a random waypoint to go
@@ -39,17 +40,35 @@ public class WaypointsPatrol : MonoBehaviour
         agent.isStopped = true;
         agent.ResetPath();
     }
-    void Start()
+    public void Start()
     {
         ResetWaypoints();
         agent = GetComponent<NavMeshAgent>();
         GoToNextWaypoint();
     }
-    void ResetWaypoints()
+    public void ResetWaypoints()
     {
         foreach (GameObject waypoint in GameObject.FindGameObjectsWithTag("Waypoint"))
         {
             waypoints.Add(waypoint.transform);
+        }
+    }
+    public void RemoveAndGoToNextWaypoint()
+    {
+        waypoints.Remove(waypoints[currentWaypoint]);
+        currentWaypoint = Random.Range(0, waypoints.Count);
+        agent.SetDestination(waypoints[currentWaypoint].position);
+    }
+    public void InsertWaypointAndHidingWaypoint()
+    {
+        foreach (GameObject waypoint in GameObject.FindGameObjectsWithTag("Waypoint"))
+        {
+            float distance = Vector3.Distance(waypoint.gameObject.transform.position, transform.position);
+            if(distance < searchArea)
+            {
+                gameObject.GetComponent<EnemyStats>().Searching = true;
+                waypoints.Add(waypoint.gameObject.transform);
+            }
         }
     }
 }

@@ -19,7 +19,8 @@ public static class Globals
         Closet, 
         HidingObject, 
         Lantern,
-        Bed
+        Bed,
+        Waypoint
     }
     public enum InteractingObjects
     {

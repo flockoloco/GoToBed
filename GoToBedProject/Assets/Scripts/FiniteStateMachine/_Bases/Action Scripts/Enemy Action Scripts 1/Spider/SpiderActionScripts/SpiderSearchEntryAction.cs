@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Finite State Machine/Actions/Enemy/Spider/Search Action")]
-public class SpiderSearchAction : Action
+[CreateAssetMenu(menuName = "Finite State Machine/Actions/Enemy/Spider/Entry Search Action")]
+public class SpiderSearchEntryAction : Action
 {
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
@@ -11,11 +11,7 @@ public class SpiderSearchAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if (enemyStats.Searching.Equals(true))
-        {
-            fsm.GetAgent().RemoveAndGoToNextWaypoint();
-        }
-        
+        fsm.GetAgent().InsertWaypointAndHidingWaypoint();
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
