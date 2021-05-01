@@ -152,10 +152,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 4
   _gravity: -9.81
-  _visionDetection: 0.5
+  _visionDetection: 10
   _soundDetection: 5
   _target: {fileID: 0}
   _searching: 0
+  bolinha: {fileID: 0}
 --- !u!114 &2065146570027192509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +172,4 @@ MonoBehaviour:
   waypoints: []
   currentWaypoint: 0
   target: {fileID: 0}
+  searchArea: 20

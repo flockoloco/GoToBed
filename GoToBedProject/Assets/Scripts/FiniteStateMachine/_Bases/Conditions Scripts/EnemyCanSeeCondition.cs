@@ -11,22 +11,26 @@ public class EnemyCanSeeCondition : Condition
     private bool useRaycast;
     private float concPlayer;
     private float distanceToTarget;
+    
     public override bool Test(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
         concPlayer = enemyStats.Target.GetComponent<PlayerStats>().ConcealmentValue;
         distanceToTarget = Vector3.Distance(enemyStats.Target.transform.position, fsm.gameObject.transform.position);
         //aumentar o RADIOUS do inimigo, colocar uma sphere!!
         //fsm.gameObject.transform.GetChild(0).gameObject.transform.localScale = Vector3.one * (concPlayer / distanceToTarget);
-        Debug.Log((concPlayer * 10) / distanceToTarget);
-        if (((concPlayer * 10) / distanceToTarget) > enemyStats.VisionDetection)
+        Debug.DrawRay(enemyStats.transform.position, (enemyStats.Target.transform.position - fsm.transform.position).normalized, Color.yellow, 10f);
+        
+        
+
+        if ((concPlayer * enemyStats.VisionDetection) > distanceToTarget)
         {
-            
+                
             if (useRaycast)
             {
                 RaycastHit hit;
                 if (Physics.Raycast(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, out hit, Mathf.Infinity, LayerMask.GetMask("Player")))
                 {
-                    Debug.DrawRay(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, Color.green);
+                    //Debug.DrawRay(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, Color.green);
                     if (hit.transform.tag == enemyStats.Target.gameObject.tag)
                     {
                         float lookingDirection = Vector3.Angle(fsm.gameObject.transform.forward, (enemyStats.Target.transform.position - fsm.gameObject.transform.position).normalized);
