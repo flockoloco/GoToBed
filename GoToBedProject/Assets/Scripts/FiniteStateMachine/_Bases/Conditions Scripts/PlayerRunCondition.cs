@@ -14,6 +14,7 @@ public class PlayerRunCondition : Condition
         {
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
+                Debug.Log("leaving run state");
                 return !negation;
             }
             else if (playerStats.StaminaObject.GetComponent<Image>().fillAmount <= 0.001f)
@@ -30,6 +31,7 @@ public class PlayerRunCondition : Condition
         {
             if (playerStats.StaminaObject.GetComponent<Image>().fillAmount > 0.5f)
             {
+                Debug.Log("entering run state");
                 return !negation;
             } 
         }

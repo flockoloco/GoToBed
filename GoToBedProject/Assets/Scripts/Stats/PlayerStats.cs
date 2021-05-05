@@ -39,8 +39,6 @@ public sealed class PlayerStats : Stats
     [SerializeField]
     private GameObject _staminaObject;
     [SerializeField]
-    private List<GameObject> _lightsInRange = new List<GameObject>();
-    [SerializeField]
     private InteractText _uiInteractionTextObject;
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
@@ -57,7 +55,6 @@ public sealed class PlayerStats : Stats
     public float InteractionCoolDown { get => _interactionCooldown; set => _interactionCooldown = value; }
     public float InteractionCooldownValue { get => _interactionCooldownValue; set => _interactionCooldownValue = value; }
     public GameObject StaminaObject { get => _staminaObject; set => _staminaObject = value; }
-    public List<GameObject> LightsInRange { get => _lightsInRange; set => _lightsInRange = value; }
     public GameObject EquippedItem { get => _equippedItem; set => _equippedItem = value; }
     public bool ItemPickUpAnimationBool { get => _itemPickUpAnimationBool; set => _itemPickUpAnimationBool = value; }
     public Transform HandPosition { get => _handPosition; set => _handPosition = value; }

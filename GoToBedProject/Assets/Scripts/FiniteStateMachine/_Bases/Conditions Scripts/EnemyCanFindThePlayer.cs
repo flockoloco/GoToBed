@@ -22,7 +22,6 @@ public class EnemyCanFindThePlayer : Condition
             concPlayer = enemyStats.Target.GetComponent<PlayerStats>().ConcealmentValue;
             distanceToTarget = Vector3.Distance(enemyStats.Target.transform.position, fsm.gameObject.transform.position);
             distanceToTarget = distanceToTarget * 1.5f;
-            Debug.Log((concPlayer * 10) / distanceToTarget);
             if (((concPlayer * 10) / distanceToTarget) > enemyStats.VisionDetection)
             {
                 if (useRaycast)

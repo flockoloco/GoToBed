@@ -27,11 +27,12 @@ public class PlayerCrouchedCondition : Condition
                     }
                     else
                     {
+                        Debug.Log("leaving crouch");
                         return !negation;
                     }
                 }
             }
-            Debug.Log("Player pressed crouch");
+            Debug.Log("Entering crouch");
             return !negation;
         }
         return negation;

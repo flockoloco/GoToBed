@@ -12,7 +12,6 @@ public class PlayerHidingAction : Action
     {
         if (!playerStats.InsideHidingObject)
         {
-            Debug.Log("SWDXWEDCC");
             if (Timer == 0f)
             {
                 //playerStats.transform.position = playerStats.InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position; // instead of this do a fast transform, not a blink

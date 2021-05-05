@@ -11,16 +11,23 @@ public class ItemInteractAction : Action
         //run timer here inside of ifs
         if(!playerStats.EquippedItem.Equals(null) && playerStats.ItemPickUpAnimationBool.Equals(false))
         {
-            Debug.Log("HELLO");
             //lerp animation
 
-            Debug.Log(playerStats.EquippedItem.gameObject.transform.tag);
+            
             playerStats.EquippedItem.transform.position = Vector3.Lerp(playerStats.EquippedItem.gameObject.transform.position,playerStats.HandPosition.position, 20 * Time.deltaTime);
+            Debug.Log(Vector3.Distance(playerStats.EquippedItem.transform.position, playerStats.HandPosition.transform.position));
+            if(Vector3.Distance( playerStats.EquippedItem.transform.position,playerStats.HandPosition.transform.position) < 0.5f)
+            {
+                playerStats.EquippedItem.transform.position = playerStats.HandPosition.transform.position;
+                playerStats.EquippedItem.transform.rotation = playerStats.HandPosition.transform.rotation;
+            }
+
 
             if (playerStats.EquippedItem.transform.position.Equals(playerStats.HandPosition.position))
             {
-
+                Debug.Log("end of animation");
                 playerStats.EquippedItem.transform.parent = playerStats.HandPosition.transform;
+                playerStats.EquippedItem.GetComponent<ItemInfoScript>().ChangeCollidableLayer(0);
                 playerStats.ItemPickUpAnimationBool = true;
             }
         
@@ -50,13 +57,40 @@ public class ItemInteractAction : Action
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                //mesma cena de detection, all interactables other than hiding
-            }
-            else if(Input.GetKeyUp(KeyCode.G))
-            {
-                //drop item animation
-            }
+                if (playerStats.InteractionCoolDown > playerStats.InteractionCooldownValue)
+                {
+                    if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Item)) //detect what ur interacting with
+                                                                                                   //make ifs for diferent interactables (not hiding)
+                    {
+                        //drop item and grab the other
 
+                        playerStats.InteractionCoolDown = 0;
+                        playerStats.EquippedItem.transform.parent = null;
+                        playerStats.EquippedItem.GetComponent<ItemInfoScript>().ChangeCollidableLayer(8);
+                        Debug.Log(playerStats.EquippedItem.layer + "this the layer");
+                        playerStats.EquippedItem.transform.position = playerStats.InteractingObject.transform.position;
+
+
+                        playerStats.EquippedItem = playerStats.InteractingObject;
+
+
+                        playerStats.EquippedItem = playerStats.InteractingObject;
+                        playerStats.EquippedItem.GetComponent<ItemInfoScript>().ChangeCollidableLayer(0);
+                        playerStats.ItemPickUpAnimationBool = false;
+
+
+
+
+
+                    }
+                    if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Objective))
+                    {
+                        if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().UsableTag.ToString())){
+                            playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().ObjectiveInteraction(playerStats);
+                        }
+                    }
+                }
+            }
         }
     }
 

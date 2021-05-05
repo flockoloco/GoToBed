@@ -17,6 +17,7 @@ public class HidingSpotInteractCheck : Condition
                 {
                     
                         playerStats.InteractionCoolDown = 0;
+                        Debug.Log("entering hiding state");
                         return !negation;
                     
                 }
@@ -26,6 +27,7 @@ public class HidingSpotInteractCheck : Condition
                 if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Hiding))
                 {
                     playerStats.InteractionCoolDown = 0;
+                    Debug.Log("leaving hiding state");
                     return !negation;
                 }
             }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HidingObjectInfo : MonoBehaviour
+public class HidingObjectInfo : ObjectInfoBase
 {
     [SerializeField]
     Transform _entryPosition;

@@ -22,13 +22,17 @@ public static class Globals
         Waypoint,
         Bed,
         Table,
-        Scissors
+        Scissors,
+        Web,
+        Ladder,
+        Rope
     }
     public enum InteractingObjects
     {
         None,
         Hiding,
-        Item
+        Item,
+        Objective
     }
     public enum typeOfHiding //move this out of here, put in modelling
     {

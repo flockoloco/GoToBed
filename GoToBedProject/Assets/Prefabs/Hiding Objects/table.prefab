@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 7389010164627935082}
   m_Layer: 0
   m_Name: table
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _entryPosition: {fileID: 5437206434359942633}
   _hiddenPosition: {fileID: 7844185149669895666}
-  _hiddingAnimation: 0
+  _hiddingAnimation: 2
 --- !u!64 &7544113086694167533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -252,20 +252,40 @@ PrefabInstance:
       value: Table
       objectReference: {fileID: 0}
     - target: {fileID: 928920284195819993, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 928920284195819993, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_TagString
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487515230044737367, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4487515230044737367, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 5284306639901449471, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284306639901449471, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 6551481295625773359, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551481295625773359, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_TagString
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7417187698263717524, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7417187698263717524, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_TagString
