@@ -16,19 +16,12 @@ public class FiniteStateMachine : MonoBehaviour
     [SerializeField] private PlayerStats playerStats;
     [SerializeField] private EnemyStats enemyStats;
 
-    private WaypointsPatrol navMeshAgent;
-
     public State InitialState { get => _initialState; set => _initialState = value; }
     public State CurrentState { get => _currentState; set => _currentState = value; }
 
     void Start()
     {
         CurrentState = InitialState;
-        navMeshAgent = GetComponent<WaypointsPatrol>();
-    }
-    public WaypointsPatrol GetAgent()
-    {
-        return navMeshAgent;
     }
     public GameObject GetObject()
     {

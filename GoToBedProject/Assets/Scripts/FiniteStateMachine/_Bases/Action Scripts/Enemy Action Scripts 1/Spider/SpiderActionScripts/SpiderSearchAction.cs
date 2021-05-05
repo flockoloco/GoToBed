@@ -11,9 +11,15 @@ public class SpiderSearchAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if (enemyStats.Searching.Equals(true))
+        if (enemyStats.IsAtDestination())
         {
-            fsm.GetAgent().RemoveAndGoToNextWaypoint();
+            Debug.Log(enemyStats.CurrentWaypoint);
+            enemyStats.SearchWaypoints.Remove(enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint]);
+            if (enemyStats.SearchWaypoints.Count != 0)
+            {
+                enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
+            }
+            enemyStats.currentList = "Searching List";
         }
         
     }

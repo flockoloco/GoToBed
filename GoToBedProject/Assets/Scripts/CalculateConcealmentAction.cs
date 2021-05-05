@@ -66,7 +66,6 @@ public class CalculateConcealmentAction : Action
         // BRIGHTNESS APPROX
         float br1 = (surfaceColor.r + surfaceColor.r + surfaceColor.b + surfaceColor.g + surfaceColor.g + surfaceColor.g) / 6;
         brightness1 = (br1 - 0.4f) / (5f - 0.4f);
-       
 
     }
 }

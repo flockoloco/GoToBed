@@ -31,7 +31,7 @@ public class SpiderAttackAction : Action
         }
         else if (deathTimer >= 2f && deathTimer <= 3f)
         {
-            fsm.GetAgent().StopAgent();
+            enemyStats.StopAgent();
             //wait a minute soldier
         }
         else if (deathTimer > 3f)

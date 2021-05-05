@@ -6,9 +6,9 @@ public class CrookedPatrolAction : Action
 {
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if (fsm.GetAgent().IsAtDestination())
+        if (enemyStats.IsAtDestination())
         {
-            fsm.GetAgent().GoToNextWaypoint();
+            enemyStats.GoToNextWaypoint(enemyStats.DefaultWaypoints);
         }
     }
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)

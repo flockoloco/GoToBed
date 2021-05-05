@@ -12,7 +12,7 @@ public class StopAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        fsm.GetAgent().StopAgent();
+        enemyStats.StopAgent();
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)

@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Finite State Machine/Conditions/Enemy Can Hear")]
-public class EnemyCanHearCondition : Condition
+[CreateAssetMenu(menuName = "Finite State Machine/Conditions/Enemy Has Nothing To Search")]
+public class EnemyNothingToSearchCondition : Condition
 {
     [SerializeField]
     private bool negation;
-    [SerializeField]
-    private float fakeFormulaHear = 1f;
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -15,9 +13,8 @@ public class EnemyCanHearCondition : Condition
 
     public override bool Test(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if(fakeFormulaHear > enemyStats.SoundDetection)
+        if(enemyStats.SearchWaypoints.Count.Equals(0))
         {
-            Debug.Log("casa isso nunca ira entrar confia na minha call");
             return !negation;
         }
         return negation;

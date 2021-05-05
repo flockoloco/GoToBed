@@ -11,7 +11,27 @@ public class SpiderSearchEntryAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        fsm.GetAgent().InsertWaypointAndHidingWaypoint();
+        if(enemyStats.SearchWaypoints != null)
+        {
+            enemyStats.SearchWaypoints.Clear();
+        }
+        float closestWaypoint = Mathf.Infinity;
+        GameObject closestWaypointObject = null;
+        foreach (GameObject waypoint in enemyStats.ListWaypoints)
+        {
+            float distance = Vector3.Distance(waypoint.gameObject.transform.position, fsm.gameObject.transform.position);
+            if (distance < closestWaypoint)
+            {
+                closestWaypoint = distance;
+                closestWaypointObject = waypoint;
+            }
+        }
+        foreach (Transform childWaypoint in closestWaypointObject.GetComponent<MainWaypoint>().waypoints)
+        {
+            enemyStats.Searching = true;
+            enemyStats.SearchWaypoints.Add(childWaypoint);
+        }
+        enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)

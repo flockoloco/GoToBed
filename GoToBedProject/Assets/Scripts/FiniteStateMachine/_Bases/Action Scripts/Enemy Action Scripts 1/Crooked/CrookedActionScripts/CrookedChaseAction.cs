@@ -11,9 +11,9 @@ public class CrookedChaseAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if (fsm.GetAgent().IsAtDestination())
+        if (enemyStats.IsAtDestination())
         {
-            fsm.GetAgent().GoToTarget();
+            enemyStats.GoToTarget();
         }
     }
 
