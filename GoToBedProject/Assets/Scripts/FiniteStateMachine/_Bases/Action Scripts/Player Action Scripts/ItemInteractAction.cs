@@ -9,31 +9,7 @@ public class ItemInteractAction : Action
     {
         //seperate set of ifs for animations
         //run timer here inside of ifs
-        if(!playerStats.EquippedItem.Equals(null) && playerStats.ItemPickUpAnimationBool.Equals(false))
-        {
-            //lerp animation
-
-            
-            playerStats.EquippedItem.transform.position = Vector3.Lerp(playerStats.EquippedItem.gameObject.transform.position,playerStats.HandPosition.position, 20 * Time.deltaTime);
-            Debug.Log(Vector3.Distance(playerStats.EquippedItem.transform.position, playerStats.HandPosition.transform.position));
-            if(Vector3.Distance( playerStats.EquippedItem.transform.position,playerStats.HandPosition.transform.position) < 0.5f)
-            {
-                playerStats.EquippedItem.transform.position = playerStats.HandPosition.transform.position;
-                playerStats.EquippedItem.transform.rotation = playerStats.HandPosition.transform.rotation;
-            }
-
-
-            if (playerStats.EquippedItem.transform.position.Equals(playerStats.HandPosition.position))
-            {
-                Debug.Log("end of animation");
-                playerStats.EquippedItem.transform.parent = playerStats.HandPosition.transform;
-                playerStats.EquippedItem.GetComponent<ItemInfoScript>().ChangeCollidableLayer(0);
-                playerStats.ItemPickUpAnimationBool = true;
-            }
         
-        
-        
-        }
 
 
         if (playerStats.EquippedItem.Equals(null) && playerStats.InsideHidingObject.Equals(false))
@@ -91,6 +67,31 @@ public class ItemInteractAction : Action
                     }
                 }
             }
+        }
+        if (!playerStats.EquippedItem.Equals(null) && playerStats.ItemPickUpAnimationBool.Equals(false))
+        {
+            //lerp animation
+            playerStats.EquippedItem.GetComponent<ItemInfoScript>().ChangeCollidableLayer(0);
+
+            playerStats.EquippedItem.transform.position = Vector3.Lerp(playerStats.EquippedItem.gameObject.transform.position, playerStats.HandPosition.position, 20 * Time.deltaTime);
+            Debug.Log(Vector3.Distance(playerStats.EquippedItem.transform.position, playerStats.HandPosition.transform.position));
+            if (Vector3.Distance(playerStats.EquippedItem.transform.position, playerStats.HandPosition.transform.position) < 0.5f)
+            {
+                playerStats.EquippedItem.transform.position = playerStats.HandPosition.transform.position;
+                playerStats.EquippedItem.transform.rotation = playerStats.HandPosition.transform.rotation;
+            }
+
+
+            if (playerStats.EquippedItem.transform.position.Equals(playerStats.HandPosition.position))
+            {
+                Debug.Log("end of animation");
+                playerStats.EquippedItem.transform.parent = playerStats.HandPosition.transform;
+
+                playerStats.ItemPickUpAnimationBool = true;
+            }
+
+
+
         }
     }
 
