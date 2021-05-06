@@ -24,6 +24,12 @@ public class CameraMovement : MonoBehaviour
         setMouseLock(true);
     }
 
+    public handplacementscript bbbbb;
+
+    void OnPreRender()
+    {
+        bbbbb.aaaaaa();
+    }
 
 
 

@@ -32,6 +32,9 @@ public class CalculateConcealmentAction : Action
         }
         else if (fsm.CurrentState.name == "Hide")
         {
+
+
+            
             playerStats.ConcealmentValue = 0;
         }
     }
