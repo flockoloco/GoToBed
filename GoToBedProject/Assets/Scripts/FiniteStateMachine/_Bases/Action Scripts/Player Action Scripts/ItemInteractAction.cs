@@ -61,9 +61,18 @@ public class ItemInteractAction : Action
                     }
                     if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Objective))
                     {
-                        if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().UsableTag.ToString())){
+                        if (playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().UsableTag.Equals(Globals.GameTags.Untagged))
+                        {
                             playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().ObjectiveInteraction(playerStats);
                         }
+                        else
+                        {
+                            if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().UsableTag.ToString()))
+                            {
+                                playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().ObjectiveInteraction(playerStats);
+                            }
+                        }
+                        
                     }
                 }
             }
