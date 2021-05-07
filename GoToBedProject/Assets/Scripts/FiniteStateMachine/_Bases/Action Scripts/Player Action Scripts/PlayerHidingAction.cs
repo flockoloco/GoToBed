@@ -35,7 +35,9 @@ public class PlayerHidingAction : Action
             Timer += Time.deltaTime;
             if (Timer > 2f)
             {
+                playerStats.PlayerCamera.GetComponent<CameraMovement>().CameraState = 2;
                 playerStats.InsideHidingObject = true;
+                playerStats.HidingPosition = playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddenPosition;
                 Timer = 0;
             }
             

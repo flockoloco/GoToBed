@@ -25,7 +25,8 @@ public static class Globals
         Scissors,
         Web,
         Ladder,
-        Rope
+        Rope,
+        Door
     }
     public enum InteractingObjects
     {

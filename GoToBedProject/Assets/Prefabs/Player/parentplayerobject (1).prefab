@@ -180,6 +180,7 @@ MonoBehaviour:
   _interactionCooldownValue: 2
   _staminaObject: {fileID: 0}
   _uiInteractionTextObject: {fileID: 0}
+  _hidingPosition: {fileID: 0}
 --- !u!143 &6163410324451856414
 CharacterController:
   m_ObjectHideFlags: 0
@@ -357,6 +358,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 120
   playerBody: {fileID: 3359317848472270958}
+  _handObjecScript: {fileID: 1676910893178837939}
+  _cameraState: 1
+  playerStats: {fileID: 1701742922871015783}
 --- !u!1 &6413492171596285662
 GameObject:
   m_ObjectHideFlags: 0
