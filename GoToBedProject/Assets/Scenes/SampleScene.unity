@@ -2857,6 +2857,10 @@ PrefabInstance:
       propertyPath: bbbbb
       value: 
       objectReference: {fileID: 703449622}
+    - target: {fileID: 7675962110697300538, guid: d525cf7e371ff9845acd70efa10e1c42, type: 3}
+      propertyPath: _handObjecScript
+      value: 
+      objectReference: {fileID: 703449622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d525cf7e371ff9845acd70efa10e1c42, type: 3}
 --- !u!1 &1233168173 stripped

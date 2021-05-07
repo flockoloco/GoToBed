@@ -8,6 +8,8 @@ public class CameraMovement : MonoBehaviour
     public Transform playerBody;
     private float cameraXAxis = 0f;
     private float cameraYAxis = 0f;
+    [SerializeField]
+    private handplacementscript _handObjecScript;
     public static void setMouseLock(bool locked)
     {
         if (locked)
@@ -24,11 +26,11 @@ public class CameraMovement : MonoBehaviour
         setMouseLock(true);
     }
 
-    public handplacementscript bbbbb;
+    
 
     void OnPreRender()
     {
-        bbbbb.aaaaaa();
+        _handObjecScript.HandToPivotTranslate();
     }
 
 
