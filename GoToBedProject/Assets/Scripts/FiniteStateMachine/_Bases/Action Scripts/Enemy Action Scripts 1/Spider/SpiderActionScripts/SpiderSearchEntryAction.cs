@@ -19,7 +19,7 @@ public class SpiderSearchEntryAction : Action
         GameObject closestWaypointObject = null;
         foreach (GameObject waypoint in enemyStats.ListWaypoints)
         {
-            float distance = Vector3.Distance(waypoint.gameObject.transform.position, fsm.gameObject.transform.position);
+            float distance = Vector3.Distance(waypoint.gameObject.transform.position, enemyStats.Target.gameObject.transform.position);
             if (distance < closestWaypoint)
             {
                 closestWaypoint = distance;

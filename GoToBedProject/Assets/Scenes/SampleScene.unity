@@ -459,7 +459,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4550
+  m_Name: pb_Mesh-1906
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -623,7 +623,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4560
+  m_Name: pb_Mesh-1916
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2521,7 +2521,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4540
+  m_Name: pb_Mesh-1896
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2884,6 +2884,10 @@ PrefabInstance:
       propertyPath: _uiInteractionTextObject
       value: 
       objectReference: {fileID: 1876015445}
+    - target: {fileID: 3359317848472270958, guid: d525cf7e371ff9845acd70efa10e1c42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.18
+      objectReference: {fileID: 0}
     - target: {fileID: 6413492171596285662, guid: d525cf7e371ff9845acd70efa10e1c42, type: 3}
       propertyPath: m_Name
       value: parentplayerobject (1)
@@ -4097,9 +4101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10bc57902a507a54ba71f60b168f6df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
-  soundReduction: 100
-  soundMovement: 15
+  wallSoundReduction: 0
+  floorSoundIncrement: 0
+  objectType: 0
+  floorType: 2
+  level: 0
 --- !u!1 &1876015443
 GameObject:
   m_ObjectHideFlags: 0
@@ -4313,7 +4319,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4530
+  m_Name: pb_Mesh-1886
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4487,8 +4493,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 431203480}
     - target: {fileID: 2065146570027192482, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
+      propertyPath: _soundDetection
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065146570027192482, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: _visionDetection
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065146570027192482, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
+      propertyPath: _hearingCapability
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2065146570027192482, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: listWaypoints.Array.size

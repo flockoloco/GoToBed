@@ -7,7 +7,7 @@ public class EnemyCanHearCondition : Condition
     [SerializeField]
     private bool negation;
     [SerializeField]
-    private float fakeFormulaHear = 1f;
+    private bool useRaycast;
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -15,10 +15,29 @@ public class EnemyCanHearCondition : Condition
 
     public override bool Test(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if(fakeFormulaHear > enemyStats.SoundDetection)
+        if (useRaycast)
         {
-            Debug.Log("casa isso nunca ira entrar confia na minha call");
-            return !negation;
+            RaycastHit hit;
+            if (Physics.Raycast(enemyStats.transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("LevelCollider")))
+            {
+                if (hit.collider.GetComponent<LevelObjectInfo>().level == enemyStats.Target.gameObject.GetComponent<PlayerStats>().CurrentLevel)
+                {
+                    float distance = Vector3.Distance(enemyStats.Target.transform.position, enemyStats.gameObject.transform.position);
+                    float attenuation = 0.9f;
+                    float soundIntensity = enemyStats.Target.GetComponent<PlayerStats>().NoiseValue * Mathf.Pow(attenuation, distance);
+                    //quanto mais longe mais dificil é do inimigo escutar
+                    //Debug.Log(soundIntensity + " INTENSIDADE DO SOM");
+                    if (enemyStats.HearingCapability < soundIntensity)
+                    {
+                        //Funciona, polish search
+                        return !negation;  
+                    }
+                    else
+                    {
+                        return negation;
+                    }
+                }
+            } 
         }
         return negation;
     }

@@ -8,7 +8,7 @@ public class EnemyStats : Stats
     [SerializeField]
     private float _visionDetection;
     [SerializeField]
-    private float _soundDetection;
+    private float _hearingCapability;
     [SerializeField]
     private GameObject _target;
     [SerializeField]
@@ -26,9 +26,9 @@ public class EnemyStats : Stats
     public string currentList;
     [SerializeField]
     private List<GameObject> listWaypoints;
+    public bool heardSomething;
 
     public float VisionDetection { get => _visionDetection; set => _visionDetection = value; }
-    public float SoundDetection { get => _soundDetection; set => _soundDetection = value; }
     public GameObject Target { get => _target; set => _target = value; }
     public bool Searching { get => _searching; set => _searching = value; }
     public NavMeshAgent Agent { get => _agent; set => _agent = value; }
@@ -37,6 +37,7 @@ public class EnemyStats : Stats
     public int CurrentWaypoint { get => _currentWaypoint; set => _currentWaypoint = value; }
     public float SearchArea { get => _searchArea; set => _searchArea = value; }
     public List<GameObject> ListWaypoints { get => listWaypoints; set => listWaypoints = value; }
+    public float HearingCapability { get => _hearingCapability; set => _hearingCapability = value; }
 
     private void OnDrawGizmos()
     {
@@ -51,7 +52,7 @@ public class EnemyStats : Stats
         _currentWaypoint = Random.Range(0, list.Count - 1);
         if(list == _searchWaypoints)
         {
-            Debug.Log("tesxtamsdklasmdlkasnlfsal " + _currentWaypoint);
+            //Debug.Log("tesxtamsdklasmdlkasnlfsal " + _currentWaypoint);
         }
        
         _agent.SetDestination(list[_currentWaypoint].position);

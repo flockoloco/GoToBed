@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public sealed class PlayerStats : Stats
@@ -7,7 +5,9 @@ public sealed class PlayerStats : Stats
     private float _staminaValue;
     [SerializeField]
     private float _concealmentValue;
+    [SerializeField]
     private float _noiseValue;
+    private float _playerCurrentVelocity;
     [SerializeField]
     private GameObject _equippedItem;
     [SerializeField]
@@ -42,6 +42,8 @@ public sealed class PlayerStats : Stats
     private InteractText _uiInteractionTextObject;
     [SerializeField]
     private Transform _hidingPosition;
+    [SerializeField]
+    private LevelObjectInfo.Level _currentLevel;
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
     public float NoiseValue { get => _noiseValue; set => _noiseValue = value; }
@@ -62,4 +64,6 @@ public sealed class PlayerStats : Stats
     public Transform HandPosition { get => _handPosition; set => _handPosition = value; }
     public InteractText UIInteractionTextObject { get => _uiInteractionTextObject; set => _uiInteractionTextObject = value; }
     public Transform HidingPosition { get => _hidingPosition; set => _hidingPosition = value; }
+    public float PlayerCurrentVelocity { get => _playerCurrentVelocity; set => _playerCurrentVelocity = value; }
+    public LevelObjectInfo.Level CurrentLevel { get => _currentLevel; set => _currentLevel = value; }
 }

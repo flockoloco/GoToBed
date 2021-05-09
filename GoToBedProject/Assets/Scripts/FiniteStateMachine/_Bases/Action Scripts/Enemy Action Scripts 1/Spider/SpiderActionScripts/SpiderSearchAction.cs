@@ -13,7 +13,7 @@ public class SpiderSearchAction : Action
     {
         if (enemyStats.IsAtDestination())
         {
-            Debug.Log(enemyStats.CurrentWaypoint);
+            //Debug.Log(enemyStats.CurrentWaypoint);
             enemyStats.SearchWaypoints.Remove(enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint]);
             if (enemyStats.SearchWaypoints.Count != 0)
             {

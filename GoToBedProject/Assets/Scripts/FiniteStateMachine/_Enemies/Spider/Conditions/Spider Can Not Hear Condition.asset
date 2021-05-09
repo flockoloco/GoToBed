@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc46a6df9be795f4e825ae68668a7c98, type: 3}
-  m_Name: Spider Can Hear Condition
+  m_Name: Spider Can Not Hear Condition
   m_EditorClassIdentifier: 
-  negation: 0
+  negation: 1
   useRaycast: 1

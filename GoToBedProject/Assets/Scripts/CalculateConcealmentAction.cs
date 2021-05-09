@@ -15,7 +15,8 @@ public class CalculateConcealmentAction : Action
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        if(fsm.CurrentState.name == "Stand")
+       
+        if (fsm.CurrentState.name == "Stand")
         {
             Calculate(fsm,playerStats);
             playerStats.ConcealmentValue = brightness1;
@@ -63,7 +64,8 @@ public class CalculateConcealmentAction : Action
             Color surfaceColor = lightmapTex.GetPixelBilinear(pixelUV.x, pixelUV.y);
             this.surfaceColor = surfaceColor;
 
-
+            playerStats.NoiseValue = playerStats.PlayerCurrentVelocity * hit.collider.gameObject.GetComponent<LevelObjectInfo>().floorSoundIncrement;
+            playerStats.CurrentLevel = hit.collider.GetComponent<LevelObjectInfo>().level;
         }
         
         // BRIGHTNESS APPROX

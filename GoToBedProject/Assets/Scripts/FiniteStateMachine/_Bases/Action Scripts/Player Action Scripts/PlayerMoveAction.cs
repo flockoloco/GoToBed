@@ -25,14 +25,16 @@ public class PlayerMoveAction : Action
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = fsm.transform.right * x + fsm.transform.forward * z;
-
-        playerStats.PlayerController.Move(move * playerStats.MoveSpeed * Time.deltaTime);
+        
+        playerStats.PlayerController.Move(move * Time.deltaTime * playerStats.MoveSpeed);
         //apply slow if webbed
+
+        playerStats.PlayerCurrentVelocity = playerStats.PlayerController.velocity.magnitude;
 
         velocity.y += playerStats.Gravity * Time.deltaTime;
 
         playerStats.PlayerController.Move(velocity * Time.deltaTime);
-
+        
     }
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
