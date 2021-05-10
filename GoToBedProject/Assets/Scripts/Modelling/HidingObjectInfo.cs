@@ -9,12 +9,9 @@ public class HidingObjectInfo : ObjectInfoBase
     [SerializeField]
     Transform _hiddenPosition;
     [SerializeField]
-    Globals.typeOfHiding _hiddingAnimation;
+    Animator _objectAnimator;
     
     public Transform EntryPosition { get => _entryPosition; set => _entryPosition = value; }
     public Transform HiddenPosition { get => _hiddenPosition; set => _hiddenPosition = value; }
-    public Globals.typeOfHiding HiddingAnimation { get => _hiddingAnimation; set => _hiddingAnimation = value; }
-
-
-    
+    public Animator ObjectAnimator { get => _objectAnimator; set => _objectAnimator = value; }
 }

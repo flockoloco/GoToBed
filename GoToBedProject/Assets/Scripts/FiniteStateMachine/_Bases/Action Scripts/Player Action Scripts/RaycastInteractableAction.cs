@@ -36,6 +36,11 @@ public class RaycastInteractableAction : Action
                 {
                     playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
                 }
+                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Door.ToString(), playerStats) != null)
+                {
+                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Door;
+                }
+
 
             }
             else
@@ -103,24 +108,43 @@ public class RaycastInteractableAction : Action
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Objective))
         {
             playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-                if (!playerStats.EquippedItem.Equals(null))
+            if (!playerStats.EquippedItem.Equals(null))
+            {
+
+                if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().UsableTag.ToString()))
                 {
-                    
-                    if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().UsableTag.ToString()))
-                    { 
-                        playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().CorrectItemText);
-                    }
-                    else
-                    {
-                        playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().WrongItemText);
-                    }
+                    playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().CorrectItemText);
                 }
                 else
                 {
                     playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().WrongItemText);
                 }
-            
-            
+            }
+            else
+            {
+                playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().WrongItemText);
+            }
+
+
+        }
+        else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Door))
+        {
+            playerStats.UIInteractionTextObject.gameObject.SetActive(true);
+            if (playerStats.InteractingObject.GetComponent<DoorScript>().Locked)
+            {
+                if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<DoorScript>().UsableTag.ToString()))
+                {
+                    playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().CorrectItemText);
+                }
+                else
+                {
+                    playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().WrongItemText);
+                }
+            }
+            else
+            {
+                playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().CorrectItemText);
+            }
         }
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.None))
         {

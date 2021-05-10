@@ -26,14 +26,16 @@ public static class Globals
         Web,
         Ladder,
         Rope,
-        Door
+        Door,
+        Key
     }
     public enum InteractingObjects
     {
         None,
         Hiding,
         Item,
-        Objective
+        Objective,
+        Door
     }
     public enum typeOfHiding //move this out of here, put in modelling
     {

@@ -26,6 +26,14 @@ public class ItemInteractAction : Action
                         playerStats.ItemPickUpAnimationBool = false;
                         
                     }
+                    else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Door))
+                    {
+                        if (!playerStats.InteractingObject.GetComponent<DoorScript>().Locked)
+                        {
+                            Debug.Log("heellooooo");
+                            playerStats.InteractingObject.GetComponent<DoorScript>().DoorInteraction(playerStats);
+                        }
+                    }
                 }
             }
         }
@@ -59,7 +67,7 @@ public class ItemInteractAction : Action
 
 
                     }
-                    if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Objective))
+                    else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Objective))
                     {
                         if (playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().UsableTag.Equals(Globals.GameTags.Untagged))
                         {
@@ -74,6 +82,23 @@ public class ItemInteractAction : Action
                         }
                         
                     }
+                    if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Door))
+                    {
+                        Debug.Log("inside first if");
+                        if (playerStats.InteractingObject.GetComponent<DoorScript>().Locked)
+                        {
+                            if (playerStats.InteractingObject.GetComponent<DoorScript>().UsableTag.Equals(Globals.GameTags.Untagged))
+                            {
+                                playerStats.InteractingObject.GetComponent<DoorScript>().DoorInteraction(playerStats);
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("heellooooo");
+                            playerStats.InteractingObject.GetComponent<DoorScript>().DoorInteraction(playerStats);
+                        }
+                    }
+
                 }
             }
         }
@@ -112,9 +137,5 @@ public class ItemInteractAction : Action
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
     {
         throw new System.NotImplementedException();
-    }
-    private void EquipNewItem()
-    {
-
     }
 }

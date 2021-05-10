@@ -21,7 +21,11 @@ public class LeaveHidingSpotAction : Action
             playerStats.PlayerCamera.CameraState = 3;
             playerStats.PlayerCamera.CameraXAxis = 0;
             playerStats.PlayerCamera.CameraYAxis = 0;
-
+            if (playerStats.InteractingObject.GetComponent<HidingObjectInfo>().ObjectAnimator != null)
+            {
+                playerStats.InteractingObject.GetComponent<HidingObjectInfo>().ObjectAnimator.Play(0);
+            }
+            
 
             Timer += Time.deltaTime;
             HidingObjectInfo hidingObject = playerStats.InteractingObject.GetComponent<HidingObjectInfo>();

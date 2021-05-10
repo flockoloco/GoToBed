@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5745293431008264618}
-  - component: {fileID: 5590506713904905670}
   - component: {fileID: 3636207893531846870}
+  - component: {fileID: 2834110200185787531}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: doorParentObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,24 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5590506713904905670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6017853255023649437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f5e539b86ef14489b1df5de54de3e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collidableChild: {fileID: 0}
-  _usableTag: 0
-  _wrongItemText: 
-  _correctItemText: 
-  _locked: 0
-  _open: 0
 --- !u!95 &3636207893531846870
 Animator:
   serializedVersion: 3
@@ -70,6 +52,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2834110200185787531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017853255023649437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad73cde505616c4dbe2b9492d673415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collidableChild: {fileID: 8915281084543812255}
+  _usableTag: 20
+  _wrongItemText: I need a key!
+  _correctItemText: Open
+  _locked: 0
+  _open: 0
+  _animator: {fileID: 3636207893531846870}
 --- !u!1 &8915281084543812255
 GameObject:
   m_ObjectHideFlags: 0

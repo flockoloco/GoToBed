@@ -10,10 +10,6 @@ public class objectiveobjectinfo : ItemObjectiveObjectInfoBase
     private string _wrongItemText;
     [SerializeField]
     private string _correctItemText;
-    [SerializeField]
-    private bool _locked;
-    [SerializeField]
-    private bool _open;
 
     public Globals.GameTags UsableTag { get => _usableTag; set => _usableTag = value; }
     public string WrongItemText { get => _wrongItemText; set => _wrongItemText = value; }
@@ -31,22 +27,6 @@ public class objectiveobjectinfo : ItemObjectiveObjectInfoBase
         {
             Destroy(playerStats.EquippedItem);
             //rotate
-        }
-        else if (gameObject.CompareTag(Globals.GameTags.Door.ToString()))
-        {
-            if (_locked)
-            {
-                _locked = false;
-                Destroy(playerStats.EquippedItem); 
-            }
-            if (_open)
-            {
-
-            }
-            else if (!_open)
-            {
-
-            }
         }
     }
 

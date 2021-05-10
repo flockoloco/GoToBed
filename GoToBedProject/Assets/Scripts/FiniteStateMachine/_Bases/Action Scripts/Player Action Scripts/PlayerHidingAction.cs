@@ -20,6 +20,10 @@ public class PlayerHidingAction : Action
                 playerStats.PlayerCamera.CameraXAxis = 0;
                 playerStats.PlayerCamera.CameraYAxis = 0;
                 playerStats.PlayerCamera.CameraState = 3;
+                if (playerStats.InteractingObject.GetComponent<HidingObjectInfo>().ObjectAnimator != null)
+                {
+                    playerStats.InteractingObject.GetComponent<HidingObjectInfo>().ObjectAnimator.Play(0);
+                }
                 //playerStats.transform.position = playerStats.InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position; // instead of this do a fast transform, not a blink
                 //playerStats.transform.rotation = playerStats.InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.rotation;
             }
@@ -30,7 +34,7 @@ public class PlayerHidingAction : Action
                
             }else if (Timer > 0.5f && Timer < 1f)
             {
-
+                
             }
             else if (Timer > 1f && Timer < 2f)
             {
