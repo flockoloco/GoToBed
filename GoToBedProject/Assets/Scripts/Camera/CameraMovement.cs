@@ -6,7 +6,9 @@ public class CameraMovement : MonoBehaviour
 {
     public float mouseSensitivity = 180f;
     public Transform playerBody;
+    [SerializeField]
     private float cameraXAxis = 0f;
+    [SerializeField]
     private float cameraYAxis = 0f;
     [SerializeField]
     private handplacementscript _handObjecScript;
@@ -16,6 +18,8 @@ public class CameraMovement : MonoBehaviour
     private PlayerStats playerStats;
 
     public int CameraState { get => _cameraState; set => _cameraState = value; }
+    public float CameraYAxis { get => cameraYAxis; set => cameraYAxis = value; }
+    public float CameraXAxis { get => cameraXAxis; set => cameraXAxis = value; }
 
     public static void setMouseLock(bool locked)
     {
@@ -52,10 +56,10 @@ public class CameraMovement : MonoBehaviour
             {
                 float mouseYInput = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
                 float mouseXInput = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-                cameraXAxis -= mouseYInput;
+                CameraXAxis -= mouseYInput;
                 //cameraYAxis += mouseXInput;
-                cameraXAxis = Mathf.Clamp(cameraXAxis, -90f, 90f);
-                transform.localEulerAngles = new Vector3(cameraXAxis, 0f, 0f);
+                CameraXAxis = Mathf.Clamp(CameraXAxis, -90f, 90f);
+                transform.localEulerAngles = new Vector3(CameraXAxis, 0f, 0f);
                 playerBody.Rotate(Vector3.up * mouseXInput);
             }
         }
@@ -64,11 +68,11 @@ public class CameraMovement : MonoBehaviour
             //mexer pouquinho
             float mouseYInput = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
             float mouseXInput = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            cameraXAxis -= mouseYInput;
-            cameraYAxis += mouseXInput;
-            cameraXAxis = Mathf.Clamp(cameraXAxis, -45f, 45f);
-            cameraYAxis = Mathf.Clamp(cameraYAxis, -45f, 45f);
-            transform.localEulerAngles = new Vector3(cameraXAxis, cameraYAxis, 0f);
+            CameraXAxis -= mouseYInput;
+            CameraYAxis += mouseXInput;
+            CameraXAxis = Mathf.Clamp(CameraXAxis, -45f, 45f);
+            CameraYAxis = Mathf.Clamp(CameraYAxis, -45f, 45f);
+            transform.localEulerAngles = new Vector3(CameraXAxis, CameraYAxis, 0f);
            // playerBody.Rotate(Vector3.up * mouseXInput);
         }
         else if (_cameraState.Equals(3))

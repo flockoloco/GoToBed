@@ -4,7 +4,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Player/Hiding")]
 public class PlayerHidingAction : Action
 {
+    [SerializeField]
     private float _timer = 0;
+    [SerializeField]
+    private LeaveHidingSpotAction leavingHidingAction;
 
     public float Timer { get => _timer; set => _timer = value; }
 
@@ -14,6 +17,9 @@ public class PlayerHidingAction : Action
         {
             if (Timer == 0f)
             {
+                playerStats.PlayerCamera.CameraXAxis = 0;
+                playerStats.PlayerCamera.CameraYAxis = 0;
+                playerStats.PlayerCamera.CameraState = 3;
                 //playerStats.transform.position = playerStats.InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position; // instead of this do a fast transform, not a blink
                 //playerStats.transform.rotation = playerStats.InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.rotation;
             }
@@ -28,17 +34,18 @@ public class PlayerHidingAction : Action
             }
             else if (Timer > 1f && Timer < 2f)
             {
+                
                 playerStats.gameObject.transform.position = Vector3.Lerp(playerStats.gameObject.transform.position, playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddenPosition.position, 8 * Time.deltaTime);
                 playerStats.gameObject.transform.rotation = Quaternion.Lerp(playerStats.gameObject.transform.rotation, playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddenPosition.rotation, 8* Time.deltaTime);
-                playerStats.ConcealmentValue = 0.5f; //change into a decreasing function
             } 
             Timer += Time.deltaTime;
             if (Timer > 2f)
             {
-                playerStats.PlayerCamera.GetComponent<CameraMovement>().CameraState = 2;
+                playerStats.PlayerCamera.CameraState = 2;
                 playerStats.InsideHidingObject = true;
                 playerStats.HidingPosition = playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddenPosition;
                 Timer = 0;
+                leavingHidingAction.Timer = 0;
             }
             
         }

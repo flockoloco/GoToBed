@@ -7,7 +7,7 @@ public class RaycastInteractableAction : Action
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         RaycastHit hit;   
-        if (Physics.Raycast(playerStats.PlayerCamera.transform.position, playerStats.PlayerCamera.transform.forward,out hit, playerStats.InteractRange,LayerMask.GetMask("Interactable")))
+        if (Physics.Raycast(playerStats.PlayerCamera.gameObject.transform.position, playerStats.PlayerCamera.gameObject.transform.forward,out hit, playerStats.InteractRange,LayerMask.GetMask("Interactable")))
         {
             if (hit.collider.CompareTag(Globals.GameTags.Interactable.ToString()))
             {

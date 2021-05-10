@@ -8,31 +8,58 @@ public class LeaveHidingSpotAction : Action
     PlayerHidingAction _hidingAction;
     [SerializeField]
     float _timer = 0;
+    [SerializeField]
+    Quaternion directionToLookAt;
+
+    public float Timer { get => _timer; set => _timer = value; }
+
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        if (_timer == 0f)
+        if (Timer == 0f)
         {
-            _timer += Time.deltaTime;
+            Debug.Log("entering the first timer");
+            playerStats.PlayerCamera.CameraState = 3;
+            playerStats.PlayerCamera.CameraXAxis = 0;
+            playerStats.PlayerCamera.CameraYAxis = 0;
+
+
+            Timer += Time.deltaTime;
+            HidingObjectInfo hidingObject = playerStats.InteractingObject.GetComponent<HidingObjectInfo>();
             //dunno
         }
-        else if (_timer < 1f)
+        else if (Timer < 1f)
         {
-            _timer += Time.deltaTime;
+            Timer += Time.deltaTime;
             HidingObjectInfo hidingObject = playerStats.InteractingObject.GetComponent<HidingObjectInfo>();
             playerStats.gameObject.transform.position = Vector3.Lerp(playerStats.gameObject.transform.position, hidingObject.EntryPosition.position, 8 * Time.deltaTime);
-            playerStats.gameObject.transform.rotation = Quaternion.Lerp(playerStats.gameObject.transform.rotation, hidingObject.EntryPosition.rotation, 8 * Time.deltaTime);
+            playerStats.gameObject.transform.rotation = Quaternion.Lerp(playerStats.gameObject.transform.rotation,hidingObject.HiddenPosition.rotation  , 8 * Time.deltaTime);
+
+
+
+
+            //rotate us over time according to speed until we are in the required rotation
+            playerStats.PlayerCamera.gameObject.transform.rotation = Quaternion.Slerp(playerStats.PlayerCamera.gameObject.transform.rotation, hidingObject.HiddenPosition.rotation, Time.deltaTime * 8f);
+
+
+
         }
-        else if (_timer > 1f && _timer < 1.5f)
+        else if (Timer > 1f && Timer < 1.5f)
         {
-            _timer += Time.deltaTime;
+            Timer += Time.deltaTime;
             //close door animation?
         }
-        else if (_timer > 1.5f)
+        else if (Timer > 1.5f)
         {
-            _timer = 0;
+            HidingObjectInfo hidingObject = playerStats.InteractingObject.GetComponent<HidingObjectInfo>();
+            playerStats.gameObject.transform.position = hidingObject.EntryPosition.position;
+            playerStats.gameObject.transform.rotation = hidingObject.HiddenPosition.rotation;
+            playerStats.PlayerCamera.gameObject.transform.rotation = hidingObject.HiddenPosition.rotation;
+
+            Timer = 0;
             _hidingAction.Timer = 0;
             playerStats.InsideHidingObject = false;
-            playerStats.ConcealmentValue = 0.5f;
+            playerStats.PlayerCamera.CameraState = 1;
+            
         }
     }
 

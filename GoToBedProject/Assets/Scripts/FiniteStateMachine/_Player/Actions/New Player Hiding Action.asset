@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424e70194f326f54e81b98b73b23579c, type: 3}
   m_Name: New Player Hiding Action
   m_EditorClassIdentifier: 
-  timer: 29.445902
-  insideSpot: 0
+  _timer: 0
+  leavingHidingAction: {fileID: 11400000, guid: 20dc73b2900c0f94ca56349b5c3f19cc, type: 2}

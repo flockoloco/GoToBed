@@ -7,6 +7,7 @@ public sealed class PlayerStats : Stats
     private float _concealmentValue;
     [SerializeField]
     private float _noiseValue;
+    [SerializeField]
     private float _playerCurrentVelocity;
     [SerializeField]
     private GameObject _equippedItem;
@@ -29,7 +30,7 @@ public sealed class PlayerStats : Stats
     [SerializeField]
     private GameObject _interactingObject;
     [SerializeField]
-    private GameObject _playerCamera;
+    private CameraMovement _playerCamera;
     [SerializeField]
     private bool _insideHidingObject;
     [SerializeField]
@@ -54,7 +55,7 @@ public sealed class PlayerStats : Stats
     public Globals.InteractingObjects LookingAtInteractable { get => _lookingAtInteractable; set => _lookingAtInteractable = value; }
     public float InteractRange { get => _interactRange; set => _interactRange = value; }
     public GameObject InteractingObject { get => _interactingObject; set => _interactingObject = value; }
-    public GameObject PlayerCamera { get => _playerCamera; set => _playerCamera = value; }
+    public CameraMovement PlayerCamera { get => _playerCamera; set => _playerCamera = value; }
     public bool InsideHidingObject { get => _insideHidingObject; set => _insideHidingObject = value; }
     public float InteractionCoolDown { get => _interactionCooldown; set => _interactionCooldown = value; }
     public float InteractionCooldownValue { get => _interactionCooldownValue; set => _interactionCooldownValue = value; }

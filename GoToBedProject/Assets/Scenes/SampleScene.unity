@@ -1023,6 +1023,17 @@ Transform:
   m_Father: {fileID: 1060625066}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377035254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7675962110697300538, guid: d525cf7e371ff9845acd70efa10e1c42, type: 3}
+  m_PrefabInstance: {fileID: 1233168172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07937b7933ee6274ea2554cad6b83991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &431203480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,6 +2887,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1701742922871015783, guid: d525cf7e371ff9845acd70efa10e1c42, type: 3}
+      propertyPath: _playerCamera
+      value: 
+      objectReference: {fileID: 377035254}
     - target: {fileID: 1701742922871015783, guid: d525cf7e371ff9845acd70efa10e1c42, type: 3}
       propertyPath: _staminaObject
       value: 
