@@ -5,7 +5,6 @@ using UnityEngine.AI;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Enemy/Spider/Attack Action")]
 public class SpiderAttackAction : Action
 {
-    [SerializeField]
     float deathTimer = 0;
     [SerializeField]
     private State deadState;

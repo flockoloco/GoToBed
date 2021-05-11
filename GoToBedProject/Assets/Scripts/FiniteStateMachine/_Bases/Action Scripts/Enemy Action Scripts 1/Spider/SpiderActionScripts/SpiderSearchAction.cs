@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Enemy/Spider/Search Action")]
 public class SpiderSearchAction : Action
 {
+    float animationTimer = 0;
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -13,15 +14,18 @@ public class SpiderSearchAction : Action
     {
         if (enemyStats.IsAtDestination())
         {
-            //Debug.Log(enemyStats.CurrentWaypoint);
-            enemyStats.SearchWaypoints.Remove(enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint]);
-            if (enemyStats.SearchWaypoints.Count != 0)
+            animationTimer += Time.deltaTime;
+            if (animationTimer < 2.5f)
             {
-                enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
+                // do animation or GIRO
             }
-            enemyStats.currentList = "Searching List";
+            else
+            {
+                enemyStats.currentList = "Searching List";
+                enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
+                enemyStats.SearchWaypoints.Remove(enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint]);
+            }
         }
-        
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)

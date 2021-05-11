@@ -11,7 +11,7 @@ public class SpiderSearchEntryAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if(enemyStats.SearchWaypoints != null)
+        if (enemyStats.SearchWaypoints != null)
         {
             enemyStats.SearchWaypoints.Clear();
         }
@@ -31,7 +31,7 @@ public class SpiderSearchEntryAction : Action
             enemyStats.Searching = true;
             enemyStats.SearchWaypoints.Add(childWaypoint);
         }
-        enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
+        enemyStats.Agent.SetDestination(enemyStats.Target.gameObject.transform.position);
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
