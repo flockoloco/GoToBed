@@ -162,6 +162,8 @@ MonoBehaviour:
   _moveSpeed: 6
   _gravity: -19.62
   _concealmentValue: 0
+  _noiseValue: 0
+  _playerCurrentVelocity: 0
   _equippedItem: {fileID: 0}
   _handPosition: {fileID: 6540053749512080293}
   _itemPickUpAnimationBool: 0
@@ -174,13 +176,14 @@ MonoBehaviour:
   _lookingAtInteractable: 0
   _interactRange: 12
   _interactingObject: {fileID: 0}
-  _playerCamera: {fileID: 2740909057772828288}
+  _playerCamera: {fileID: 7675962110697300538}
   _insideHidingObject: 0
   _interactionCooldown: 0
   _interactionCooldownValue: 2
   _staminaObject: {fileID: 0}
   _uiInteractionTextObject: {fileID: 0}
   _hidingPosition: {fileID: 0}
+  _currentLevel: 0
 --- !u!143 &6163410324451856414
 CharacterController:
   m_ObjectHideFlags: 0
@@ -358,6 +361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 120
   playerBody: {fileID: 3359317848472270958}
+  cameraXAxis: 0
+  cameraYAxis: 0
   _handObjecScript: {fileID: 1676910893178837939}
   _cameraState: 1
   playerStats: {fileID: 1701742922871015783}
