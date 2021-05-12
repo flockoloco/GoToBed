@@ -13,7 +13,10 @@ public class State : ScriptableObject
     private Action exitAction;
     [SerializeField]
     private Transition[] transitions;
+    [SerializeField]
+    private string _stateDisplayName;
 
+    public string StateDisplayName { get => _stateDisplayName; set => _stateDisplayName = value; }
 
     public Action GetEntryAction()
     {

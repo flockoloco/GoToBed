@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class EnemyStats : Stats
 {
@@ -27,6 +28,8 @@ public class EnemyStats : Stats
     [SerializeField]
     private List<GameObject> listWaypoints;
     public bool heardSomething;
+    private FiniteStateMachine _myFsm;
+    public TMP_Text currentStatusTextMesh;
 
     public float VisionDetection { get => _visionDetection; set => _visionDetection = value; }
     public GameObject Target { get => _target; set => _target = value; }
@@ -41,8 +44,8 @@ public class EnemyStats : Stats
 
     private void OnDrawGizmos()
     {
-        float concPlayer = Target.GetComponent<PlayerStats>().ConcealmentValue;
-        Gizmos.DrawWireSphere(gameObject.transform.position, concPlayer * _visionDetection);
+        //float concPlayer = Target.GetComponent<PlayerStats>().ConcealmentValue;
+        //Gizmos.DrawWireSphere(gameObject.transform.position, concPlayer * _visionDetection);
     }
 
     public void GoToNextWaypoint(List<Transform> list)
@@ -84,8 +87,19 @@ public class EnemyStats : Stats
     }
     public void Start()
     {
+        _myFsm = GetComponent<FiniteStateMachine>();
         _agent = GetComponent<NavMeshAgent>();
         GoToNextWaypoint(_defaultWaypoints);
+    }
+    private void Update()
+    {
+        StatusTextRotation();
+    }
+
+    public void StatusTextRotation()
+    {
+        currentStatusTextMesh.text = _myFsm.CurrentState.StateDisplayName.ToString();
+        currentStatusTextMesh.rectTransform.rotation = Quaternion.LookRotation((gameObject.transform.position - _target.transform.position).normalized, Vector3.up);
     }
 }
 

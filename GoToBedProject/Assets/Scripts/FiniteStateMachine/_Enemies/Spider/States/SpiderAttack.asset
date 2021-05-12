@@ -18,3 +18,4 @@ MonoBehaviour:
   exitAction: {fileID: 0}
   transitions:
   - {fileID: 0}
+  _stateDisplayName: Attack
