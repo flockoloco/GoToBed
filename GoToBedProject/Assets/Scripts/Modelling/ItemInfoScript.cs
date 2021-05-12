@@ -9,13 +9,4 @@ public class ItemInfoScript : ItemObjectiveObjectInfoBase
     {
         CollidableChild.layer = layer;
     }
-
-    private string aaa = "scissors";
-
-
-    //Activate()
-
-    //Deactivate()
-
-    //maybe more?
 }

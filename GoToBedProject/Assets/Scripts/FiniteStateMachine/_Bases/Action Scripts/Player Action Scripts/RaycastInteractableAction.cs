@@ -40,7 +40,10 @@ public class RaycastInteractableAction : Action
                 {
                     playerStats.LookingAtInteractable = Globals.InteractingObjects.Door;
                 }
-
+                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Key.ToString(), playerStats) != null)
+                {
+                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                }
 
             }
             else
@@ -132,18 +135,31 @@ public class RaycastInteractableAction : Action
             playerStats.UIInteractionTextObject.gameObject.SetActive(true);
             if (playerStats.InteractingObject.GetComponent<DoorScript>().Locked)
             {
-                if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<DoorScript>().UsableTag.ToString()))
+                if (!playerStats.EquippedItem.Equals(null))
                 {
-                    playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().CorrectItemText);
+                    
+                    if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<DoorScript>().UsableTag.ToString()))
+                    {
+                        playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<DoorScript>().UnlockText);
+                    }
+                    else
+                    {
+                        playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<DoorScript>().WrongItemText);
+                    }
                 }
                 else
                 {
-                    playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().WrongItemText);
+                    playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<DoorScript>().WrongItemText);
                 }
+                   
+            }
+            else if (playerStats.InteractingObject.GetComponent<DoorScript>().Open)
+            {
+                playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<DoorScript>().CloseText);
             }
             else
             {
-                playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().CorrectItemText);
+                playerStats.UIInteractionTextObject.ChangeText(playerStats.InteractingObject.GetComponent<DoorScript>().CorrectItemText);
             }
         }
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.None))

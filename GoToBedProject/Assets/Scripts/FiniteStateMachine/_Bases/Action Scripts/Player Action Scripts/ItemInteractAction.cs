@@ -87,7 +87,7 @@ public class ItemInteractAction : Action
                         Debug.Log("inside first if");
                         if (playerStats.InteractingObject.GetComponent<DoorScript>().Locked)
                         {
-                            if (playerStats.InteractingObject.GetComponent<DoorScript>().UsableTag.Equals(Globals.GameTags.Untagged))
+                            if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<DoorScript>().UsableTag.ToString()))
                             {
                                 playerStats.InteractingObject.GetComponent<DoorScript>().DoorInteraction(playerStats);
                             }
