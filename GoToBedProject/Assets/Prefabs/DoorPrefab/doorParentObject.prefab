@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2834110200185787531}
   m_Layer: 0
   m_Name: doorParentObject
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +71,7 @@ MonoBehaviour:
   _locked: 0
   _open: 0
   _animator: {fileID: 3636207893531846870}
+  _unlockText: Unlock!
 --- !u!1 &8915281084543812255
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,9 +84,9 @@ GameObject:
   - component: {fileID: 8915281084543812252}
   - component: {fileID: 8915281084543812253}
   - component: {fileID: 8915281084543812254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
