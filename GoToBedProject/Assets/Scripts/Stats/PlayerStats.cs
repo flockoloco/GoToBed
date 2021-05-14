@@ -40,6 +40,8 @@ public sealed class PlayerStats : Stats
     [SerializeField]
     private GameObject _staminaObject;
     [SerializeField]
+    private GameObject _staminaParentObject;
+    [SerializeField]
     private InteractText _uiInteractionTextObject;
     [SerializeField]
     private Transform _hidingPosition;
@@ -67,4 +69,5 @@ public sealed class PlayerStats : Stats
     public Transform HidingPosition { get => _hidingPosition; set => _hidingPosition = value; }
     public float PlayerCurrentVelocity { get => _playerCurrentVelocity; set => _playerCurrentVelocity = value; }
     public LevelObjectInfo.Level CurrentLevel { get => _currentLevel; set => _currentLevel = value; }
+    public GameObject StaminaParentObject { get => _staminaParentObject; set => _staminaParentObject = value; }
 }

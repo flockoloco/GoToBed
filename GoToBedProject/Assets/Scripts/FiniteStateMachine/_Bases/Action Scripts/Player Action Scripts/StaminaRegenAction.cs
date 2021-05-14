@@ -9,7 +9,7 @@ public class StaminaRegenAction : Action
     {
         if (playerStats.StaminaObject.GetComponent<Image>().fillAmount < 1f)
         {
-            playerStats.StaminaObject.SetActive(true);
+            playerStats.StaminaParentObject.SetActive(true);
             playerStats.StaminaObject.GetComponent<Image>().fillAmount += 0.0005f;
             if (playerStats.StaminaObject.GetComponent<Image>().fillAmount > 1f)
             {
@@ -18,7 +18,7 @@ public class StaminaRegenAction : Action
         }
         else
         {
-            playerStats.StaminaObject.SetActive(false);
+            playerStats.StaminaParentObject.SetActive(false);
         }
     }
 

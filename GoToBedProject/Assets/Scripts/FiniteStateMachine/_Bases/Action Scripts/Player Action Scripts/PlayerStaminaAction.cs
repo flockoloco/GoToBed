@@ -9,7 +9,7 @@ public class PlayerStaminaAction : Action
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     { 
-        playerStats.StaminaObject.SetActive(true);
+        playerStats.StaminaParentObject.SetActive(true);
         if (playerStats.StaminaObject.GetComponent<Image>().fillAmount > 0.002f)
         {
             playerStats.StaminaObject.GetComponent<Image>().fillAmount -= 0.002f;
