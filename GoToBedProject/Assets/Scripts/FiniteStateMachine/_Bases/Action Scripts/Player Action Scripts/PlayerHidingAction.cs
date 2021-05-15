@@ -50,6 +50,7 @@ public class PlayerHidingAction : Action
                 playerStats.HidingPosition = playerStats.InteractingObject.GetComponent<HidingObjectInfo>().HiddenPosition;
                 Timer = 0;
                 leavingHidingAction.Timer = 0;
+                playerStats.UIInteractionTextObject.ChangeText("Get out!");
             }
             
         }

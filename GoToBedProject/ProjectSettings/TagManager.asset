@@ -27,7 +27,7 @@ TagManager:
   - LevelCollider
   - Player
   - Interactable
-  - 
+  - ItemOnHand
   - 
   - 
   - 

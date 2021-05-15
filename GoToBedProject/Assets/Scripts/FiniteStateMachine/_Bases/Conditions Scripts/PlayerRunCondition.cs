@@ -21,6 +21,10 @@ public class PlayerRunCondition : Condition
             {
                 return !negation;
             }
+            else if (! ( Input.GetAxis("Vertical") > 0))
+            {
+                return !negation;
+            }
             else
             {
                 return negation;
@@ -31,8 +35,12 @@ public class PlayerRunCondition : Condition
         {
             if (playerStats.StaminaObject.GetComponent<Image>().fillAmount > 0.5f)
             {
-                Debug.Log("entering run state");
-                return !negation;
+                if (Input.GetAxis("Vertical") > 0)
+                {
+                    Debug.Log("entering run state");
+                    return !negation;
+                }
+               
             } 
         }
         return negation;

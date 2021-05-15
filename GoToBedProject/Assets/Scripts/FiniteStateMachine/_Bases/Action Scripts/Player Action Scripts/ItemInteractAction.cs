@@ -50,7 +50,7 @@ public class ItemInteractAction : Action
 
                         playerStats.InteractionCoolDown = 0;
                         playerStats.EquippedItem.transform.parent = null;
-                        playerStats.EquippedItem.GetComponent<ItemInfoScript>().ChangeCollidableLayer(8);
+                        playerStats.EquippedItem.GetComponent<ItemInfoScript>().SetLayerRecursively(playerStats.EquippedItem.gameObject, 8);
                         Debug.Log(playerStats.EquippedItem.layer + "this the layer");
                         playerStats.EquippedItem.transform.position = playerStats.InteractingObject.transform.position;
 
@@ -59,7 +59,7 @@ public class ItemInteractAction : Action
 
 
                         playerStats.EquippedItem = playerStats.InteractingObject;
-                        playerStats.EquippedItem.GetComponent<ItemInfoScript>().ChangeCollidableLayer(0);
+                        playerStats.EquippedItem.GetComponent<ItemInfoScript>().SetLayerRecursively(playerStats.EquippedItem.gameObject, 9); 
                         playerStats.ItemPickUpAnimationBool = false;
 
 
@@ -105,7 +105,7 @@ public class ItemInteractAction : Action
         if (!playerStats.EquippedItem.Equals(null) && playerStats.ItemPickUpAnimationBool.Equals(false))
         {
             //lerp animation
-            playerStats.EquippedItem.GetComponent<ItemInfoScript>().ChangeCollidableLayer(0);
+            playerStats.EquippedItem.GetComponent<ItemInfoScript>().SetLayerRecursively(playerStats.EquippedItem.gameObject, 9);
 
             playerStats.EquippedItem.transform.position = Vector3.Lerp(playerStats.EquippedItem.gameObject.transform.position, playerStats.HandPosition.position, 20 * Time.deltaTime);
             Debug.Log(Vector3.Distance(playerStats.EquippedItem.transform.position, playerStats.HandPosition.transform.position));

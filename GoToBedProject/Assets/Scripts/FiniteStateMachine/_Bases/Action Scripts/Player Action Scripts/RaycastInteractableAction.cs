@@ -6,45 +6,56 @@ public class RaycastInteractableAction : Action
 {
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        RaycastHit hit;   
+        RaycastHit hit;
         if (Physics.Raycast(playerStats.PlayerCamera.gameObject.transform.position, playerStats.PlayerCamera.gameObject.transform.forward,out hit, playerStats.InteractRange,LayerMask.GetMask("Interactable")))
         {
             if (hit.collider.CompareTag(Globals.GameTags.Interactable.ToString()))
             {
-                //add canvas thing saying "Interact"
-                if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Closet.ToString(), playerStats) != null)
+                RaycastHit secondHitCheck;
+                if ( !Physics.Raycast(playerStats.PlayerCamera.gameObject.transform.position, playerStats.PlayerCamera.gameObject.transform.forward, out secondHitCheck, playerStats.InteractRange, LayerMask.GetMask("LevelCollider"))||
+                    (Vector3.Distance(playerStats.transform.position, secondHitCheck.point) > Vector3.Distance(playerStats.transform.position, hit.point)))
                 {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Table.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Lantern.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Scissors.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Bed.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Web.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Door.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Door;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Key.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                }
+                    Debug.Log("heaaaaaaaaaaaaaaaaaaaaaallo");
                 
+                    //add canvas thing saying "Interact"
+                    if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Closet.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Table.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Lantern.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Scissors.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Bed.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Web.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Door.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Door;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Key.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    }
+                }
+                else
+                {
+                    playerStats.InteractingObject = null;
+                    playerStats.LookingAtInteractable = Globals.InteractingObjects.None;
+                }
 
             }
             else
@@ -94,14 +105,10 @@ public class RaycastInteractableAction : Action
         if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Hiding))
         {
             playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-            if (playerStats.InsideHidingObject.Equals(true))
-            {
-                playerStats.UIInteractionTextObject.ChangeText("Get out!");
-            }
-            else
-            {
+            Debug.Log("hello :D " + playerStats.InsideHidingObject);
+            
                 playerStats.UIInteractionTextObject.ChangeText("Hide!");
-            }
+            
            
         }
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Item))

@@ -18,7 +18,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b21ed92e6eda6cc499f1e7748a972934, type: 2}
   - {fileID: 11400000, guid: ec62e06962c48d14b80a5f99c301d452, type: 2}
   - {fileID: 11400000, guid: fc99d92beff76564184c785f8962b35e, type: 2}
+  - {fileID: 11400000, guid: d96ae6dcfb5f45f49897bda1541dfc80, type: 2}
   exitAction: {fileID: 0}
   transitions:
   - {fileID: 11400000, guid: efa2fe9c7c27d3f4fbf90fb23c1e18b8, type: 2}
   - {fileID: 11400000, guid: 98c741d494cfe8648aef1234bc179a51, type: 2}
+  - {fileID: 11400000, guid: f45d47325ebabc54dae8aca22a21c925, type: 2}
+  _stateDisplayName: 

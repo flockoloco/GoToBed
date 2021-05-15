@@ -24,7 +24,15 @@ public class PlayerMoveAction : Action
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = fsm.transform.right * x + fsm.transform.forward * z;
+        Vector3 move = (fsm.transform.right * x + fsm.transform.forward * z);
+        Debug.Log("before " + move);
+        if (move.magnitude > 1)
+        {
+
+            move = move.normalized;
+            Debug.Log("after " + move);
+        }
+       
         
         playerStats.PlayerController.Move(move * Time.deltaTime * playerStats.MoveSpeed);
         //apply slow if webbed
