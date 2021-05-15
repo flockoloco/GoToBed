@@ -14,12 +14,4 @@ public class ItemInfoScript : ItemObjectiveObjectInfoBase
             SetLayerRecursively(child.gameObject,layer);
         }
     }
-
-
-
-    public void ChangeCollidableLayer(int layer)
-    {
-        CollidableChild.layer = layer;
-        SetLayerRecursively(gameObject,4);
-    }
 }

@@ -12,7 +12,7 @@ public class PlayerStaminaAction : Action
         playerStats.StaminaParentObject.SetActive(true);
         if (playerStats.StaminaObject.GetComponent<Image>().fillAmount > 0.002f)
         {
-            playerStats.StaminaObject.GetComponent<Image>().fillAmount -= 0.002f;
+            playerStats.StaminaObject.GetComponent<Image>().fillAmount -= 0.002f * Time.deltaTime;
         }
     }
 
