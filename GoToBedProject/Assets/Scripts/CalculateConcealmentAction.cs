@@ -63,6 +63,8 @@ public class CalculateConcealmentAction : Action
 
             Color surfaceColor = lightmapTex.GetPixelBilinear(pixelUV.x, pixelUV.y);
             this.surfaceColor = surfaceColor;
+            Debug.Log(hit.collider.gameObject);
+            Debug.Log(hit.collider.gameObject.GetComponent<LevelObjectInfo>());
 
             playerStats.NoiseValue = playerStats.PlayerCurrentVelocity * hit.collider.gameObject.GetComponent<LevelObjectInfo>().floorSoundIncrement;
             playerStats.CurrentLevel = hit.collider.GetComponent<LevelObjectInfo>().level;

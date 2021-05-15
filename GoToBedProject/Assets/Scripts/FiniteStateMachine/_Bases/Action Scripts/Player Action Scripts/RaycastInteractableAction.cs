@@ -44,6 +44,7 @@ public class RaycastInteractableAction : Action
                 {
                     playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
                 }
+                
 
             }
             else
@@ -93,19 +94,27 @@ public class RaycastInteractableAction : Action
         if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Hiding))
         {
             playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-            playerStats.UIInteractionTextObject.ChangeText("Hide");
+            if (playerStats.InsideHidingObject.Equals(true))
+            {
+                playerStats.UIInteractionTextObject.ChangeText("Get out!");
+            }
+            else
+            {
+                playerStats.UIInteractionTextObject.ChangeText("Hide!");
+            }
+           
         }
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Item))
         {
             if (playerStats.EquippedItem.Equals(null))
             {
                 playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-                playerStats.UIInteractionTextObject.ChangeText("Pick Up");
+                playerStats.UIInteractionTextObject.ChangeText("Pick Up!");
             }
             else
             {
                 playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-                playerStats.UIInteractionTextObject.ChangeText("Drop & Pick");
+                playerStats.UIInteractionTextObject.ChangeText("Drop & Pick!");
             }
         }
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Objective))

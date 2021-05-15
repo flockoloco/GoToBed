@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _entryPosition: {fileID: 5437206434359942633}
   _hiddenPosition: {fileID: 7844185149669895666}
-  _hiddingAnimation: 2
+  _objectAnimator: {fileID: 0}
 --- !u!64 &7544113086694167533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -116,24 +116,11 @@ MeshCollider:
   m_GameObject: {fileID: 6539305643862624225}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
---- !u!65 &2379891323305136547
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6539305643862624225}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.6605957, y: 0.082534015, z: 2}
-  m_Center: {x: 0.00000023841858, y: 0, z: 0}
 --- !u!1 &7012488655308811118
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +230,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7476120026827033240, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2845779275431937956, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -251,6 +242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 928920284195819993, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -283,11 +278,19 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 7362909482058720656, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 7417187698263717524, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7417187698263717524, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152363913774390056, guid: 0ac7890a84b06d848887c5c0a5ab29d8, type: 3}
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
