@@ -24,12 +24,12 @@ public class CalculateConcealmentAction : Action
         else if(fsm.CurrentState.name == "Crouch")
         {
             Calculate(fsm, playerStats);
-            playerStats.ConcealmentValue = brightness1 / 2;
+            playerStats.ConcealmentValue = brightness1 / 1.5f;
         }
         else if(fsm.CurrentState.name == "Run")
         {
             Calculate(fsm, playerStats);
-            playerStats.ConcealmentValue = brightness1 * 2;
+            playerStats.ConcealmentValue = brightness1 * 1.5f;
         }
         else if (fsm.CurrentState.name == "Hide")
         {
@@ -70,11 +70,16 @@ public class CalculateConcealmentAction : Action
         
         // BRIGHTNESS APPROX
         float br1 = (surfaceColor.r + surfaceColor.r + surfaceColor.b + surfaceColor.g + surfaceColor.g + surfaceColor.g) / 6;
-        brightness1 = (br1 - 0.4f) / (5f - 0.4f);
-        if (brightness1 < 0.4f)
-        {
-            brightness1 = 0.4f;
-        }
-        brightness1 *= 2f;
+        
+        //brightness1 = (br1 - 0.4f) / (5f - 0.4f);
+        //if (brightness1 < 0.4f)
+        //{
+           // brightness1 = 0.4f;
+        //}
+
+        //brightness1 *= 2f;
+        br1 *= 4f;
+        brightness1 = br1;
+        Debug.Log(br1);
     }
 }

@@ -25,12 +25,9 @@ public class PlayerMoveAction : Action
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = (fsm.transform.right * x + fsm.transform.forward * z);
-        Debug.Log("before " + move);
         if (move.magnitude > 1)
-        {
-
+        { 
             move = move.normalized;
-            Debug.Log("after " + move);
         }
        
         

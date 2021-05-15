@@ -10,7 +10,7 @@ public class StaminaRegenAction : Action
         if (playerStats.StaminaObject.GetComponent<Image>().fillAmount < 1f)
         {
             playerStats.StaminaParentObject.SetActive(true);
-            playerStats.StaminaObject.GetComponent<Image>().fillAmount += 0.0005f * Time.deltaTime;
+            playerStats.StaminaObject.GetComponent<Image>().fillAmount += 0.2f * Time.deltaTime;
             if (playerStats.StaminaObject.GetComponent<Image>().fillAmount > 1f)
             {
                 playerStats.StaminaObject.GetComponent<Image>().fillAmount = 1f;
