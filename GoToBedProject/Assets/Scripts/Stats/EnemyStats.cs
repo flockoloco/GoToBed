@@ -14,33 +14,36 @@ public class EnemyStats : Stats
     private GameObject _target;
     [SerializeField]
     private bool _searching;
-    public GameObject bolinha;
     private NavMeshAgent _agent;
     [SerializeField]
-    private List<Transform> _defaultWaypoints = new List<Transform>();
+    private List<WayPointInfo> _defaultWaypoints = new List<WayPointInfo>();
     [SerializeField]
-    private List<Transform> _searchWaypoints = new List<Transform>();
+    private List<WayPointInfo> _searchWaypoints = new List<WayPointInfo>();
     [SerializeField]
     private int _currentWaypoint;
     [SerializeField]
     private float _searchArea = 20f;
-    public string currentList;
     [SerializeField]
-    private List<GameObject> listWaypoints;
+    private List<GameObject> listMainWaypoints;
     public bool heardSomething;
     private FiniteStateMachine _myFsm;
     public TMP_Text currentStatusTextMesh;
+    [SerializeField]
+    private Animator _animator;
+
+
 
     public float VisionDetection { get => _visionDetection; set => _visionDetection = value; }
     public GameObject Target { get => _target; set => _target = value; }
     public bool Searching { get => _searching; set => _searching = value; }
     public NavMeshAgent Agent { get => _agent; set => _agent = value; }
-    public List<Transform> DefaultWaypoints { get => _defaultWaypoints; set => _defaultWaypoints = value; }
-    public List<Transform> SearchWaypoints { get => _searchWaypoints; set => _searchWaypoints = value; }
+    public List<WayPointInfo> DefaultWaypoints { get => _defaultWaypoints; set => _defaultWaypoints = value; }
+    public List<WayPointInfo> SearchWaypoints { get => _searchWaypoints; set => _searchWaypoints = value; }
     public int CurrentWaypoint { get => _currentWaypoint; set => _currentWaypoint = value; }
     public float SearchArea { get => _searchArea; set => _searchArea = value; }
-    public List<GameObject> ListWaypoints { get => listWaypoints; set => listWaypoints = value; }
+    public List<GameObject> ListMainWaypoints { get => listMainWaypoints; set => listMainWaypoints = value; }
     public float HearingCapability { get => _hearingCapability; set => _hearingCapability = value; }
+    public Animator Animator { get => _animator; set => _animator = value; }
 
     private void OnDrawGizmos()
     {
@@ -48,18 +51,29 @@ public class EnemyStats : Stats
         //Gizmos.DrawWireSphere(gameObject.transform.position, concPlayer * _visionDetection);
     }
 
-    public void GoToNextWaypoint(List<Transform> list)
+    public void GoToNextWaypoint(List<WayPointInfo> list)
     {
-        currentList = "default";
-        //select a random waypoint to go
-        _currentWaypoint = Random.Range(0, list.Count - 1);
-        if(list == _searchWaypoints)
+        Debug.Log("entering with the value of " + CurrentWaypoint + "and list.count is " + list.Count);
+
+        if (_currentWaypoint >= (list.Count - 1))
         {
-            //Debug.Log("tesxtamsdklasmdlkasnlfsal " + _currentWaypoint);
+            _currentWaypoint = 0;
         }
-       
-        _agent.SetDestination(list[_currentWaypoint].position);
-        
+        else
+        {
+            _currentWaypoint++;
+        }
+        if ( !list.Count.Equals(0))
+        {
+            _agent.isStopped = false;
+            _agent.SetDestination(list[_currentWaypoint].wpPosition);
+        }
+        else
+        {
+            _agent.isStopped = true;
+        }
+        Debug.Log("exiting with the value of " + CurrentWaypoint + "and list.count is " + list.Count);
+
     }
     public bool IsAtDestination()
     {
@@ -90,16 +104,26 @@ public class EnemyStats : Stats
         _myFsm = GetComponent<FiniteStateMachine>();
         _agent = GetComponent<NavMeshAgent>();
         GoToNextWaypoint(_defaultWaypoints);
+        _agent.updateRotation = true;
+        
     }
     private void Update()
     {
         StatusTextRotation();
+       // RotateTowards(_agent.steeringTarget);
+
     }
 
     public void StatusTextRotation()
     {
         currentStatusTextMesh.text = _myFsm.CurrentState.StateDisplayName.ToString();
         currentStatusTextMesh.rectTransform.rotation = Quaternion.LookRotation((gameObject.transform.position - _target.transform.position).normalized, Vector3.up);
+    }
+    private void RotateTowards(Vector3 target)
+    {
+        Vector3 direction = (target - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime *3000f);
     }
 }
 

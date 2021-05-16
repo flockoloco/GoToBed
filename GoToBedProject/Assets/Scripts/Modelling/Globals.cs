@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public static class Globals
 {
-    //to decide which one we use
     public enum GameTags
     {
         Untagged, 
@@ -44,5 +44,4 @@ public static class Globals
         Table
         //....
     }
-
 }
