@@ -80,6 +80,5 @@ public class CalculateConcealmentAction : Action
         //brightness1 *= 2f;
         br1 *= 4f;
         brightness1 = br1;
-        Debug.Log(br1);
     }
 }

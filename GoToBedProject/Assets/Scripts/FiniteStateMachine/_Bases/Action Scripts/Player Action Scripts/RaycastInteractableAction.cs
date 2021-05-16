@@ -14,8 +14,7 @@ public class RaycastInteractableAction : Action
                 RaycastHit secondHitCheck;
                 if ( !Physics.Raycast(playerStats.PlayerCamera.gameObject.transform.position, playerStats.PlayerCamera.gameObject.transform.forward, out secondHitCheck, playerStats.InteractRange, LayerMask.GetMask("LevelCollider"))||
                     (Vector3.Distance(playerStats.transform.position, secondHitCheck.point) > Vector3.Distance(playerStats.transform.position, hit.point)))
-                {
-                    Debug.Log("heaaaaaaaaaaaaaaaaaaaaaallo");
+                { 
                 
                     //add canvas thing saying "Interact"
                     if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Closet.ToString(), playerStats) != null)
@@ -105,7 +104,6 @@ public class RaycastInteractableAction : Action
         if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Hiding))
         {
             playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-            Debug.Log("hello :D " + playerStats.InsideHidingObject);
             
                 playerStats.UIInteractionTextObject.ChangeText("Hide!");
             

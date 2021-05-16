@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad86555a79f9c3e479d3314d507ee3f7, type: 3}
-  m_Name: New Spider Search Action
+  m_Script: {fileID: 11500000, guid: 7d14b5946533f3740ae48f8c675dfa05, type: 3}
+  m_Name: Player Run to hide
   m_EditorClassIdentifier: 
-  animationTimer: 0
+  decision: {fileID: 11400000, guid: 3f9a078973d7fcc4e9febb44b49dd4d0, type: 2}
+  action: {fileID: 0}
+  targetState: {fileID: 11400000, guid: aa89f2be6a1ec1f4ab5fc104baf415d0, type: 2}

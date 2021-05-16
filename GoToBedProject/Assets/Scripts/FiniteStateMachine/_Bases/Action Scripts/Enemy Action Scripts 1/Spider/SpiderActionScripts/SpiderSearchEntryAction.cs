@@ -11,13 +11,16 @@ public class SpiderSearchEntryAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if (enemyStats.SearchWaypoints != null)
+        if (enemyStats.SearchWaypoints != null) //remove later
         {
             enemyStats.SearchWaypoints.Clear();
         }
+       // enemyStats.SearchWaypoints.Add(enemyStats.Target.gameObject.transform,0);//AAAAAAAAAAAAAAAAA
+
+
         float closestWaypoint = Mathf.Infinity;
         GameObject closestWaypointObject = null;
-        foreach (GameObject waypoint in enemyStats.ListWaypoints)
+        foreach (GameObject waypoint in enemyStats.ListMainWaypoints)
         {
             float distance = Vector3.Distance(waypoint.gameObject.transform.position, enemyStats.Target.gameObject.transform.position);
             if (distance < closestWaypoint)
@@ -29,7 +32,7 @@ public class SpiderSearchEntryAction : Action
         foreach (Transform childWaypoint in closestWaypointObject.GetComponent<MainWaypoint>().waypoints)
         {
             enemyStats.Searching = true;
-            enemyStats.SearchWaypoints.Add(childWaypoint);
+            enemyStats.SearchWaypoints.Add(childWaypoint.gameObject.GetComponent<WayPointInfo>());
         }
         enemyStats.Agent.SetDestination(enemyStats.Target.gameObject.transform.position);
     }
