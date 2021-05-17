@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935276b6d96fd3d4ca27a33f4efab517, type: 3}
   m_Name: SpiderHasNothingToSearch
   m_EditorClassIdentifier: 
+  _searchAction: {fileID: 11400000, guid: e25bfe445267a5345b2dea0118056812, type: 2}
   negation: 0

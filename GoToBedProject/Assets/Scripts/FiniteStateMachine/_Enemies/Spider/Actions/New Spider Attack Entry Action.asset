@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d9e4f493156f7459a771d81e7a5c5b, type: 3}
-  m_Name: New Spider Attack Action
+  m_Script: {fileID: 11500000, guid: 34fd4beedee2e2f40b57c1ecc6c37e81, type: 3}
+  m_Name: New Spider Attack Entry Action
   m_EditorClassIdentifier: 
   deadState: {fileID: 11400000, guid: 84032d3260aa87d4380311354c4708d8, type: 2}

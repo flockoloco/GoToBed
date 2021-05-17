@@ -5,7 +5,9 @@ using UnityEngine;
 public class SpiderSearchAction : Action
 {
     [SerializeField]
-    float animationTimer = 0;
+    private State attackState;
+    public float animationTimer = 0;
+    public bool finishedLastWaypoint;
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -13,16 +15,38 @@ public class SpiderSearchAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
+        Debug.DrawLine(enemyStats.transform.position, enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition,Color.red);
         if (enemyStats.IsAtDestination())  
         {
-            Debug.Log("aaaaaaaa my current waypoint is " + enemyStats.CurrentWaypoint);
+            finishedLastWaypoint = false;
+
            
             if (animationTimer.Equals(0))
             {
-                Debug.Log("should be playing");
+
+              
                 enemyStats.Agent.isStopped = true;
-                
-                enemyStats.Animator.Play("Base Layer.enemyLookAround");
+                if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(0))
+                {
+                    enemyStats.Animator.Play("Base Layer.enemyLookAround");
+                }
+                else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(1))
+                {
+                    enemyStats.Animator.Play("Base Layer.enemyLookInCloset");
+                    if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
+                        enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
+                    {
+                        fsm.CurrentState = attackState;
+                    }
+                }
+                else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(2))
+                {
+                    enemyStats.Animator.Play("Base Layer.enemyLookUnderObject");
+                }
+                else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(3))
+                {
+                    enemyStats.Animator.Play("Base Layer.enemyLookUnderObject");
+                }
                 animationTimer += Time.deltaTime;
             }
             else if (animationTimer < 2f) 
@@ -30,14 +54,25 @@ public class SpiderSearchAction : Action
                 animationTimer += Time.deltaTime;
             }
             else if ( animationTimer > 2f) //change value to animation length
-            {
-                Debug.Log(" bbbbbbbbbbbb my current waypoint is " + enemyStats.CurrentWaypoint);
-                enemyStats.SearchWaypoints.Remove(enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint]);
-                enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
-                Debug.Log(" ccccccccccc my current waypoint is " + enemyStats.CurrentWaypoint);
+            {  
+                
+                if (enemyStats.CurrentWaypoint >= enemyStats.SearchWaypoints.Count - 1)    
+                {
+                    Debug.Log("YOYOYOYOYOOY");
+                    finishedLastWaypoint = true; //cringeira POG
+                }
+                else
+                { 
+                    enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
+                }
+                
+                
+             
                 animationTimer = 0;
                 enemyStats.Agent.isStopped = false;
                 enemyStats.Animator.Play("Base Layer.enemyWalk");
+                
+
             }
             
         }

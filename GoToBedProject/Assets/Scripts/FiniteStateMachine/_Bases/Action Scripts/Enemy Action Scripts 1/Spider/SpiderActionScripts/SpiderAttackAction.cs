@@ -5,10 +5,8 @@ using UnityEngine.AI;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Enemy/Spider/Attack Action")]
 public class SpiderAttackAction : Action
 {
-    float deathTimer = 0;
     [SerializeField]
     private State deadState;
-    Vector3 deathOffSet = new Vector3(0, 0, 3);
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -16,28 +14,14 @@ public class SpiderAttackAction : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        enemyStats.Target.transform.LookAt(fsm.transform.position, Vector3.up); //mudar 
+       
+            Vector3 dir = (enemyStats.transform.position - enemyStats.Target.transform.position).normalized;
+            Quaternion targetRotation = Quaternion.LookRotation(dir);
+            enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.gameObject.transform.rotation = Quaternion.Slerp(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.gameObject.transform.rotation, targetRotation, Time.deltaTime * 8f);
 
-        deathTimer += Time.deltaTime;
-        if (deathTimer == 0f)
-        {
-        }
-        else if (deathTimer >= 0.5f && deathTimer <= 2f)
-        {
-            enemyStats.Target.GetComponent<FiniteStateMachine>().CurrentState = deadState;
-
+            enemyStats.transform.LookAt(enemyStats.Target.transform);
             
-        }
-        else if (deathTimer >= 2f && deathTimer <= 3f)
-        {
-            enemyStats.StopAgent();
-            //wait a minute soldier
-        }
-        else if (deathTimer > 3f)
-        {
-            //omegalul
-            deathTimer = 0;
-        }
+        
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)

@@ -53,7 +53,7 @@ public class EnemyStats : Stats
 
     public void GoToNextWaypoint(List<WayPointInfo> list)
     {
-        Debug.Log("entering with the value of " + CurrentWaypoint + "and list.count is " + list.Count);
+
 
         if (_currentWaypoint >= (list.Count - 1))
         {
@@ -72,7 +72,7 @@ public class EnemyStats : Stats
         {
             _agent.isStopped = true;
         }
-        Debug.Log("exiting with the value of " + CurrentWaypoint + "and list.count is " + list.Count);
+
 
     }
     public bool IsAtDestination()
@@ -110,7 +110,6 @@ public class EnemyStats : Stats
     private void Update()
     {
         StatusTextRotation();
-       // RotateTowards(_agent.steeringTarget);
 
     }
 
@@ -118,12 +117,6 @@ public class EnemyStats : Stats
     {
         currentStatusTextMesh.text = _myFsm.CurrentState.StateDisplayName.ToString();
         currentStatusTextMesh.rectTransform.rotation = Quaternion.LookRotation((gameObject.transform.position - _target.transform.position).normalized, Vector3.up);
-    }
-    private void RotateTowards(Vector3 target)
-    {
-        Vector3 direction = (target - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime *3000f);
     }
 }
 

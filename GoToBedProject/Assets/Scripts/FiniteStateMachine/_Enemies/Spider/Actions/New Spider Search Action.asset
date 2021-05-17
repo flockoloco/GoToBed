@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad86555a79f9c3e479d3314d507ee3f7, type: 3}
   m_Name: New Spider Search Action
   m_EditorClassIdentifier: 
-  animationTimer: 0
+  attackState: {fileID: 11400000, guid: cdb343f343ef7fd439cd5a15d634e621, type: 2}
+  animationTimer: 0.0231175
+  finishedLastWaypoint: 0

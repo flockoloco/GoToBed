@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyNothingToSearchCondition : Condition
 {
     [SerializeField]
+    SpiderSearchAction _searchAction;
+    [SerializeField]
     private bool negation;
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
@@ -13,10 +15,14 @@ public class EnemyNothingToSearchCondition : Condition
 
     public override bool Test(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        if(enemyStats.SearchWaypoints.Count.Equals(0))
+        if (enemyStats.CurrentWaypoint >= enemyStats.SearchWaypoints.Count - 1)
         {
-            return !negation;
-        }
+        
+            if (_searchAction.finishedLastWaypoint)
+                {
+                    return !negation;
+                }
+            }
         return negation;
     }
 

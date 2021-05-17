@@ -534,7 +534,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3874
+  m_Name: pb_Mesh-1968
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -698,7 +698,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3884
+  m_Name: pb_Mesh-1978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1977,6 +1977,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50, y: 2.8, z: 0}
+--- !u!4 &710085912 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 810243365278091129, guid: 7a75a6bec21e7944ba8efa63f572eea9, type: 3}
+  m_PrefabInstance: {fileID: 433801784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &717901776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,7 +2943,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3864
+  m_Name: pb_Mesh-1958
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4886,6 +4891,7 @@ MonoBehaviour:
   - {fileID: 889673717}
   - {fileID: 1863080767}
   - {fileID: 1618871890}
+  - {fileID: 710085912}
 --- !u!65 &1875990717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5197,7 +5203,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3854
+  m_Name: pb_Mesh-1948
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

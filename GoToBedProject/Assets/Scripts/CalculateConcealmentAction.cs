@@ -35,7 +35,7 @@ public class CalculateConcealmentAction : Action
         {
 
 
-            
+            playerStats.NoiseValue = 0;
             playerStats.ConcealmentValue = 0;
         }
     }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: SpiderAttack
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 11400000, guid: 93c4370bbba5f9740b9f243ab3954705, type: 2}
+  entryAction: {fileID: 11400000, guid: a495133493107e643baf4474698b8e8a, type: 2}
   stateActions:
   - {fileID: 11400000, guid: d90d11908a555c34da3747a790aeceae, type: 2}
   exitAction: {fileID: 0}

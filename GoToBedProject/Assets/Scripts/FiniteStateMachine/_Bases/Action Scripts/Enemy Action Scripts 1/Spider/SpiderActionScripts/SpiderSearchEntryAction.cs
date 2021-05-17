@@ -15,7 +15,7 @@ public class SpiderSearchEntryAction : Action
         {
             enemyStats.SearchWaypoints.Clear();
         }
-       // enemyStats.SearchWaypoints.Add(enemyStats.Target.gameObject.transform,0);//AAAAAAAAAAAAAAAAA
+        enemyStats.SearchWaypoints.Add(new WayPointInfo(0,enemyStats.Target.gameObject.transform.position));
 
 
         float closestWaypoint = Mathf.Infinity;
@@ -34,7 +34,8 @@ public class SpiderSearchEntryAction : Action
             enemyStats.Searching = true;
             enemyStats.SearchWaypoints.Add(childWaypoint.gameObject.GetComponent<WayPointInfo>());
         }
-        enemyStats.Agent.SetDestination(enemyStats.Target.gameObject.transform.position);
+        enemyStats.CurrentWaypoint = int.MaxValue;
+        enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
