@@ -6,10 +6,6 @@ public class MenuSwitch : MonoBehaviour
 {
     public LevelLoaderScript levelLoader;
     public GameObject currentMenu;
-    private void Start()
-    {
-        levelLoader = GetComponent<LevelLoaderScript>();
-    }
     public void StartNewGame()
     {
         levelLoader.LoadScene("pogScene");
