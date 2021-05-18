@@ -47,6 +47,10 @@ public sealed class PlayerStats : Stats
     private Transform _hidingPosition;
     [SerializeField]
     private LevelObjectInfo.Level _currentLevel;
+    [SerializeField]
+    private bool _playerDead = false;
+
+
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
     public float NoiseValue { get => _noiseValue; set => _noiseValue = value; }
@@ -70,4 +74,5 @@ public sealed class PlayerStats : Stats
     public float PlayerCurrentVelocity { get => _playerCurrentVelocity; set => _playerCurrentVelocity = value; }
     public LevelObjectInfo.Level CurrentLevel { get => _currentLevel; set => _currentLevel = value; }
     public GameObject StaminaParentObject { get => _staminaParentObject; set => _staminaParentObject = value; }
+    public bool PlayerDead { get => _playerDead; set => _playerDead = value; }
 }

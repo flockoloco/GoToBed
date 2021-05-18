@@ -19,4 +19,5 @@ MonoBehaviour:
   transitions:
   - {fileID: 11400000, guid: 5311aadd1e6cc3941b1baa1fa32e78f1, type: 2}
   - {fileID: 11400000, guid: f038af60d6fc615498d3aece9d29aa07, type: 2}
+  - {fileID: 11400000, guid: 758c33281e159b741924d693f012e822, type: 2}
   _stateDisplayName: Patrol

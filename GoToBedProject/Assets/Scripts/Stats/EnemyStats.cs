@@ -12,8 +12,6 @@ public class EnemyStats : Stats
     private float _hearingCapability;
     [SerializeField]
     private GameObject _target;
-    [SerializeField]
-    private bool _searching;
     private NavMeshAgent _agent;
     [SerializeField]
     private List<WayPointInfo> _defaultWaypoints = new List<WayPointInfo>();
@@ -32,10 +30,23 @@ public class EnemyStats : Stats
     private Animator _animator;
 
 
+    [SerializeField]
+    private WayPointInfo _playerWayPoint;
+
+    // new shit for the door animation
+    public State OldState;
+    public List<WayPointInfo> OldSearchList = new List<WayPointInfo>();
+    public int OldCurrentWaypoint;
+    public DoorScript OldDoorScript;
+
+
+
+    //end of new shit
+
+
 
     public float VisionDetection { get => _visionDetection; set => _visionDetection = value; }
     public GameObject Target { get => _target; set => _target = value; }
-    public bool Searching { get => _searching; set => _searching = value; }
     public NavMeshAgent Agent { get => _agent; set => _agent = value; }
     public List<WayPointInfo> DefaultWaypoints { get => _defaultWaypoints; set => _defaultWaypoints = value; }
     public List<WayPointInfo> SearchWaypoints { get => _searchWaypoints; set => _searchWaypoints = value; }
@@ -44,12 +55,7 @@ public class EnemyStats : Stats
     public List<GameObject> ListMainWaypoints { get => listMainWaypoints; set => listMainWaypoints = value; }
     public float HearingCapability { get => _hearingCapability; set => _hearingCapability = value; }
     public Animator Animator { get => _animator; set => _animator = value; }
-
-    private void OnDrawGizmos()
-    {
-        //float concPlayer = Target.GetComponent<PlayerStats>().ConcealmentValue;
-        //Gizmos.DrawWireSphere(gameObject.transform.position, concPlayer * _visionDetection);
-    }
+    public WayPointInfo PlayerWayPoint { get => _playerWayPoint; set => _playerWayPoint = value; }
 
     public void GoToNextWaypoint(List<WayPointInfo> list)
     {

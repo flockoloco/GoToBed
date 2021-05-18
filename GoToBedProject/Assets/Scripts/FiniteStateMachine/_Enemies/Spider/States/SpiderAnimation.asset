@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SpiderAnimation
   m_EditorClassIdentifier: 
   entryAction: {fileID: 11400000, guid: 93c4370bbba5f9740b9f243ab3954705, type: 2}
-  stateActions: []
+  stateActions:
+  - {fileID: 11400000, guid: d6b51a3a7b9a4384a954a15241fbbea2, type: 2}
   exitAction: {fileID: 0}
   transitions: []
   _stateDisplayName: Animation

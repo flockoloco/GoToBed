@@ -20,5 +20,9 @@ public class WayPointInfo : MonoBehaviour
     {
         wpPosition = gameObject.transform.position;
     }
+    public void UpdatePosition()
+    {
+        wpPosition = gameObject.transform.position;
+    }
 
 }

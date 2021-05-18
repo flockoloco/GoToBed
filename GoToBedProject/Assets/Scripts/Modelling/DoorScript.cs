@@ -44,4 +44,15 @@ public class DoorScript : objectiveobjectinfo
         }
 
     }
+    public void DoorInteraction(EnemyStats enemyStats)
+    {
+        
+        if (!Open)
+        {
+            _animator.SetBool(_openString, true);
+            Open = true;
+        }
+        
+
+    }
 }

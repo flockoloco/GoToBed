@@ -15,7 +15,8 @@ public class SpiderSearchEntryAction : Action
         {
             enemyStats.SearchWaypoints.Clear();
         }
-        enemyStats.SearchWaypoints.Add(new WayPointInfo(0,enemyStats.Target.gameObject.transform.position));
+        enemyStats.PlayerWayPoint.transform.position = enemyStats.Target.transform.position;
+        enemyStats.PlayerWayPoint.UpdatePosition();
 
 
         float closestWaypoint = Mathf.Infinity;
@@ -29,11 +30,31 @@ public class SpiderSearchEntryAction : Action
                 closestWaypointObject = waypoint;
             }
         }
-        foreach (Transform childWaypoint in closestWaypointObject.GetComponent<MainWaypoint>().waypoints)
+        bool pickedOne = false;
+        foreach (Transform childWaypoint in closestWaypointObject.GetComponent<MainWaypoint>().waypoints) //first check if theres oneso close that the enemy NEEDS to go check it
         {
-            enemyStats.Searching = true;
-            enemyStats.SearchWaypoints.Add(childWaypoint.gameObject.GetComponent<WayPointInfo>());
+            Vector3 calculation = (childWaypoint.position - enemyStats.PlayerWayPoint.wpPosition);
+            calculation.y = 0;
+
+            if ( calculation.magnitude < 2)
+            {
+                enemyStats.SearchWaypoints.Add(childWaypoint.gameObject.GetComponent<WayPointInfo>());
+                pickedOne = true;
+            }
         }
+        if (pickedOne.Equals(false))
+        {
+            enemyStats.SearchWaypoints.Add(enemyStats.PlayerWayPoint);
+        }
+
+        foreach (Transform childWaypoint in closestWaypointObject.GetComponent<MainWaypoint>().waypoints) //then give a chance for each, rn it can repeat one if its already picked above, but it wont matter as the player is caught anyways
+        {
+            if (Random.Range(0,1) < 0.4f)
+            {
+                enemyStats.SearchWaypoints.Add(childWaypoint.gameObject.GetComponent<WayPointInfo>());
+            }
+        }
+
         enemyStats.CurrentWaypoint = int.MaxValue;
         enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
     }

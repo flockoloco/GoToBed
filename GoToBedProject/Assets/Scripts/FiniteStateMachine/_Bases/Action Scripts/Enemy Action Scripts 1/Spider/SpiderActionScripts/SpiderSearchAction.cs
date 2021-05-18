@@ -32,10 +32,18 @@ public class SpiderSearchAction : Action
                 }
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(1))
                 {
+                    Debug.Log("right before dying  inside hidding obj  " + enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject + "  entryposition.position 1  " + enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position + "  entry position.position 2  " + enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition);
                     enemyStats.Animator.Play("Base Layer.enemyLookInCloset");
                     if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
                         enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
                     {
+                        animationTimer = 0;
+                        Debug.Log("you dead yet?  hello ");
+                        enemyStats.Target.GetComponent<PlayerStats>().PlayerDead = true;
+                        enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
+                        enemyStats.StopAgent();
+                        enemyStats.Agent.isStopped = true;
+                        enemyStats.Animator.enabled = false;
                         fsm.CurrentState = attackState;
                     }
                 }
