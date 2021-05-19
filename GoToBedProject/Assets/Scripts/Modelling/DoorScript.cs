@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DoorScript : objectiveobjectinfo
 {
@@ -14,6 +15,8 @@ public class DoorScript : objectiveobjectinfo
     [SerializeField]
     private string _unlockText = "Unlock!";
     private string _closeText = "Close!";
+    [SerializeField]
+    private NavMeshObstacle _obstacleComponent;
 
     public bool Locked { get => _locked; set => _locked = value; }
     public string UnlockText { get => _unlockText; set => _unlockText = value; }
@@ -30,17 +33,20 @@ public class DoorScript : objectiveobjectinfo
             Destroy(playerStats.EquippedItem);
             _animator.SetBool(_openString, true);
             Open = true;
+            _obstacleComponent.enabled = true;
 
         }
         else if (Open)
         {
             _animator.SetBool(_openString,false);
             Open = false;
+            _obstacleComponent.enabled = false;
         }
         else if (!Open)
         {
             _animator.SetBool(_openString, true);
             Open = true;
+            _obstacleComponent.enabled = true;
         }
 
     }
@@ -51,6 +57,7 @@ public class DoorScript : objectiveobjectinfo
         {
             _animator.SetBool(_openString, true);
             Open = true;
+            _obstacleComponent.enabled = true;
         }
         
 
