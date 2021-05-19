@@ -50,10 +50,34 @@ public class SpiderSearchAction : Action
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(2))
                 {
                     enemyStats.Animator.Play("Base Layer.enemyLookUnderObject");
+                    if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
+                       enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
+                    {
+                        animationTimer = 0;
+                        Debug.Log("you dead yet?  hello ");
+                        enemyStats.Target.GetComponent<PlayerStats>().PlayerDead = true;
+                        enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
+                        enemyStats.StopAgent();
+                        enemyStats.Agent.isStopped = true;
+                        enemyStats.Animator.enabled = false;
+                        fsm.CurrentState = attackState;
+                    }
                 }
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(3))
                 {
                     enemyStats.Animator.Play("Base Layer.enemyLookUnderObject");
+                    if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
+                       enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
+                    {
+                        animationTimer = 0;
+                        Debug.Log("you dead yet?  hello ");
+                        enemyStats.Target.GetComponent<PlayerStats>().PlayerDead = true;
+                        enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
+                        enemyStats.StopAgent();
+                        enemyStats.Agent.isStopped = true;
+                        enemyStats.Animator.enabled = false;
+                        fsm.CurrentState = attackState;
+                    }   
                 }
                 animationTimer += Time.deltaTime;
             }
