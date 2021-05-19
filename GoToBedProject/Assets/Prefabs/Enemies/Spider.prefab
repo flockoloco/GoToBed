@@ -324,8 +324,9 @@ MonoBehaviour:
   _moveSpeed: 4
   _gravity: -9.81
   _visionDetection: 10
-  _hearingCapability: 1.2
+  _hearingCapability: 0
   _target: {fileID: 0}
+  _searching: 0
   _defaultWaypoints: []
   _searchWaypoints: []
   _currentWaypoint: 0
@@ -334,7 +335,6 @@ MonoBehaviour:
   heardSomething: 0
   currentStatusTextMesh: {fileID: 5034786827035405582}
   _animator: {fileID: 0}
-  _enemyName: 0
   _playerWayPoint: {fileID: 6706613203315733652}
   OldState: {fileID: 0}
   OldSearchList: []

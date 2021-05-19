@@ -1,7 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class EnemyStats : Stats
 {
@@ -27,8 +28,7 @@ public class EnemyStats : Stats
     public TMP_Text currentStatusTextMesh;
     [SerializeField]
     private Animator _animator;
-    [SerializeField]
-    private Globals.Enemy _enemyName;
+
 
     [SerializeField]
     private WayPointInfo _playerWayPoint;
@@ -56,7 +56,6 @@ public class EnemyStats : Stats
     public float HearingCapability { get => _hearingCapability; set => _hearingCapability = value; }
     public Animator Animator { get => _animator; set => _animator = value; }
     public WayPointInfo PlayerWayPoint { get => _playerWayPoint; set => _playerWayPoint = value; }
-    public Globals.Enemy EnemyName { get => _enemyName; set => _enemyName = value; }
 
     public void GoToNextWaypoint(List<WayPointInfo> list)
     {
