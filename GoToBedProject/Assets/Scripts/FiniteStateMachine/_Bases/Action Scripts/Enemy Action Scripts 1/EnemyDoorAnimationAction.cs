@@ -32,6 +32,7 @@ public class EnemyDoorAnimationAction : Action
             }
             else if (enemyStats.OldState.StateDisplayName.Equals("Chase"))
             {
+                //meter variacao para iniigos diferentes
                 enemyStats.GoToTarget();
                 fsm.CurrentState = enemyStats.OldState;
             }
