@@ -31069,6 +31069,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 533684081}
     - target: {fileID: 2065146570027192482, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 976502631}
+    - target: {fileID: 2065146570027192482, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
       propertyPath: _hearingCapability
       value: 1.2
       objectReference: {fileID: 0}
@@ -32487,6 +32491,11 @@ Transform:
 --- !u!1 &976502624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2065146570027192507, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
+  m_PrefabInstance: {fileID: 888820457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &976502631 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2643561346549187109, guid: 7ea15a08edd72214586409d1fe26b28c, type: 3}
   m_PrefabInstance: {fileID: 888820457}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &983482017

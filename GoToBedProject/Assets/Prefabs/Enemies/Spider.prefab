@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 2065146570027192504}
   - component: {fileID: 2065146570027192483}
   - component: {fileID: 2065146570027192482}
+  - component: {fileID: 2643561346549187109}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -305,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOrEnemy: 1
+  dontTriggerStart: 0
   _initialState: {fileID: 11400000, guid: 5f50556b9ae5d1746b88841e77943425, type: 2}
   _currentState: {fileID: 0}
   playerStats: {fileID: 0}
@@ -326,6 +328,7 @@ MonoBehaviour:
   _visionDetection: 10
   _hearingCapability: 1.2
   _target: {fileID: 0}
+  _agent: {fileID: 0}
   _defaultWaypoints: []
   _searchWaypoints: []
   _currentWaypoint: 0
@@ -340,6 +343,25 @@ MonoBehaviour:
   OldSearchList: []
   OldCurrentWaypoint: 0
   OldDoorScript: {fileID: 0}
+--- !u!95 &2643561346549187109
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065146570027192507}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 15dd8e42ca7fb5142933e55a73e650cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4375961332833790368
 GameObject:
   m_ObjectHideFlags: 0
