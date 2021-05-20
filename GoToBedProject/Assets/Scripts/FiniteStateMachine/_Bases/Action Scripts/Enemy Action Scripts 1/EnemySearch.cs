@@ -15,6 +15,7 @@ public class EnemySearch : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
+        enemyStats.CancelAnimation("Walking");
         Debug.DrawLine(enemyStats.transform.position, enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition,Color.red);
         if (enemyStats.IsAtDestination())  
         {

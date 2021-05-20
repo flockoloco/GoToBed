@@ -11,6 +11,7 @@ public class EnemySearchEntry : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
+
         if (enemyStats.SearchWaypoints != null) //remove later
         {
             enemyStats.SearchWaypoints.Clear();

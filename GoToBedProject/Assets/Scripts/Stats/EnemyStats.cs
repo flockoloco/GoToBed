@@ -139,6 +139,13 @@ public class EnemyStats : Stats
     }
     public void CancelAnimation(string boolName)
     {
+        //nao queria mas it is what it is
+        Animator.SetBool(boolName, false);
+        Animator.SetBool(boolName, false);
+        Animator.SetBool(boolName, false);
+        
+        Animator.SetBool(boolName, false);
+        Animator.SetBool(boolName, false);
         Animator.SetBool(boolName, false);
     }
     public void StateAnimation(string stateName, int stateNumber)
