@@ -17,6 +17,7 @@ TagManager:
   - Door
   - Key
   - Ladder
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -19,9 +19,9 @@ public class EnemyCanSeeCondition : Condition
         //aumentar o RADIOUS do inimigo, colocar uma sphere!!
         //fsm.gameObject.transform.GetChild(0).gameObject.transform.localScale = Vector3.one * (concPlayer / distanceToTarget);
         //Debug.DrawRay(enemyStats.transform.position, (enemyStats.Target.transform.position - fsm.transform.position).normalized, Color.yellow, 10f);
-        
-        
 
+
+        Debug.Log(concPlayer * enemyStats.VisionDetection +  " this is the concealment of the player " + distanceToTarget + "distance to target"); 
         if ((concPlayer * enemyStats.VisionDetection) > distanceToTarget)
         {
                 
@@ -30,9 +30,11 @@ public class EnemyCanSeeCondition : Condition
                 RaycastHit hit;
                 if (Physics.Raycast(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, out hit, Mathf.Infinity, LayerMask.GetMask("Player")))
                 {
+                    Debug.Log("im here");
                     //Debug.DrawRay(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, Color.green);
                     if (hit.transform.tag == enemyStats.Target.gameObject.tag)
                     {
+                        
                         float lookingDirection = Vector3.Angle(fsm.gameObject.transform.forward, (enemyStats.Target.transform.position - fsm.gameObject.transform.position).normalized);
                         if (lookingDirection < 80f)
                         {

@@ -12,6 +12,7 @@ public class EnemyStats : Stats
     private float _hearingCapability;
     [SerializeField]
     private GameObject _target;
+    [SerializeField]
     private NavMeshAgent _agent;
     [SerializeField]
     private List<WayPointInfo> _defaultWaypoints = new List<WayPointInfo>();
@@ -62,7 +63,7 @@ public class EnemyStats : Stats
 
     public void GoToNextWaypoint(List<WayPointInfo> list)
     {
-
+        Debug.Log(list[0].name + "right after the method");
 
         if (_currentWaypoint >= (list.Count - 1))
         {
@@ -76,6 +77,7 @@ public class EnemyStats : Stats
         {
             _agent.isStopped = false;
             _agent.SetDestination(list[_currentWaypoint].wpPosition);
+            Debug.Log(list[_currentWaypoint].name + "the current waypoint");
         }
         else
         {
@@ -111,8 +113,12 @@ public class EnemyStats : Stats
     public void Start()
     {
         _myFsm = GetComponent<FiniteStateMachine>();
+        Debug.Log("yoyoyooyyo");
         _agent = GetComponent<NavMeshAgent>();
-        GoToNextWaypoint(_defaultWaypoints);
+        if (_myFsm.dontTriggerStart == false  )
+        {
+            GoToNextWaypoint(_defaultWaypoints);
+        }
         _agent.updateRotation = true;
         
     }

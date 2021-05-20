@@ -7,7 +7,8 @@ public class FiniteStateMachine : MonoBehaviour
 {
     [SerializeField]
     private bool playerOrEnemy; // false is player, true is enemy
-
+    [SerializeField]
+    public bool dontTriggerStart;
     [SerializeField]
     private State _initialState;
     [SerializeField]
@@ -21,7 +22,11 @@ public class FiniteStateMachine : MonoBehaviour
 
     void Start()
     {
-        CurrentState = InitialState;
+        if ( dontTriggerStart == false)
+        {
+            CurrentState = InitialState;
+        }
+        
     }
     public GameObject GetObject()
     {
