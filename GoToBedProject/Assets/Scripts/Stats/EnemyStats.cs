@@ -133,5 +133,17 @@ public class EnemyStats : Stats
         currentStatusTextMesh.text = _myFsm.CurrentState.StateDisplayName.ToString();
         currentStatusTextMesh.rectTransform.rotation = Quaternion.LookRotation((gameObject.transform.position - _target.transform.position).normalized, Vector3.up);
     }
+    public void StartAnimation(string boolName)
+    {
+        Animator.SetBool(boolName, true);
+    }
+    public void CancelAnimation(string boolName)
+    {
+        Animator.SetBool(boolName, false);
+    }
+    public void StateAnimation(string stateName, int stateNumber)
+    {
+        Animator.SetInteger(stateName, stateNumber);
+    }
 }
 

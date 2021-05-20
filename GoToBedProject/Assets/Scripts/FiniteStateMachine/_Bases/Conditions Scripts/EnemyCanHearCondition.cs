@@ -30,7 +30,7 @@ public class EnemyCanHearCondition : Condition
                     float soundIntensity = enemyStats.Target.GetComponent<PlayerStats>().NoiseValue * Mathf.Pow(attenuation, distance);
                     if (useHearToChase)
                     {
-                        if (distance < 20f)
+                        if (distance < 10f)
                         {
                             if (lookingDirection < 160f && enemyStats.HearingCapability < soundIntensity)
                             {
