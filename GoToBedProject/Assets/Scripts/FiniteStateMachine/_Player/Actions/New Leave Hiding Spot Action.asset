@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: New Leave Hiding Spot Action
   m_EditorClassIdentifier: 
   _hidingAction: {fileID: 11400000, guid: 907856eb57c761a4fb083a047a5663f5, type: 2}
+  _timer: 0
+  directionToLookAt: {x: 0, y: 0, z: 0, w: 0}

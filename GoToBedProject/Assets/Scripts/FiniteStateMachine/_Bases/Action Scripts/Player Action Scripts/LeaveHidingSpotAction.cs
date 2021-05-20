@@ -31,7 +31,7 @@ public class LeaveHidingSpotAction : Action
             HidingObjectInfo hidingObject = playerStats.InteractingObject.GetComponent<HidingObjectInfo>();
             //dunno
         }
-        else if (Timer < 1f)
+        else if (Timer < 0.5f)
         {
             Timer += Time.deltaTime;
             HidingObjectInfo hidingObject = playerStats.InteractingObject.GetComponent<HidingObjectInfo>();
@@ -47,12 +47,7 @@ public class LeaveHidingSpotAction : Action
 
 
         }
-        else if (Timer > 1f && Timer < 1.5f)
-        {
-            Timer += Time.deltaTime;
-            //close door animation?
-        }
-        else if (Timer > 1.5f)
+        else if (Timer > 0.5f)
         {
             HidingObjectInfo hidingObject = playerStats.InteractingObject.GetComponent<HidingObjectInfo>();
             playerStats.gameObject.transform.position = hidingObject.EntryPosition.position;
