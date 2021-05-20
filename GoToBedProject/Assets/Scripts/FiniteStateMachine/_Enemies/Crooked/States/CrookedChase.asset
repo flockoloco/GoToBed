@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
+  m_Name: CrookedChase
+  m_EditorClassIdentifier: 
+  entryAction: {fileID: 11400000, guid: 1b1a67c1f4d5ef64e8d2bdc19439693d, type: 2}
+  stateActions:
+  - {fileID: 11400000, guid: 55f8fc010f9662245b983c8fa7fcdca7, type: 2}
+  exitAction: {fileID: 11400000, guid: 86c464abf69838d419f34dc3299fadfe, type: 2}
+  transitions:
+  - {fileID: 11400000, guid: ef2eb327021825b429230c0a0561fe12, type: 2}
+  - {fileID: 11400000, guid: f3aaa44e86b6b964f9c89372cc519ffb, type: 2}
+  - {fileID: 11400000, guid: 732952c095065a345aa4f0fde78d331f, type: 2}
+  _stateDisplayName: Chase

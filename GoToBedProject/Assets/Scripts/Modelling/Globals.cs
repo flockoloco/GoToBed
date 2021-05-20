@@ -5,6 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public static class Globals
 {
+    public enum Enemy
+    {
+        Spider,
+        Clown,
+        CrookedMan
+    }
     public enum GameTags
     {
         Untagged, 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyNothingToSearchCondition : Condition
 {
     [SerializeField]
-    SpiderSearchAction _searchAction;
+    EnemySearch _searchAction;
     [SerializeField]
     private bool negation;
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)

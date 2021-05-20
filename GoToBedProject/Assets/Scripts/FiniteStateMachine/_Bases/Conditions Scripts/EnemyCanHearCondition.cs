@@ -8,6 +8,8 @@ public class EnemyCanHearCondition : Condition
     private bool negation;
     [SerializeField]
     private bool useRaycast;
+    [SerializeField]
+    private bool useHearToChase;
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -22,22 +24,41 @@ public class EnemyCanHearCondition : Condition
             {
                 if (hit.collider.GetComponent<LevelObjectInfo>().level == enemyStats.Target.gameObject.GetComponent<PlayerStats>().CurrentLevel)
                 {
+                    float lookingDirection = Vector3.Angle(fsm.gameObject.transform.forward, (enemyStats.Target.transform.position - fsm.gameObject.transform.position).normalized);
                     float distance = Vector3.Distance(enemyStats.Target.transform.position, enemyStats.gameObject.transform.position);
                     float attenuation = 0.9f;
                     float soundIntensity = enemyStats.Target.GetComponent<PlayerStats>().NoiseValue * Mathf.Pow(attenuation, distance);
-                    //quanto mais longe mais dificil é do inimigo escutar
-                    //Debug.Log(soundIntensity + " INTENSIDADE DO SOM");
-                    if (enemyStats.HearingCapability < soundIntensity)
+                    if (useHearToChase)
                     {
-                        //Funciona, polish search
-                        return !negation;  
+                        if (distance < 20f)
+                        {
+                            if (lookingDirection < 160f && enemyStats.HearingCapability < soundIntensity)
+                            {
+                                return !negation;
+                            }
+                            else
+                            {
+                                return negation;
+                            }
+                        }
+                        else
+                        {
+                            return negation;
+                        }
                     }
                     else
                     {
-                        return negation;
+                        if (enemyStats.HearingCapability < soundIntensity)
+                        {
+                            return !negation;
+                        }
+                        else
+                        {
+                            return negation;
+                        }
                     }
                 }
-            } 
+            }
         }
         return negation;
     }
