@@ -18,6 +18,9 @@ TagManager:
   - Key
   - Ladder
   - Enemy
+  - DarkZone
+  - TeddyBear
+  - Rope
   layers:
   - Default
   - TransparentFX
@@ -29,7 +32,7 @@ TagManager:
   - Player
   - Interactable
   - ItemOnHand
-  - 
+  - DoorLayer
   - 
   - 
   - 

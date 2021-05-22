@@ -28,7 +28,7 @@ public class EnemyCanSeeCondition : Condition
             if (useRaycast)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, out hit, Mathf.Infinity, LayerMask.GetMask("Player")))
+                if (Physics.Raycast(enemyStats.EyesPosition.transform.position, enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position - enemyStats.EyesPosition.transform.position, out hit, Mathf.Infinity, LayerMask.GetMask("Player","LevelCollider","DoorLayer")))
                 {
                     Debug.Log("im here");
                     //Debug.DrawRay(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, Color.green);

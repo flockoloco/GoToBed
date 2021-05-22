@@ -33,7 +33,9 @@ public static class Globals
         Ladder,
         Rope,
         Door,
-        Key
+        Key,
+        DarkZone,
+        TeddyBear
     }
     public enum InteractingObjects
     {

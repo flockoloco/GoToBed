@@ -31,7 +31,8 @@ public class EnemyStats : Stats
     private Animator _animator;
     [SerializeField]
     private Globals.Enemy _enemyName;
-
+    [SerializeField]
+    private Transform _eyesPosition;
 
     [SerializeField]
     private WayPointInfo _playerWayPoint;
@@ -60,6 +61,7 @@ public class EnemyStats : Stats
     public Animator Animator { get => _animator; set => _animator = value; }
     public WayPointInfo PlayerWayPoint { get => _playerWayPoint; set => _playerWayPoint = value; }
     public Globals.Enemy EnemyName { get => _enemyName; set => _enemyName = value; }
+    public Transform EyesPosition { get => _eyesPosition; set => _eyesPosition = value; }
 
     public void GoToNextWaypoint(List<WayPointInfo> list)
     {

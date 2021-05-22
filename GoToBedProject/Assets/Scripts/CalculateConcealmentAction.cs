@@ -78,7 +78,7 @@ public class CalculateConcealmentAction : Action
         //}
 
         //brightness1 *= 2f;
-        br1 *= 4f;
+        br1 *= 8f;
         brightness1 = br1;
     }
 }

@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 8915281084543812253}
   - component: {fileID: 8915281084543812254}
   - component: {fileID: 2811584201689888836}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Door
   m_TagString: Interactable
   m_Icon: {fileID: 0}
