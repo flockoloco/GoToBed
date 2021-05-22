@@ -4,6 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Enemy/Entry Search")]
 public class EnemySearchEntry : Action
 {
+
+    [SerializeField]
+    EnemySearch _enemySearch;
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -12,6 +15,7 @@ public class EnemySearchEntry : Action
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
 
+        _enemySearch.animationTimer = 0;
         if (enemyStats.SearchWaypoints != null) //remove later
         {
             enemyStats.SearchWaypoints.Clear();

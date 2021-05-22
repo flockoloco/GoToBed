@@ -9,10 +9,13 @@ public class ItemInteractAction : Action
     {
         //seperate set of ifs for animations
         //run timer here inside of ifs
-        
+        //Debug.LogError(playerStats + " this should exist ");
 
+        //Debug.LogError(fsm + " this should exist ");
+        //Debug.LogError("blablablabl" + playerStats.EquippedItem);
 
-        if (playerStats.EquippedItem.Equals(null) && playerStats.InsideHidingObject.Equals(false))
+        //Debug.LogError("waaaaaaaaaaaaaaaaaaaaaaaa" + playerStats.InsideHidingObject);
+        if (!playerStats.EquippedItem && playerStats.InsideHidingObject.Equals(false))
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
@@ -37,7 +40,7 @@ public class ItemInteractAction : Action
                 }
             }
         }
-        else if (!playerStats.EquippedItem.Equals(null) && playerStats.InsideHidingObject.Equals(false))
+        else if ((playerStats.EquippedItem) && playerStats.InsideHidingObject.Equals(false))
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
@@ -102,7 +105,7 @@ public class ItemInteractAction : Action
                 }
             }
         }
-        if (!playerStats.EquippedItem.Equals(null) && playerStats.ItemPickUpAnimationBool.Equals(false))
+        if ((playerStats.EquippedItem) && playerStats.ItemPickUpAnimationBool.Equals(false))
         {
             //lerp animation
             playerStats.EquippedItem.GetComponent<ItemInfoScript>().SetLayerRecursively(playerStats.EquippedItem.gameObject, 9);
@@ -127,6 +130,7 @@ public class ItemInteractAction : Action
 
 
         }
+        //Debug.LogError(" hell??????????????????????????????????????????????????'");
     }
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)

@@ -120,7 +120,7 @@ public class RaycastInteractableAction : Action
         }
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Item))
         {
-            if (playerStats.EquippedItem.Equals(null))
+            if (!playerStats.EquippedItem)
             {
                 playerStats.UIInteractionTextObject.gameObject.SetActive(true);
                 playerStats.UIInteractionTextObject.ChangeText("Pick Up!");
@@ -134,7 +134,7 @@ public class RaycastInteractableAction : Action
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Objective))
         {
             playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-            if (!playerStats.EquippedItem.Equals(null))
+            if (playerStats.EquippedItem)
             {
 
                 if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<objectiveobjectinfo>().UsableTag.ToString()))
@@ -158,7 +158,7 @@ public class RaycastInteractableAction : Action
             playerStats.UIInteractionTextObject.gameObject.SetActive(true);
             if (playerStats.InteractingObject.GetComponent<DoorScript>().Locked)
             {
-                if (!playerStats.EquippedItem.Equals(null))
+                if (playerStats.EquippedItem)
                 {
                     
                     if (playerStats.EquippedItem.CompareTag(playerStats.InteractingObject.GetComponent<DoorScript>().UsableTag.ToString()))

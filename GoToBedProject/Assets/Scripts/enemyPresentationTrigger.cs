@@ -22,18 +22,23 @@ public class enemyPresentationTrigger : MonoBehaviour
         {
             if ( other.tag == "Player")
             {
-                enemySpawn =  Instantiate(enemyPrefab, spawnPosition.wpPosition,Quaternion.identity);
-                enemySpawn.GetComponent<FiniteStateMachine>().CurrentState = searchState;
-                enemySpawn.GetComponent<EnemyStats>().CurrentWaypoint = -1;
-                enemySpawn.GetComponent<EnemyStats>().SearchWaypoints = scriptedWayPoints;
-                enemySpawn.SetActive(true);
-                enemySpawn.GetComponent<EnemyStats>().Agent = enemySpawn.GetComponent<NavMeshAgent>();
-                Debug.Log(scriptedWayPoints[0].name + " before going into nextwaypointS");
-                enemySpawn.GetComponent<EnemyStats>().GoToNextWaypoint(scriptedWayPoints);
-                
-                
-                Debug.Log(enemySpawn.GetComponent<FiniteStateMachine>().CurrentState);
-                oneTime = false;
+                if (!GameObject.FindGameObjectWithTag("Enemy"))
+                {
+
+
+                    enemySpawn = Instantiate(enemyPrefab, spawnPosition.wpPosition, Quaternion.identity);
+                    enemySpawn.GetComponent<FiniteStateMachine>().CurrentState = searchState;
+                    enemySpawn.GetComponent<EnemyStats>().CurrentWaypoint = -1;
+                    enemySpawn.GetComponent<EnemyStats>().SearchWaypoints = scriptedWayPoints;
+                    enemySpawn.SetActive(true);
+                    enemySpawn.GetComponent<EnemyStats>().Agent = enemySpawn.GetComponent<NavMeshAgent>();
+                    Debug.Log(scriptedWayPoints[0].name + " before going into nextwaypointS");
+                    enemySpawn.GetComponent<EnemyStats>().GoToNextWaypoint(scriptedWayPoints);
+
+
+                    Debug.Log(enemySpawn.GetComponent<FiniteStateMachine>().CurrentState);
+                    oneTime = false;
+                }
             }
         }
 

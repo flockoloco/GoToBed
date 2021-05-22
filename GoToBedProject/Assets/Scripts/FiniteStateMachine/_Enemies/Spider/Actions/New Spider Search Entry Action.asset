@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da18a164a6d0f142963314410be3ea1, type: 3}
   m_Name: New Spider Search Entry Action
   m_EditorClassIdentifier: 
+  _enemySearch: {fileID: 11400000, guid: e25bfe445267a5345b2dea0118056812, type: 2}

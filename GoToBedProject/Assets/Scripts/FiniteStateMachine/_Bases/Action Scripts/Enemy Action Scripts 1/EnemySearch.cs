@@ -35,6 +35,8 @@ public class EnemySearch : Action
                 {
                     Debug.Log("right before dying  inside hidding obj  " + enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject + "  entryposition.position 1  " + enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position + "  entry position.position 2  " + enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition);
                     enemyStats.StartAnimation("LookingInside");
+                    enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].transform.parent.GetComponent<HidingObjectInfo>().ObjectAnimator.Play(0);
+
                     if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
                         enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
                     {
