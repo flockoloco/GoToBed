@@ -44,6 +44,7 @@ public class EnemySearch : Action
                         enemyStats.StopAgent();
                         enemyStats.Agent.isStopped = true;
                         enemyStats.TurnOffThenTurnOnAnimation("Attacking");
+                        enemyStats.transform.LookAt(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform);
                         fsm.CurrentState = attackState;
                     }
                 }
@@ -60,6 +61,7 @@ public class EnemySearch : Action
                         enemyStats.StopAgent();
                         enemyStats.Agent.isStopped = true;
                         enemyStats.TurnOffThenTurnOnAnimation("Attacking");
+                        enemyStats.transform.LookAt(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform);
                         fsm.CurrentState = attackState;
                     }
                 }
@@ -76,6 +78,7 @@ public class EnemySearch : Action
                         enemyStats.StopAgent();
                         enemyStats.Agent.isStopped = true;
                         enemyStats.TurnOffThenTurnOnAnimation("Attacking");
+                        enemyStats.transform.LookAt(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform);
                         fsm.CurrentState = attackState;
                     }   
                 }

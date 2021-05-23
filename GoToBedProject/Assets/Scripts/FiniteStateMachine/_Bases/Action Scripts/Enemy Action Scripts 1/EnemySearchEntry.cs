@@ -14,7 +14,7 @@ public class EnemySearchEntry : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-
+        Debug.Log("hello i was here" + enemyStats.CurrentWaypoint);
         _enemySearch.animationTimer = 0;
         enemyStats.TurnOffThenTurnOnAnimation("Walking");
         if (enemyStats.SearchWaypoints != null) //remove later

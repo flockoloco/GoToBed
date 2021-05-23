@@ -15,10 +15,20 @@ public class EnemyAttack : Action
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
         enemyStats.TurnOffThenTurnOnAnimation("Attacking");
-        Vector3 dir = (enemyStats.EyesPosition.transform.position - enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position).normalized;
-        Quaternion targetRotation = Quaternion.LookRotation(dir);
-        enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.gameObject.transform.rotation = Quaternion.Slerp(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.gameObject.transform.rotation, targetRotation, Time.deltaTime * 8f);
+        
+        if ( enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == false)
+        {
+            Vector3 dir = (enemyStats.EyesPosition.transform.position - enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position).normalized;
+            Quaternion targetRotation = Quaternion.LookRotation(dir);
+            enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.gameObject.transform.rotation = Quaternion.Slerp(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.gameObject.transform.rotation, targetRotation, Time.deltaTime * 8f);
 
+        }else
+        {
+            Vector3 dir = (new Vector3( enemyStats.EyesPosition.transform.position.x, enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position.y,enemyStats.EyesPosition.transform.position.z) - enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position).normalized;
+            Quaternion targetRotation = Quaternion.LookRotation(dir);
+            enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.gameObject.transform.rotation = Quaternion.Slerp(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.gameObject.transform.rotation, targetRotation, Time.deltaTime * 8f);
+        }
+        
         //enemyStats.transform.LookAt(enemyStats.Target.transform);
 
         //fazer aqui mesmo a diferenciação com o enemystats.enemyname
