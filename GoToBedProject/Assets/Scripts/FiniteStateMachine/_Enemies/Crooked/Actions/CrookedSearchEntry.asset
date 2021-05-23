@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da18a164a6d0f142963314410be3ea1, type: 3}
   m_Name: CrookedSearchEntry
   m_EditorClassIdentifier: 
+  _enemySearch: {fileID: 11400000, guid: fc8fd369fffe1724db3315f2ab21844d, type: 2}

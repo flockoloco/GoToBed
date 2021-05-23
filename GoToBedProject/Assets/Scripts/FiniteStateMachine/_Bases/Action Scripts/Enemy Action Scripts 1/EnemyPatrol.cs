@@ -6,7 +6,6 @@ public class EnemyPatrol : Action
 {
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        enemyStats.TurnOffThenTurnOnAnimation("Walking");
         if (enemyStats.IsAtDestination())
         {
             enemyStats.GoToNextWaypoint(enemyStats.DefaultWaypoints);

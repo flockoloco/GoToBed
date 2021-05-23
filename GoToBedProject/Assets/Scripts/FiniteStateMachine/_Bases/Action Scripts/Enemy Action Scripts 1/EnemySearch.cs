@@ -19,7 +19,6 @@ public class EnemySearch : Action
         if (enemyStats.IsAtDestination())  
         {
             finishedLastWaypoint = false;
-
            
             if (animationTimer.Equals(0))
             {
@@ -32,7 +31,7 @@ public class EnemySearch : Action
                 }
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(1))
                 {
-                    Debug.Log("right before dying  inside hidding obj  " + enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject + "  entryposition.position 1  " + enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position + "  entry position.position 2  " + enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition);
+
                     enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].transform.parent.GetComponent<HidingObjectInfo>().ObjectAnimator.Play(0);
                     enemyStats.TurnOffThenTurnOnAnimation("LookingInside");
                     if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
@@ -44,7 +43,7 @@ public class EnemySearch : Action
                         enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
                         enemyStats.StopAgent();
                         enemyStats.Agent.isStopped = true;
-                        enemyStats.Animator.enabled = false;
+                        enemyStats.TurnOffThenTurnOnAnimation("Attacking");
                         fsm.CurrentState = attackState;
                     }
                 }
@@ -60,7 +59,7 @@ public class EnemySearch : Action
                         enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
                         enemyStats.StopAgent();
                         enemyStats.Agent.isStopped = true;
-                        enemyStats.Animator.enabled = false;
+                        enemyStats.TurnOffThenTurnOnAnimation("Attacking");
                         fsm.CurrentState = attackState;
                     }
                 }
@@ -76,7 +75,7 @@ public class EnemySearch : Action
                         enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
                         enemyStats.StopAgent();
                         enemyStats.Agent.isStopped = true;
-                        enemyStats.Animator.enabled = false;
+                        enemyStats.TurnOffThenTurnOnAnimation("Attacking");
                         fsm.CurrentState = attackState;
                     }   
                 }

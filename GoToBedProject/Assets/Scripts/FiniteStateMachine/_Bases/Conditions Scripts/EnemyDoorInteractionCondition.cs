@@ -13,12 +13,14 @@ public class EnemyDoorInteractionCondition : Condition
     public override bool Test(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
         RaycastHit hit;
-        if (Physics.Raycast(enemyStats.transform.position,  (new Vector3(enemyStats.Agent.steeringTarget.x, enemyStats.transform.position.y, enemyStats.Agent.steeringTarget.z) - enemyStats.transform.position).normalized, out hit, 3, LayerMask.GetMask("DoorLayer")))
-        { 
+        Debug.DrawRay(new Vector3(enemyStats.transform.position.x, enemyStats.EyesPosition.transform.position.y, enemyStats.transform.position.z), (new Vector3(enemyStats.Agent.steeringTarget.x, enemyStats.transform.position.y, enemyStats.Agent.steeringTarget.z) - enemyStats.transform.position).normalized);
+        if (Physics.Raycast(new Vector3(enemyStats.transform.position.x, enemyStats.EyesPosition.transform.position.y, enemyStats.transform.position.z),  (new Vector3(enemyStats.Agent.steeringTarget.x, enemyStats.transform.position.y, enemyStats.Agent.steeringTarget.z) - enemyStats.transform.position).normalized, out hit, 3, LayerMask.GetMask("DoorLayer")))
+        {
             if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Door.ToString(), enemyStats))
             {
                 if (enemyStats.OldDoorScript.Open.Equals(false) && enemyStats.OldDoorScript.Locked.Equals(false))
                 {
+
                     enemyStats.StopAgent();
                     enemyStats.OldCurrentWaypoint = enemyStats.CurrentWaypoint;
                     enemyStats.OldSearchList = enemyStats.SearchWaypoints;

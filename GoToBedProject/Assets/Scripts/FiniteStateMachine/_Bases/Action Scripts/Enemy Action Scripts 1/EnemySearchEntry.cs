@@ -16,6 +16,7 @@ public class EnemySearchEntry : Action
     {
 
         _enemySearch.animationTimer = 0;
+        enemyStats.TurnOffThenTurnOnAnimation("Walking");
         if (enemyStats.SearchWaypoints != null) //remove later
         {
             enemyStats.SearchWaypoints.Clear();

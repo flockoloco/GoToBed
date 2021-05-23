@@ -115,8 +115,8 @@ public class EnemyStats : Stats
     public void Start()
     {
         _myFsm = GetComponent<FiniteStateMachine>();
-        Debug.Log("yoyoyooyyo");
         _agent = GetComponent<NavMeshAgent>();
+        TurnOffThenTurnOnAnimation("Walking");
         if (_myFsm.dontTriggerStart == false  )
         {
             GoToNextWaypoint(_defaultWaypoints);

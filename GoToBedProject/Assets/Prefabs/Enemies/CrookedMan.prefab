@@ -371,6 +371,36 @@ Transform:
   m_Father: {fileID: 2964005696915647824}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1852495516699814146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168751699359769896}
+  m_Layer: 0
+  m_Name: eyesspot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &168751699359769896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852495516699814146}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.191, y: 0.544, z: 0.321}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 6661307380622958766}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1964811881101645843
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +585,7 @@ Transform:
   m_Children:
   - {fileID: 8119671556617594762}
   - {fileID: 8119671555872041610}
+  - {fileID: 168751699359769896}
   m_Father: {fileID: 8585100314116651541}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2139,8 +2170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 4
   _gravity: -9.81
-  _visionDetection: 10
-  _hearingCapability: 2.4
+  _visionDetection: 2
+  _hearingCapability: 3.2
   _target: {fileID: 0}
   _agent: {fileID: 8119671556598561149}
   _defaultWaypoints: []
@@ -2152,6 +2183,7 @@ MonoBehaviour:
   currentStatusTextMesh: {fileID: 8119671556617594760}
   _animator: {fileID: 8119671556598561150}
   _enemyName: 2
+  _eyesPosition: {fileID: 168751699359769896}
   _playerWayPoint: {fileID: 8119671555872041605}
   OldState: {fileID: 0}
   OldSearchList: []

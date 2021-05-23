@@ -329,7 +329,7 @@ MonoBehaviour:
   _visionDetection: 10
   _hearingCapability: 1.2
   _target: {fileID: 0}
-  _agent: {fileID: 0}
+  _agent: {fileID: 2065146570027192504}
   _defaultWaypoints: []
   _searchWaypoints: []
   _currentWaypoint: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   listMainWaypoints: []
   heardSomething: 0
   currentStatusTextMesh: {fileID: 5034786827035405582}
-  _animator: {fileID: 0}
+  _animator: {fileID: 2643561346549187109}
   _enemyName: 0
   _eyesPosition: {fileID: 8418008017021751511}
   _playerWayPoint: {fileID: 6706613203315733652}

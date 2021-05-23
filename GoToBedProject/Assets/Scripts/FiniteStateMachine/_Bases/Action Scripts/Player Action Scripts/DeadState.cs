@@ -9,7 +9,7 @@ public class DeadState : Action
     public GameObject deathScreen;
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        throw new System.NotImplementedException();
+
     }
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)

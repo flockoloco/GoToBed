@@ -11,8 +11,7 @@ public class EnemyPatrolEntry : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        
-        //enemyStats.TurnOffThenTurnOnAnimation("Walking");
+        enemyStats.TurnOffThenTurnOnAnimation("Walking");
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)

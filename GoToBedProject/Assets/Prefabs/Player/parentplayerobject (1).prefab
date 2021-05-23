@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOrEnemy: 0
+  dontTriggerStart: 0
   _initialState: {fileID: 11400000, guid: c41e2f2285179eb4f8597af49c1829f8, type: 2}
   _currentState: {fileID: 0}
   playerStats: {fileID: 1701742922871015783}
@@ -185,6 +186,7 @@ MonoBehaviour:
   _uiInteractionTextObject: {fileID: 0}
   _hidingPosition: {fileID: 0}
   _currentLevel: 0
+  _playerDead: 0
 --- !u!143 &6163410324451856414
 CharacterController:
   m_ObjectHideFlags: 0
@@ -361,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07937b7933ee6274ea2554cad6b83991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 120
+  mouseSensitivity: 200
   playerBody: {fileID: 3359317848472270958}
   cameraXAxis: 0
   cameraYAxis: 0
