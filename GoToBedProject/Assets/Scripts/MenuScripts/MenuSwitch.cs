@@ -9,6 +9,7 @@ public class MenuSwitch : MonoBehaviour
     public GameObject currentMenu;
     public GameObject menuObject; //usado por enquanto apenas para o pause menu
     private bool gameIsPaused;
+    public Globals.Menus MenuName;
     public void StartNewGame()
     {
         levelLoader.LoadScene("pogScene");
@@ -32,25 +33,29 @@ public class MenuSwitch : MonoBehaviour
     }
     public void PauseGame()
     {
-        if(player.GetComponent<FiniteStateMachine>().CurrentState.StateDisplayName != "Dead")
+        if(MenuName == Globals.Menus.Pause)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if(player.GetComponent<FiniteStateMachine>().CurrentState.StateDisplayName != "Dead")
             {
-                if (gameIsPaused)
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    Time.timeScale = 1;
-                    gameIsPaused = !gameIsPaused;
-                    menuObject.SetActive(false);
-                    Cursor.lockState = CursorLockMode.Locked;
-                }
-                else
-                {
-                    Time.timeScale = 0;
-                    gameIsPaused = true;
-                    menuObject.SetActive(true);
-                    Cursor.lockState = CursorLockMode.None;
+                    if (gameIsPaused)
+                    {
+                        Time.timeScale = 1;
+                        gameIsPaused = !gameIsPaused;
+                        menuObject.SetActive(false);
+                        Cursor.lockState = CursorLockMode.Locked;
+                    }
+                    else
+                    {
+                        Time.timeScale = 0;
+                        gameIsPaused = true;
+                        menuObject.SetActive(true);
+                        Cursor.lockState = CursorLockMode.None;
+                    }
                 }
             }
+            
         }
         
     }

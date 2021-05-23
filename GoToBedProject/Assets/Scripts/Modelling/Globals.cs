@@ -52,4 +52,10 @@ public static class Globals
         Table
         //....
     }
+    public enum Menus
+    {
+        Death,
+        Win,
+        Pause
+    }
 }

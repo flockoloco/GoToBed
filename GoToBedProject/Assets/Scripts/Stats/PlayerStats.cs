@@ -56,6 +56,10 @@ public sealed class PlayerStats : Stats
     private GameObject _deathPanel;
     [SerializeField]
     private GameObject _deathMenu;
+    [SerializeField]
+    private GameObject _winPanel;
+    [SerializeField]
+    private GameObject _winMenu;
 
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
@@ -82,12 +86,29 @@ public sealed class PlayerStats : Stats
     public GameObject StaminaParentObject { get => _staminaParentObject; set => _staminaParentObject = value; }
     public bool PlayerDead { get => _playerDead; set => _playerDead = value; }
 
+    private void Update()
+    {
+        if (_equippedItem && _equippedItem.GetComponent<ItemInfoScript>().tag == "TeddyBear")
+        {
+            PlayerWon();
+        }
+    }
     public void PlayerDied()
     {
-        _deathPanel.GetComponent<Image>().fillAmount += 0.4f * Time.deltaTime;
+        _deathPanel.GetComponent<Image>().fillAmount += 0.5f * Time.deltaTime;
         if (_deathPanel.GetComponent<Image>().fillAmount >= 1f)
         {
+            Cursor.lockState = CursorLockMode.None;
             _deathMenu.SetActive(true);
+        }
+    }
+    public void PlayerWon()
+    {
+        _winPanel.GetComponent<Image>().fillAmount += 0.6f * Time.deltaTime;
+        if (_winPanel.GetComponent<Image>().fillAmount >= 1f)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            _winMenu.SetActive(true);
         }
     }
 }

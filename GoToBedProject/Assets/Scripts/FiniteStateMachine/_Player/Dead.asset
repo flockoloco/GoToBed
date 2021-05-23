@@ -16,4 +16,4 @@ MonoBehaviour:
   stateActions: []
   exitAction: {fileID: 0}
   transitions: []
-  _stateDisplayName: 
+  _stateDisplayName: Dead
