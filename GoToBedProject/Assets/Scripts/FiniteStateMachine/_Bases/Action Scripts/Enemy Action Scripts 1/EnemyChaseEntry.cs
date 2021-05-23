@@ -13,6 +13,7 @@ public class EnemyChaseEntry : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
+        enemyStats.TurnOffThenTurnOnAnimation("Running");
         if (!exit)
         {
             if (enemyStats.EnemyName == Globals.Enemy.CrookedMan)

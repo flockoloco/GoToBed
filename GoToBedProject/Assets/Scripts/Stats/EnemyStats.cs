@@ -135,21 +135,16 @@ public class EnemyStats : Stats
         currentStatusTextMesh.text = _myFsm.CurrentState.StateDisplayName.ToString();
         currentStatusTextMesh.rectTransform.rotation = Quaternion.LookRotation((gameObject.transform.position - _target.transform.position).normalized, Vector3.up);
     }
-    public void StartAnimation(string boolName)
+    public void TurnOffThenTurnOnAnimation(string boolName)
     {
+        //me recuso a dar false um por um
+        foreach(AnimatorControllerParameter parameter in _animator.parameters)
+        {
+            _animator.SetBool(parameter.name, false);
+        }
         Animator.SetBool(boolName, true);
     }
-    public void CancelAnimation(string boolName)
-    {
-        //nao queria mas it is what it is
-        Animator.SetBool(boolName, false);
-        Animator.SetBool(boolName, false);
-        Animator.SetBool(boolName, false);
-        
-        Animator.SetBool(boolName, false);
-        Animator.SetBool(boolName, false);
-        Animator.SetBool(boolName, false);
-    }
+    //not being used, maybe in the future
     public void StateAnimation(string stateName, int stateNumber)
     {
         Animator.SetInteger(stateName, stateNumber);

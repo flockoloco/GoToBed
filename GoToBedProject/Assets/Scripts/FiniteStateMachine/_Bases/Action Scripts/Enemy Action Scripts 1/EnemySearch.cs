@@ -15,7 +15,6 @@ public class EnemySearch : Action
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {
-        enemyStats.CancelAnimation("Walking");
         Debug.DrawLine(enemyStats.transform.position, enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition,Color.red);
         if (enemyStats.IsAtDestination())  
         {
@@ -29,14 +28,13 @@ public class EnemySearch : Action
                 enemyStats.Agent.isStopped = true;
                 if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(0))
                 {
-                    enemyStats.StartAnimation("LookingAround");
+                    enemyStats.TurnOffThenTurnOnAnimation("LookingAround");
                 }
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(1))
                 {
                     Debug.Log("right before dying  inside hidding obj  " + enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject + "  entryposition.position 1  " + enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position + "  entry position.position 2  " + enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition);
-                    enemyStats.StartAnimation("LookingInside");
                     enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].transform.parent.GetComponent<HidingObjectInfo>().ObjectAnimator.Play(0);
-
+                    enemyStats.TurnOffThenTurnOnAnimation("LookingInside");
                     if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
                         enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
                     {
@@ -52,7 +50,7 @@ public class EnemySearch : Action
                 }
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(2))
                 {
-                    enemyStats.StartAnimation("LookingUnder");
+                    enemyStats.TurnOffThenTurnOnAnimation("LookingUnder");
                     if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
                        enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
                     {
@@ -68,7 +66,7 @@ public class EnemySearch : Action
                 }
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(3))
                 {
-                    enemyStats.StartAnimation("LookingUnder");
+                    enemyStats.TurnOffThenTurnOnAnimation("LookingUnder");
                     if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
                        enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
                     {
@@ -105,8 +103,7 @@ public class EnemySearch : Action
              
                 animationTimer = 0;
                 enemyStats.Agent.isStopped = false;
-                enemyStats.StartAnimation("Walking");
-
+                enemyStats.TurnOffThenTurnOnAnimation("Walking");
 
             }
             
