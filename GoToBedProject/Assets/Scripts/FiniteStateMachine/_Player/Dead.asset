@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Dead
   m_EditorClassIdentifier: 
   entryAction: {fileID: 0}
-  stateActions:
-  - {fileID: 11400000, guid: 77fa29e0c009ae640ba178cec8cad168, type: 2}
+  stateActions: []
   exitAction: {fileID: 0}
   transitions: []
   _stateDisplayName: 

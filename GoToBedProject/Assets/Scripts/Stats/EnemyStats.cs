@@ -33,7 +33,6 @@ public class EnemyStats : Stats
     private Globals.Enemy _enemyName;
     [SerializeField]
     private Transform _eyesPosition;
-
     [SerializeField]
     private WayPointInfo _playerWayPoint;
 

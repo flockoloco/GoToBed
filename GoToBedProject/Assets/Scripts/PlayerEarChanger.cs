@@ -6,10 +6,10 @@ using Unity.VectorGraphics;
 public class PlayerEarChanger : MonoBehaviour
 {
     public GameObject player;
-    public Sprite firstEar;
-    public Sprite middleEar;
-    public Sprite secondEar;
-    public Sprite thirdEar;
+    public Sprite lowEar;
+    public Sprite mediumEar;
+    public Sprite highEar;
+    public Sprite extraHighEar;
     private SVGImage earImage;
     private void Start()
     {
@@ -19,19 +19,19 @@ public class PlayerEarChanger : MonoBehaviour
     {
        if(player.GetComponent<PlayerStats>().NoiseValue == 0f)
        {
-            earImage.sprite = firstEar;
+            earImage.sprite = lowEar;
        }
         else if (player.GetComponent<PlayerStats>().NoiseValue < 4f)
         {
-            earImage.sprite = firstEar; //change to middle ear
+            earImage.sprite = mediumEar; //change to middle ear
         }
         else if(player.GetComponent<PlayerStats>().NoiseValue >= 4f && player.GetComponent<PlayerStats>().NoiseValue < 8f)
        {
-            earImage.sprite = secondEar;
+            earImage.sprite = highEar;
        }
        else if(player.GetComponent<PlayerStats>().NoiseValue >= 8f)
        {
-            earImage.sprite = thirdEar;
+            earImage.sprite = extraHighEar;
        }
     }
 }

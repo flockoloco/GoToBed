@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public sealed class PlayerStats : Stats
 {
@@ -37,6 +38,14 @@ public sealed class PlayerStats : Stats
     private float _interactionCooldown;
     [SerializeField]
     private float _interactionCooldownValue = 2;
+    
+    [SerializeField]
+    private Transform _hidingPosition;
+    [SerializeField]
+    private LevelObjectInfo.Level _currentLevel;
+    [SerializeField]
+    private bool _playerDead = false;
+    //menu section
     [SerializeField]
     private GameObject _staminaObject;
     [SerializeField]
@@ -44,12 +53,9 @@ public sealed class PlayerStats : Stats
     [SerializeField]
     private InteractText _uiInteractionTextObject;
     [SerializeField]
-    private Transform _hidingPosition;
+    private GameObject _deathPanel;
     [SerializeField]
-    private LevelObjectInfo.Level _currentLevel;
-    [SerializeField]
-    private bool _playerDead = false;
-
+    private GameObject _deathMenu;
 
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
@@ -75,4 +81,13 @@ public sealed class PlayerStats : Stats
     public LevelObjectInfo.Level CurrentLevel { get => _currentLevel; set => _currentLevel = value; }
     public GameObject StaminaParentObject { get => _staminaParentObject; set => _staminaParentObject = value; }
     public bool PlayerDead { get => _playerDead; set => _playerDead = value; }
+
+    public void PlayerDied()
+    {
+        _deathPanel.GetComponent<Image>().fillAmount += 0.4f * Time.deltaTime;
+        if (_deathPanel.GetComponent<Image>().fillAmount >= 1f)
+        {
+            _deathMenu.SetActive(true);
+        }
+    }
 }

@@ -30,7 +30,7 @@ public class EnemyAttack : Action
         }
         
         //enemyStats.transform.LookAt(enemyStats.Target.transform);
-
+        enemyStats.Target.GetComponent<PlayerStats>().PlayerDied();
         //fazer aqui mesmo a diferenciação com o enemystats.enemyname
         //animacao (cada inimigo tem o seu play.animation para matar o player)
         // fazer if(enemystats.enemyname == blabla) {animacao.play } blabla

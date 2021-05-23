@@ -20,4 +20,4 @@ MonoBehaviour:
   transitions:
   - {fileID: 11400000, guid: 563fd8829bb9707448c3d835d7ccc02f, type: 2}
   - {fileID: 11400000, guid: 8324af542f1765a4cb1ae934d595e14a, type: 2}
-  _stateDisplayName: 
+  _stateDisplayName: Hide
