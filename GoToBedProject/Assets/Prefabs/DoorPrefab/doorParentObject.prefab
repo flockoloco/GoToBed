@@ -67,7 +67,7 @@ MonoBehaviour:
   _collidableChild: {fileID: 8915281084543812255}
   _usableTag: 20
   _wrongItemText: I need a key!
-  _correctItemText: Open
+  _correctItemText: Open!
   _locked: 0
   _open: 0
   _animator: {fileID: 3636207893531846870}

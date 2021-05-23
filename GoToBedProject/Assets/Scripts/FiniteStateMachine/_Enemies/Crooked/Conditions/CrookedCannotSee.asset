@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f940db8be24899479fa0d5aabad217c, type: 3}
-  m_Name: Spider Can Attack
+  m_Script: {fileID: 11500000, guid: a8f98a5b428f1c44cae7e4d602c3da24, type: 3}
+  m_Name: CrookedCannotSee
   m_EditorClassIdentifier: 
-  negation: 0
+  negation: 1
   useRaycast: 1
-  attackRange: 5

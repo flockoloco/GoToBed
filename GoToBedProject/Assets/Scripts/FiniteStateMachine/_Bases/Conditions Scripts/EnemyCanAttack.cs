@@ -8,6 +8,8 @@ public class EnemyCanAttack : Condition
     private bool negation;
     [SerializeField]
     private bool useRaycast;
+    [SerializeField]
+    private float attackRange;
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -17,7 +19,7 @@ public class EnemyCanAttack : Condition
     {
         float distanceBetween = Vector3.Distance(enemyStats.Target.gameObject.transform.position, fsm.gameObject.transform.position);
         
-        if (distanceBetween < 5f)
+        if (distanceBetween < attackRange)
         {
             if (useRaycast)
             {
