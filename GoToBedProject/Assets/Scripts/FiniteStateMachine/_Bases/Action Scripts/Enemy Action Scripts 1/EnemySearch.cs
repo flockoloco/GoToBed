@@ -8,6 +8,8 @@ public class EnemySearch : Action
     private State attackState;
     public float animationTimer = 0;
     public bool finishedLastWaypoint;
+    public float animationClipTimer;
+
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
         throw new System.NotImplementedException();
@@ -19,7 +21,7 @@ public class EnemySearch : Action
         if (enemyStats.IsAtDestination())  
         {
             finishedLastWaypoint = false;
-           
+            animationClipTimer = enemyStats.Animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
             if (animationTimer.Equals(0))
             {
 
@@ -86,11 +88,11 @@ public class EnemySearch : Action
                 }
                 animationTimer += Time.deltaTime;
             }
-            else if (animationTimer < 2f) 
+            else if (animationTimer < animationClipTimer)
             {
                 animationTimer += Time.deltaTime;
             }
-            else if ( animationTimer > 2f) //change value to animation length
+            else if (animationTimer > animationClipTimer) //change value to animation length
             {  
                 
                 if (enemyStats.CurrentWaypoint >= enemyStats.SearchWaypoints.Count - 1)    
