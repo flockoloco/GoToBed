@@ -17606,6 +17606,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2059433822216867602, guid: d525cf7e371ff9845acd70efa10e1c42, type: 3}
   m_PrefabInstance: {fileID: 1060971972}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &533684082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533684081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea817d36c5bd01e479dd9bf22b84de64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scissorsPrefab: {fileID: 235178878615523876, guid: c49ff9150a88df2499ac569dd5a5bef9, type: 3}
+  keyPrefab: {fileID: 1563996071522465781, guid: ba3fdbac06d7a444bae186007d201877, type: 3}
+  bearPrefab: {fileID: 6835159858443078132, guid: ed125c13c9708224ab10e8198af1e213, type: 3}
 --- !u!1 &559992640
 GameObject:
   m_ObjectHideFlags: 0
