@@ -82,6 +82,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5961663488496540664, guid: ae4a7146b9e0ae041b22e807b957fc63, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6017853255023649437, guid: ae4a7146b9e0ae041b22e807b957fc63, type: 3}
       propertyPath: m_Name
       value: doorParentObject
