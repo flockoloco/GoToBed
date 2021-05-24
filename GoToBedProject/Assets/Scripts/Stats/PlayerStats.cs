@@ -45,6 +45,8 @@ public sealed class PlayerStats : Stats
     private LevelObjectInfo.Level _currentLevel;
     [SerializeField]
     private bool _playerDead = false;
+    [SerializeField]
+    private bool _playerWon = false;
     //menu section
     [SerializeField]
     private GameObject _staminaObject;
@@ -85,25 +87,30 @@ public sealed class PlayerStats : Stats
     public LevelObjectInfo.Level CurrentLevel { get => _currentLevel; set => _currentLevel = value; }
     public GameObject StaminaParentObject { get => _staminaParentObject; set => _staminaParentObject = value; }
     public bool PlayerDead { get => _playerDead; set => _playerDead = value; }
+    public bool PlayerWon { get => _playerWon; set => _playerWon = value; }
 
     private void Update()
     {
         if (_equippedItem && _equippedItem.GetComponent<ItemInfoScript>().tag == "TeddyBear")
         {
-            PlayerWon();
+            PlayerWonGame();
         }
     }
     public void PlayerDied()
     {
-        _deathPanel.GetComponent<Image>().fillAmount += 0.5f * Time.deltaTime;
-        if (_deathPanel.GetComponent<Image>().fillAmount >= 1f)
+        if (!_playerWon)
         {
-            Cursor.lockState = CursorLockMode.None;
-            _deathMenu.SetActive(true);
-        }
+            _deathPanel.GetComponent<Image>().fillAmount += 0.5f * Time.deltaTime;
+            if (_deathPanel.GetComponent<Image>().fillAmount >= 1f)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                _deathMenu.SetActive(true);
+            }
+        } 
     }
-    public void PlayerWon()
+    public void PlayerWonGame()
     {
+        _playerWon = false;
         _winPanel.GetComponent<Image>().fillAmount += 0.6f * Time.deltaTime;
         if (_winPanel.GetComponent<Image>().fillAmount >= 1f)
         {

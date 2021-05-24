@@ -51,6 +51,7 @@ public class EnemySearch : Action
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(2))
                 {
                     enemyStats.TurnOffThenTurnOnAnimation("LookingUnder");
+                   
                     if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
                        enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
                     {
@@ -68,6 +69,7 @@ public class EnemySearch : Action
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(3))
                 {
                     enemyStats.TurnOffThenTurnOnAnimation("LookingUnder");
+                    Debug.Log("I WAS HERE");
                     if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
                        enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
                     {
