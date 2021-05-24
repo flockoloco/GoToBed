@@ -35,7 +35,7 @@ public class MenuSwitch : MonoBehaviour
     {
         if(MenuName == Globals.Menus.Pause)
         {
-            if(player.GetComponent<FiniteStateMachine>().CurrentState.StateDisplayName != "Dead")
+            if(player.GetComponent<FiniteStateMachine>().CurrentState.StateDisplayName != "Dead" && !player.GetComponent<PlayerStats>().PlayerWon)
             {
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {

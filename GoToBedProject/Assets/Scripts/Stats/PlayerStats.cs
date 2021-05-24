@@ -110,7 +110,7 @@ public sealed class PlayerStats : Stats
     }
     public void PlayerWonGame()
     {
-        _playerWon = false;
+        _playerWon = true;
         _winPanel.GetComponent<Image>().fillAmount += 0.6f * Time.deltaTime;
         if (_winPanel.GetComponent<Image>().fillAmount >= 1f)
         {

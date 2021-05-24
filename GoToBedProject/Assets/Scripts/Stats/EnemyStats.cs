@@ -35,13 +35,17 @@ public class EnemyStats : Stats
     private Transform _eyesPosition;
     [SerializeField]
     private WayPointInfo _playerWayPoint;
-
+   
     // new shit for the door animation
     public State OldState;
     public List<WayPointInfo> OldSearchList = new List<WayPointInfo>();
     public int OldCurrentWaypoint;
     public DoorScript OldDoorScript;
 
+    //sound
+    public AudioClip _footStep;
+    public AudioClip _runningFootStep;
+    private AudioSource _audioSource;
 
 
     //end of new shit
@@ -113,6 +117,7 @@ public class EnemyStats : Stats
     }
     public void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _myFsm = GetComponent<FiniteStateMachine>();
         _agent = GetComponent<NavMeshAgent>();
         TurnOffThenTurnOnAnimation("Walking");
@@ -126,7 +131,6 @@ public class EnemyStats : Stats
     private void Update()
     {
         StatusTextRotation();
-
     }
 
     public void StatusTextRotation()
@@ -148,5 +152,15 @@ public class EnemyStats : Stats
     {
         Animator.SetInteger(stateName, stateNumber);
     }
+
+    public void playWalkFootStep()
+    {
+        _audioSource.PlayOneShot(_footStep);
+    }
+    public void playRunningFootStep()
+    {
+        _audioSource.PlayOneShot(_runningFootStep);
+    }
+
 }
 
