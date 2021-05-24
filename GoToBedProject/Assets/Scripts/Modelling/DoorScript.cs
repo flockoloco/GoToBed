@@ -17,6 +17,10 @@ public class DoorScript : objectiveobjectinfo
     private string _closeText = "Close!";
     [SerializeField]
     private NavMeshObstacle _obstacleComponent;
+    [SerializeField]
+    private AudioSource _doorAudio;
+    [SerializeField]
+    private AudioClip _doorSoundClip;
 
     public bool Locked { get => _locked; set => _locked = value; }
     public string UnlockText { get => _unlockText; set => _unlockText = value; }
@@ -25,6 +29,7 @@ public class DoorScript : objectiveobjectinfo
 
     public void DoorInteraction(PlayerStats playerStats)
     {
+        _doorAudio.PlayOneShot(_doorSoundClip);
         playerStats.InteractionCoolDown = 0;
         if (Locked)
         {
@@ -52,14 +57,13 @@ public class DoorScript : objectiveobjectinfo
     }
     public void DoorInteraction(EnemyStats enemyStats)
     {
-        
+        _doorAudio.PlayOneShot(_doorSoundClip);
         if (!Open)
         {
             _animator.SetBool(_openString, true);
             Open = true;
             _obstacleComponent.enabled = true;
         }
-        
-
     }
+
 }
