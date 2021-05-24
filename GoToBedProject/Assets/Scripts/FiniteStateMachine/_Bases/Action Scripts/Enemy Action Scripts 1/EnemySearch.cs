@@ -36,55 +36,19 @@ public class EnemySearch : Action
 
                     enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].transform.parent.GetComponent<HidingObjectInfo>().ObjectAnimator.Play(0);
                     enemyStats.TurnOffThenTurnOnAnimation("LookingInside");
-                    if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
-                        enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
-                    {
-                        animationTimer = 0;
-                        Debug.Log("you dead yet?  hello ");
-                        enemyStats.Target.GetComponent<PlayerStats>().PlayerDead = true;
-                        enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
-                        enemyStats.StopAgent();
-                        enemyStats.Agent.isStopped = true;
-                        enemyStats.TurnOffThenTurnOnAnimation("Attacking");
-                        enemyStats.transform.LookAt(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform);
-                        fsm.CurrentState = attackState;
-                    }
+                    TryToAttackThePlayer(fsm, enemyStats);
                 }
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(2))
                 {
                     enemyStats.TurnOffThenTurnOnAnimation("LookingUnder");
-                   
-                    if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
-                       enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
-                    {
-                        animationTimer = 0;
-                        Debug.Log("you dead yet?  hello ");
-                        enemyStats.Target.GetComponent<PlayerStats>().PlayerDead = true;
-                        enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
-                        enemyStats.StopAgent();
-                        enemyStats.Agent.isStopped = true;
-                        enemyStats.TurnOffThenTurnOnAnimation("Attacking");
-                        enemyStats.transform.LookAt(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform);
-                        fsm.CurrentState = attackState;
-                    }
+
+                    TryToAttackThePlayer(fsm, enemyStats);
                 }
                 else if (enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].type.Equals(3))
                 {
                     enemyStats.TurnOffThenTurnOnAnimation("LookingUnder");
                     Debug.Log("I WAS HERE");
-                    if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
-                       enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
-                    {
-                        animationTimer = 0;
-                        Debug.Log("you dead yet?  hello ");
-                        enemyStats.Target.GetComponent<PlayerStats>().PlayerDead = true;
-                        enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
-                        enemyStats.StopAgent();
-                        enemyStats.Agent.isStopped = true;
-                        enemyStats.TurnOffThenTurnOnAnimation("Attacking");
-                        enemyStats.transform.LookAt(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform);
-                        fsm.CurrentState = attackState;
-                    }   
+                    TryToAttackThePlayer(fsm, enemyStats);
                 }
                 animationTimer += Time.deltaTime;
             }
@@ -115,6 +79,22 @@ public class EnemySearch : Action
             
         }
 
+    }
+    private void TryToAttackThePlayer(FiniteStateMachine fsm, EnemyStats enemyStats)
+    {
+        enemyStats.transform.LookAt(enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].transform.parent);
+        if (enemyStats.Target.GetComponent<PlayerStats>().InsideHidingObject == true &&
+                       enemyStats.Target.GetComponent<PlayerStats>().InteractingObject.GetComponent<HidingObjectInfo>().EntryPosition.position == enemyStats.SearchWaypoints[enemyStats.CurrentWaypoint].wpPosition)
+        {
+            animationTimer = 0;
+            enemyStats.Target.GetComponent<PlayerStats>().PlayerDead = true;
+            enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.CameraState = 3;
+            enemyStats.StopAgent();
+            enemyStats.Agent.isStopped = true;
+            enemyStats.TurnOffThenTurnOnAnimation("Attacking");
+            enemyStats.transform.LookAt(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform);
+            fsm.CurrentState = attackState;
+        }
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)
