@@ -50,14 +50,6 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     { 
-       if (Input.GetKey(KeyCode.C))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else if (Input.GetKey(KeyCode.V))
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
         if (_cameraState.Equals(1))
         {
             if (Cursor.lockState == CursorLockMode.Locked)
