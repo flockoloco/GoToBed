@@ -21,7 +21,9 @@ public class NewMenuCameraScript : MonoBehaviour
     {
         if (_startAnimation == true)
         {
-            transform.parent.position = Vector3.Lerp(transform.parent.position,_wayPointList[_canvasToGoTo].position,Time.deltaTime * 2);
+            if (_wayPointList[_canvasToGoTo].position != null)
+            {
+transform.parent.position = Vector3.Lerp(transform.parent.position,_wayPointList[_canvasToGoTo].position,Time.deltaTime * 2);
             transform.parent.rotation = Quaternion.Slerp(transform.parent.rotation,_wayPointList[_canvasToGoTo].rotation,Time.deltaTime * 2);
             if ( Vector3.Distance(transform.parent.position, _wayPointList[_canvasToGoTo].position) < 0.01)
             {
@@ -35,6 +37,11 @@ public class NewMenuCameraScript : MonoBehaviour
                 _canvasToGoTo = -1;
                 
             }
+            }else
+            {
+
+            }
+            
         }
         
     }

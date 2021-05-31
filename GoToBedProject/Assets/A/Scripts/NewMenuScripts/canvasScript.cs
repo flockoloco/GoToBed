@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class canvasScript : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class canvasScript : MonoBehaviour
     private List<GameObject> _hoverInteractionList;
     [SerializeField]
     private GameObject _doorLamp;
+    [SerializeField]
+    private bool _sleepyTime = false;
     private void Start()
     {
         Time.timeScale = 1;
@@ -94,6 +97,19 @@ public class canvasScript : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        _sleepyTime = true;
+        
+    }
+    private void Update()
+    {
+        if (_sleepyTime == true)        
+        {
+            _canvasList[5].gameObject.transform.GetChild(1).GetComponent<Image>().color =  Color.Lerp(_canvasList[5].gameObject.transform.GetChild(1).GetComponent<Image>().color,Color.black,Time.deltaTime * 1.5f);
+            if (_canvasList[5].gameObject.transform.GetChild(1).GetComponent<Image>().color.a >= 0.9f)
+            {
+                Debug.Log("quitei ");
+                Application.Quit();
+            }
+        }
     }
 }

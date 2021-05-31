@@ -16,7 +16,7 @@ public class MenuSwitch : MonoBehaviour
     }
     public void BackToMainMenu()
     {
-        levelLoader.LoadScene("MainMenu");
+        levelLoader.LoadScene("EvenPoggierScene");
     }
     public void TurnOffOnCanvas(GameObject targetCanvas)
     {
