@@ -65,5 +65,12 @@ public class DoorScript : objectiveobjectinfo
             _obstacleComponent.enabled = true;
         }
     }
+    public void DoorInteraction()
+    {
+        _doorAudio.PlayOneShot(_doorSoundClip);
+        _animator.SetBool(_openString, true);
+        Open = true;
+        _obstacleComponent.enabled = true;
+    }
 
 }
