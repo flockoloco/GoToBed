@@ -21,7 +21,7 @@ public class EnemyCanSeeCondition : Condition
         //Debug.DrawRay(enemyStats.transform.position, (enemyStats.Target.transform.position - fsm.transform.position).normalized, Color.yellow, 10f);
 
 
-        Debug.Log(concPlayer * enemyStats.VisionDetection +  " this is the concealment of the player " + distanceToTarget + "distance to target"); 
+
         if ((concPlayer * enemyStats.VisionDetection) > distanceToTarget)
         {
                 

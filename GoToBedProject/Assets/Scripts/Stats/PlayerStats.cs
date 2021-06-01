@@ -47,6 +47,8 @@ public sealed class PlayerStats : Stats
     private bool _playerDead = false;
     [SerializeField]
     private bool _playerWon = false;
+    [SerializeField]
+    private bool _playerIsWebbed = false;
     //menu section
     [SerializeField]
     private GameObject _staminaObject;
@@ -88,6 +90,7 @@ public sealed class PlayerStats : Stats
     public GameObject StaminaParentObject { get => _staminaParentObject; set => _staminaParentObject = value; }
     public bool PlayerDead { get => _playerDead; set => _playerDead = value; }
     public bool PlayerWon { get => _playerWon; set => _playerWon = value; }
+    public bool PlayerIsWebbed { get => _playerIsWebbed; set => _playerIsWebbed = value; }
 
     private void Update()
     {
@@ -118,4 +121,5 @@ public sealed class PlayerStats : Stats
             _winMenu.SetActive(true);
         }
     }
+
 }

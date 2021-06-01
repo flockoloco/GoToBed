@@ -29,10 +29,12 @@ public class PlayerMoveAction : Action
         { 
             move = move.normalized;
         }
+
+        
        
         
         playerStats.PlayerController.Move(move * Time.deltaTime * playerStats.MoveSpeed);
-        //apply slow if webbed
+      
 
         playerStats.PlayerCurrentVelocity = playerStats.PlayerController.velocity.magnitude;
 
@@ -50,4 +52,6 @@ public class PlayerMoveAction : Action
     {
         throw new System.NotImplementedException();
     }
+
+    
 }

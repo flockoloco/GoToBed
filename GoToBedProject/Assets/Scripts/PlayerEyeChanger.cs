@@ -10,6 +10,7 @@ public class PlayerEyeChanger : MonoBehaviour
     public Sprite middleOpenedEye;
     public Sprite closedEye;
     private SVGImage eyeImage;
+
     private void Start()
     {
         eyeImage = gameObject.GetComponent<SVGImage>();

@@ -2186,6 +2186,8 @@ MonoBehaviour:
   _enemyName: 2
   _eyesPosition: {fileID: 168751699359769896}
   _playerWayPoint: {fileID: 8119671555872041605}
+  _spiderCoccyx: {fileID: 0}
+  _spiderWeb: {fileID: 0}
   OldState: {fileID: 0}
   OldSearchList: []
   OldCurrentWaypoint: 0

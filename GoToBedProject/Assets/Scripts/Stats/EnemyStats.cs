@@ -35,7 +35,11 @@ public class EnemyStats : Stats
     private Transform _eyesPosition;
     [SerializeField]
     private WayPointInfo _playerWayPoint;
-   
+    [SerializeField]
+    private GameObject _spiderCoccyx;
+    [SerializeField]
+    private GameObject _spiderWeb;
+
     // new shit for the door animation
     public State OldState;
     public List<WayPointInfo> OldSearchList = new List<WayPointInfo>();
@@ -65,6 +69,8 @@ public class EnemyStats : Stats
     public WayPointInfo PlayerWayPoint { get => _playerWayPoint; set => _playerWayPoint = value; }
     public Globals.Enemy EnemyName { get => _enemyName; set => _enemyName = value; }
     public Transform EyesPosition { get => _eyesPosition; set => _eyesPosition = value; }
+    public GameObject SpiderCoccyx { get => _spiderCoccyx; set => _spiderCoccyx = value; }
+    public GameObject SpiderWeb { get => _spiderWeb; set => _spiderWeb = value; }
 
     public void GoToNextWaypoint(List<WayPointInfo> list)
     {

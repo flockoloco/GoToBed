@@ -21,6 +21,7 @@ TagManager:
   - DarkZone
   - TeddyBear
   - Rope
+  - WebFromSpider
   layers:
   - Default
   - TransparentFX
