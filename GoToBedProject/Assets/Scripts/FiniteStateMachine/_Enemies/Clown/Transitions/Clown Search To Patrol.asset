@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d14b5946533f3740ae48f8c675dfa05, type: 3}
-  m_Name: CrookedAttackToChase
+  m_Name: Clown Search To Patrol
   m_EditorClassIdentifier: 
-  decision: {fileID: 11400000, guid: 357ac83c9c828ea42a0f4b600c6102e3, type: 2}
+  decision: {fileID: 11400000, guid: e76536606e455a14b9e7ebe62eb94a8a, type: 2}
   action: {fileID: 0}
-  targetState: {fileID: 11400000, guid: 0609a15595ede5540a158d8f1e72b83b, type: 2}
+  targetState: {fileID: 11400000, guid: a6afa7ae3a3819f4dbade4113e6baaf6, type: 2}
