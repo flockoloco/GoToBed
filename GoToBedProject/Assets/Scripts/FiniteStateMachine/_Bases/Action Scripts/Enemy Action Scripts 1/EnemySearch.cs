@@ -21,7 +21,8 @@ public class EnemySearch : Action
         if (enemyStats.IsAtDestination())  
         {
             finishedLastWaypoint = false;
-            animationClipTimer = enemyStats.Animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+
+            animationClipTimer = enemyStats.Animator.GetCurrentAnimatorClipInfo(0)[0].clip.length; 
             if (animationTimer.Equals(0))
             {
 

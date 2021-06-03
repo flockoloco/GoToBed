@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: Clown Chase
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 0}
-  stateActions: []
+  entryAction: {fileID: 11400000, guid: 45c6ff00b1017fc41a47df79a547053c, type: 2}
+  stateActions:
+  - {fileID: 11400000, guid: 00041ac5b96be5141a2a62df4074d013, type: 2}
   exitAction: {fileID: 0}
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: 9d352876d30c9d04cb54beb159c20378, type: 2}
+  - {fileID: 11400000, guid: 28de79605afecb043be7836c349e8b86, type: 2}
+  - {fileID: 11400000, guid: 23873d21bea7e7546963e0971d6d10a6, type: 2}
+  - {fileID: 11400000, guid: 5587663b6bf452d408e47639b5406667, type: 2}
   _stateDisplayName: Chase

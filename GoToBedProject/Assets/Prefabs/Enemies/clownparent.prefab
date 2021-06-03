@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5449009359486318473}
   - component: {fileID: 2245574390806533895}
   - component: {fileID: 5403372466906499539}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: clownparent
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,6 +161,8 @@ MonoBehaviour:
   _enemyName: 1
   _eyesPosition: {fileID: 1476688391967157114}
   _playerWayPoint: {fileID: 998946655397110096}
+  _spiderCoccyx: {fileID: 0}
+  _spiderWeb: {fileID: 0}
   OldState: {fileID: 0}
   OldSearchList: []
   OldCurrentWaypoint: 0
@@ -181,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOrEnemy: 0
   dontTriggerStart: 0
-  _initialState: {fileID: 0}
+  _initialState: {fileID: 11400000, guid: a6afa7ae3a3819f4dbade4113e6baaf6, type: 2}
   _currentState: {fileID: 0}
   playerStats: {fileID: 0}
   enemyStats: {fileID: 0}
@@ -237,7 +239,7 @@ GameObject:
   - component: {fileID: 952208365382815537}
   - component: {fileID: 1010370565520504893}
   - component: {fileID: 2572455046981506236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476688391967157114}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: eyesspot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4310344546239353845}
   - component: {fileID: 998946655397110096}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: playerWayPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,12 +537,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2845779275431937956, guid: 60f012e915f6903498c6a40774d0fd7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -2845779275431937956, guid: 60f012e915f6903498c6a40774d0fd7d, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 60f012e915f6903498c6a40774d0fd7d, type: 3}
       propertyPath: m_Name
       value: twisty final (export)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60f012e915f6903498c6a40774d0fd7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767559492127519299, guid: 60f012e915f6903498c6a40774d0fd7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6999696200217743489, guid: 60f012e915f6903498c6a40774d0fd7d, type: 3}
       propertyPath: m_LocalPosition.x

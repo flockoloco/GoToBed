@@ -16,5 +16,6 @@ MonoBehaviour:
   stateActions:
   - {fileID: 11400000, guid: d34aff16cce3eb547be86abc8a81f17a, type: 2}
   exitAction: {fileID: 0}
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: 5587663b6bf452d408e47639b5406667, type: 2}
   _stateDisplayName: DoorAnimation

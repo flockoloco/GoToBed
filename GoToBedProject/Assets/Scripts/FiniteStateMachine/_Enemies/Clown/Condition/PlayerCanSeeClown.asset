@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463ef85a146204f419ff398fa823d877, type: 3}
-  m_Name: Clown Chase Entry
+  m_Script: {fileID: 11500000, guid: 02706a8e6d862ef4b95f0b3edaf88b3f, type: 3}
+  m_Name: PlayerCanSeeClown
   m_EditorClassIdentifier: 
-  exit: 0
+  negation: 0
+  useRaycast: 1

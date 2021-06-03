@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: Clown Freeze
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 0}
+  entryAction: {fileID: 11400000, guid: 45c6ff00b1017fc41a47df79a547053c, type: 2}
   stateActions: []
   exitAction: {fileID: 0}
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: 06a94570105b1874a9939f1c921d260e, type: 2}
   _stateDisplayName: Freeze

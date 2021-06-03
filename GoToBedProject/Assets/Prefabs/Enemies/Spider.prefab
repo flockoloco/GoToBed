@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9164208761447623511}
   - component: {fileID: 2274249841080612205}
   - component: {fileID: 5034786827035405582}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,9 +183,9 @@ GameObject:
   - component: {fileID: 2065146570027192483}
   - component: {fileID: 2065146570027192482}
   - component: {fileID: 2643561346549187109}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8418008017021751511}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: eyesspot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6959036404305275553}
   - component: {fileID: 6706613203315733652}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: playerWayPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4559835491775337820}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpiderBooty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,6 +461,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6428976865593055544, guid: efe95d4227524ec4fa7acdebd84021c4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -2845779275431937956, guid: efe95d4227524ec4fa7acdebd84021c4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -2845779275431937956, guid: efe95d4227524ec4fa7acdebd84021c4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -468,6 +476,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: efe95d4227524ec4fa7acdebd84021c4, type: 3}
       propertyPath: m_Name
       value: legs
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efe95d4227524ec4fa7acdebd84021c4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4583005972368562929, guid: efe95d4227524ec4fa7acdebd84021c4, type: 3}
       propertyPath: m_LocalPosition.x

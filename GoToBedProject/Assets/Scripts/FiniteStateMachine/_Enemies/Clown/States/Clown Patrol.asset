@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: Clown Patrol
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 0}
-  stateActions: []
+  entryAction: {fileID: 11400000, guid: 8455a1854e4504348a2a2dda774ed598, type: 2}
+  stateActions:
+  - {fileID: 11400000, guid: 4f823faf69910f7418b1fe3e1cdc401e, type: 2}
   exitAction: {fileID: 0}
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: 06922fdc7f4d1a04aa36d0f4b10be06c, type: 2}
+  - {fileID: 11400000, guid: fc9c9389bbd557c458c50a3066eb880d, type: 2}
+  - {fileID: 11400000, guid: 23873d21bea7e7546963e0971d6d10a6, type: 2}
+  - {fileID: 11400000, guid: 5587663b6bf452d408e47639b5406667, type: 2}
   _stateDisplayName: Patrol

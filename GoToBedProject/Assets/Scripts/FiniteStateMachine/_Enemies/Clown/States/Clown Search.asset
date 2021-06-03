@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f8cec5d35e6d647813122e6e6ec3d3, type: 3}
   m_Name: Clown Search
   m_EditorClassIdentifier: 
-  entryAction: {fileID: 0}
-  stateActions: []
+  entryAction: {fileID: 11400000, guid: 12cc36c026722664688c2ba3caad6dec, type: 2}
+  stateActions:
+  - {fileID: 11400000, guid: b45505aa928eb1a42b87b5fa333c9885, type: 2}
   exitAction: {fileID: 0}
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: ba6e1b40f8592e24da6cf0ede1f5670a, type: 2}
+  - {fileID: 11400000, guid: 66d9dcc7c865d6644963127b3a97be48, type: 2}
+  - {fileID: 11400000, guid: 23525a5416e70e046be746c1f88c7690, type: 2}
+  - {fileID: 11400000, guid: 23873d21bea7e7546963e0971d6d10a6, type: 2}
+  - {fileID: 11400000, guid: 5587663b6bf452d408e47639b5406667, type: 2}
   _stateDisplayName: Search

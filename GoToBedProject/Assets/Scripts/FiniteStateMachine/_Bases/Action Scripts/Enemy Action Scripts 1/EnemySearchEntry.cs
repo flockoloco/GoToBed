@@ -21,11 +21,14 @@ public class EnemySearchEntry : Action
             enemyStats.PlayerWayPoint.transform.position = enemyStats.Target.transform.position;
             enemyStats.PlayerWayPoint.UpdatePosition();
             enemyStats.SearchWaypoints.Add(enemyStats.PlayerWayPoint);
+            enemyStats.CurrentWaypoint = 0;
+            enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
+
+
         }
         else
         { 
             
-            Debug.Log("hello i was here" + enemyStats.CurrentWaypoint);
             _enemySearch.animationTimer = 0;
             enemyStats.TurnOffThenTurnOnAnimation("Walking");
             if (enemyStats.SearchWaypoints != null) //remove later

@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6716627d61274a48ae4433727ad824e, type: 3}
-  m_Name: CrookedSearchNoise
+  m_Script: {fileID: 11500000, guid: 7d14b5946533f3740ae48f8c675dfa05, type: 3}
+  m_Name: Clown Freeze To Search
   m_EditorClassIdentifier: 
+  decision: {fileID: 11400000, guid: 7c97849124f748545bf7941832c6e3f2, type: 2}
+  action: {fileID: 0}
+  targetState: {fileID: 11400000, guid: b0a7f97573fba084f8644bbd1f443fa9, type: 2}

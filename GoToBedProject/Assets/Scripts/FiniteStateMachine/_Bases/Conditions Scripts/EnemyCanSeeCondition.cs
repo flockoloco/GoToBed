@@ -52,6 +52,7 @@ public class EnemyCanSeeCondition : Condition
     }
     public override bool Test(FiniteStateMachine fsm, PlayerStats playerStats)
     {
+        Debug.Log(fsm.gameObject.name + "name of the object;");
         throw new System.NotImplementedException();
     }
 

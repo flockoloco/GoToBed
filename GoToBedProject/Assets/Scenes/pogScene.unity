@@ -61231,6 +61231,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 147012440945425883, guid: 47ec30182ccf4ed4d9675d2693983951, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 533684081}
     - target: {fileID: 1793268429307820491, guid: 47ec30182ccf4ed4d9675d2693983951, type: 3}
       propertyPath: m_Name
       value: clownparent
