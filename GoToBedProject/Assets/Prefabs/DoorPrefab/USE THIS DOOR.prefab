@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3131855396059237868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: USE THIS DOOR
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,10 +90,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorParentObject
       objectReference: {fileID: 0}
+    - target: {fileID: 6017853255023649437, guid: ae4a7146b9e0ae041b22e807b957fc63, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8915281084543812253, guid: ae4a7146b9e0ae041b22e807b957fc63, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 735c4f62c5303534aa8ec60c2a64c6e8, type: 2}
+      objectReference: {fileID: 2100000, guid: 0f21d9b314126f04688ec9315f1a066e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae4a7146b9e0ae041b22e807b957fc63, type: 3}
 --- !u!4 &8145427213169166516 stripped

@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5380b99d4457ef54b994028eff5cad25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 6
+  _moveSpeed: 3
   _gravity: -19.62
   _concealmentValue: 0
   _noiseValue: 0
@@ -185,6 +185,7 @@ MonoBehaviour:
   _currentLevel: 0
   _playerDead: 0
   _playerWon: 0
+  _playerIsWebbed: 0
   _staminaObject: {fileID: 0}
   _staminaParentObject: {fileID: 0}
   _uiInteractionTextObject: {fileID: 0}
@@ -369,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07937b7933ee6274ea2554cad6b83991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 200
+  mouseSensitivity: 120
   playerBody: {fileID: 3359317848472270958}
   cameraXAxis: 0
   cameraYAxis: 0
@@ -555,9 +556,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6585815221295303823}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: parentplayerobject (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
