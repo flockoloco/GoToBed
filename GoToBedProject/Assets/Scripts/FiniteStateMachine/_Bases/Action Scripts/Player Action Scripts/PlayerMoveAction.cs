@@ -8,6 +8,7 @@ public class PlayerMoveAction : Action
     
     Vector3 velocity;
     bool isGrounded;
+    public Vector3 moveDirection = Vector3.zero;
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
@@ -30,9 +31,10 @@ public class PlayerMoveAction : Action
             move = move.normalized;
         }
 
-        
-       
-        
+
+
+         moveDirection = move;
+
         playerStats.PlayerController.Move(move * Time.deltaTime * playerStats.MoveSpeed);
       
 
