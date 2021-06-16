@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 3569245489475091996}
   - component: {fileID: 5176887968660775404}
   - component: {fileID: 8379881812933641702}
-  m_Layer: 0
-  m_Name: central_table_
+  - component: {fileID: 2361873503840959549}
+  m_Layer: 6
+  m_Name: living room table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3569245489475091996
 Transform:
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2361873503840959549
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2312914405262417883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8972462898612303826, guid: e24ded9689bb9d34a8f2bbbc4cd49e60, type: 3}

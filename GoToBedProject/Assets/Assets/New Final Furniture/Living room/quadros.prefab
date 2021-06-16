@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 2947502182377904982}
   - component: {fileID: 4137475586233424900}
   - component: {fileID: 5146121351151488702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2947502182377904982
 Transform:
@@ -90,12 +90,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2778099497622259591}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2778099497622259591
 Transform:
@@ -122,12 +122,12 @@ GameObject:
   - component: {fileID: 7946777783097860457}
   - component: {fileID: 7131742835916920941}
   - component: {fileID: 5569611670264515755}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7946777783097860457
 Transform:
@@ -203,12 +203,12 @@ GameObject:
   - component: {fileID: 8789553409221708519}
   - component: {fileID: 6909870401781399117}
   - component: {fileID: 478294957806296573}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8789553409221708519
 Transform:
@@ -284,12 +284,12 @@ GameObject:
   - component: {fileID: 8281936637448420678}
   - component: {fileID: 3566540921973149504}
   - component: {fileID: 7849100421193696834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8281936637448420678
 Transform:
@@ -365,12 +365,12 @@ GameObject:
   - component: {fileID: 8720242553204208387}
   - component: {fileID: 2539854789598104636}
   - component: {fileID: 8557142306631169177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_4_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8720242553204208387
 Transform:
@@ -444,12 +444,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3992876367842509553}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3992876367842509553
 Transform:
@@ -476,12 +476,12 @@ GameObject:
   - component: {fileID: 2309184522463263129}
   - component: {fileID: 3223678733798878409}
   - component: {fileID: 8555817031252524722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2309184522463263129
 Transform:
@@ -555,12 +555,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3539634758270549089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3539634758270549089
 Transform:
@@ -587,12 +587,12 @@ GameObject:
   - component: {fileID: 8450411433310979082}
   - component: {fileID: 1026284774954991816}
   - component: {fileID: 1381409717445169828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8450411433310979082
 Transform:
@@ -666,12 +666,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3795006433803725131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadros
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3795006433803725131
 Transform:
@@ -704,12 +704,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3112867237613291690}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_2_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3112867237613291690
 Transform:
@@ -734,12 +734,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8703890371277704758}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_3_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8703890371277704758
 Transform:
@@ -764,12 +764,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5515213426043010838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadros_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5515213426043010838
 Transform:
@@ -806,12 +806,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8284377074019398879}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_4_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8284377074019398879
 Transform:
@@ -836,12 +836,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8833756159190308572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8833756159190308572
 Transform:
@@ -868,12 +868,12 @@ GameObject:
   - component: {fileID: 8942367179873517761}
   - component: {fileID: 9124587004887757786}
   - component: {fileID: 1695508757683942056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8942367179873517761
 Transform:
@@ -947,12 +947,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2077008439716995125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2077008439716995125
 Transform:
@@ -979,12 +979,12 @@ GameObject:
   - component: {fileID: 1073819924526597411}
   - component: {fileID: 2710913093799098931}
   - component: {fileID: 7246178888567853371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1073819924526597411
 Transform:
@@ -1058,12 +1058,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581098418322005824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8581098418322005824
 Transform:
@@ -1090,12 +1090,12 @@ GameObject:
   - component: {fileID: 2241686964105120176}
   - component: {fileID: 6867249698851600773}
   - component: {fileID: 4069221522990334152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: quadro_2_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2241686964105120176
 Transform:

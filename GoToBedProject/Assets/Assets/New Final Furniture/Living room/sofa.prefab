@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3484617631432595426}
   - component: {fileID: 5741596221088705168}
   - component: {fileID: 547286332963681000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cuchion_2_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3484617631432595426
 Transform:
@@ -92,12 +92,13 @@ GameObject:
   - component: {fileID: 2180049803669707626}
   - component: {fileID: 870040695883756058}
   - component: {fileID: 4873028196721486083}
-  m_Layer: 0
+  - component: {fileID: 5154340974399483208}
+  m_Layer: 6
   m_Name: sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2180049803669707626
 Transform:
@@ -168,6 +169,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5154340974399483208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163048773770208793}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.63527733, y: 0.8590771, z: 1.7863647}
+  m_Center: {x: 0.067638665, y: 0.26132017, z: 0}
 --- !u!1 &1197869581087874766
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,12 +193,12 @@ GameObject:
   - component: {fileID: 7329980978902230549}
   - component: {fileID: 879711022762147761}
   - component: {fileID: 9167378235458256386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cuchion_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7329980978902230549
 Transform:
@@ -260,12 +274,12 @@ GameObject:
   - component: {fileID: 3999239393278368037}
   - component: {fileID: 792333921017018154}
   - component: {fileID: 7338007931928262107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cuchion_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3999239393278368037
 Transform:
@@ -341,12 +355,12 @@ GameObject:
   - component: {fileID: 3764499200944388469}
   - component: {fileID: 7581673938526617189}
   - component: {fileID: 5048754338588460489}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cuchion_2_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3764499200944388469
 Transform:
@@ -422,12 +436,12 @@ GameObject:
   - component: {fileID: 5073293189528030890}
   - component: {fileID: 629292658204932076}
   - component: {fileID: 6649256440370982097}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cuchion_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5073293189528030890
 Transform:
@@ -503,12 +517,12 @@ GameObject:
   - component: {fileID: 592947019458045754}
   - component: {fileID: 4759523328826516521}
   - component: {fileID: 804783084557184714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cuchion_2_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &592947019458045754
 Transform:
