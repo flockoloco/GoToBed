@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad73cde505616c4dbe2b9492d673415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collidableChild: {fileID: 0}
+  _collidableChild: {fileID: 6447680088849263302}
   _usableTag: 20
   _wrongItemText: I need a key!
   _correctItemText: Open!
@@ -73,7 +73,7 @@ MonoBehaviour:
   _open: 0
   _animator: {fileID: 3636207893531846870}
   _unlockText: Unlock!
-  _obstacleComponent: {fileID: 0}
+  _obstacleComponent: {fileID: 933496216832181400}
   _doorAudio: {fileID: 5961663488496540664}
   _doorSoundClip: {fileID: 8300000, guid: f449b6a39678fe94ebe47777675d957c, type: 3}
 --- !u!82 &5961663488496540664

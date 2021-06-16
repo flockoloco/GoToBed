@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 826893493766780256}
   - component: {fileID: 7751580985384866306}
   - component: {fileID: 4309479703088042951}
+  - component: {fileID: 5543518303058874115}
   m_Layer: 6
   m_Name: carpet
   m_TagString: Untagged
@@ -96,3 +97,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1967472078271676955, guid: a6b9d8dd092656740af85af0d998a870, type: 3}
+--- !u!114 &5543518303058874115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317949500970359121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bc57902a507a54ba71f60b168f6df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallSoundReduction: 0
+  floorSoundIncrement: 0
+  objectType: 0
+  floorType: 1
+  level: 1
