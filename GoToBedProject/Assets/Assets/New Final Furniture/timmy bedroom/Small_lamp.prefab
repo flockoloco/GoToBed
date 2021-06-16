@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6570372908571840774}
   - component: {fileID: 1461210798467134163}
   - component: {fileID: 3321906374696111669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder_1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6570372908571840774
 Transform:
@@ -92,12 +92,12 @@ GameObject:
   - component: {fileID: 1060969745587210425}
   - component: {fileID: 8593998165625339431}
   - component: {fileID: 162708099573523192}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1060969745587210425
 Transform:
@@ -173,12 +173,12 @@ GameObject:
   - component: {fileID: 7017946903651736436}
   - component: {fileID: 1152192166309713186}
   - component: {fileID: 4303475165369887351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7017946903651736436
 Transform:
@@ -252,12 +252,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1097787768737663587}
-  m_Layer: 0
+  - component: {fileID: 354838585785250038}
+  m_Layer: 6
   m_Name: Small_lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1097787768737663587
 Transform:
@@ -276,3 +277,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &354838585785250038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919886521059327274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.325, z: 0.18}
+  m_Center: {x: -0.005, y: 0.025, z: 0.001}

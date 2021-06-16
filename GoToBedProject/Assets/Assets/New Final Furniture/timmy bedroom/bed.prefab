@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3863863354811558427}
-  m_Layer: 0
+  - component: {fileID: 7835558138579344312}
+  m_Layer: 6
   m_Name: bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3863863354811558427
 Transform:
@@ -34,6 +35,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7835558138579344312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858204407031794943}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.06, y: 0.93, z: 1.32}
+  m_Center: {x: -1.52, y: 0.21, z: 1.64}
 --- !u!1 &3983996834262319206
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,12 +59,12 @@ GameObject:
   - component: {fileID: 7318167151016508240}
   - component: {fileID: 4084714233398368346}
   - component: {fileID: 6881709864466037319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: matress_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7318167151016508240
 Transform:
@@ -126,12 +140,12 @@ GameObject:
   - component: {fileID: 5957226722903969415}
   - component: {fileID: 1696818317503902193}
   - component: {fileID: 2033150692764240220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_9_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5957226722903969415
 Transform:
@@ -207,12 +221,12 @@ GameObject:
   - component: {fileID: 7336676925267365386}
   - component: {fileID: 8679643978064453908}
   - component: {fileID: 3590323384873802316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: matress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7336676925267365386
 Transform:
@@ -288,12 +302,12 @@ GameObject:
   - component: {fileID: 9175838493945606825}
   - component: {fileID: 3396938719368794035}
   - component: {fileID: 6368004494391417216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pillow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9175838493945606825
 Transform:
@@ -367,12 +381,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4967054882251624547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bed_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4967054882251624547
 Transform:
@@ -401,12 +415,12 @@ GameObject:
   - component: {fileID: 3431829464412298400}
   - component: {fileID: 5216149399726907182}
   - component: {fileID: 214730591624257444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_1_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3431829464412298400
 Transform:
