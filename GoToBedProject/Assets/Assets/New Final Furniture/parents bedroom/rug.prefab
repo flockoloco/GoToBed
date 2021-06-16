@@ -11,12 +11,14 @@ GameObject:
   - component: {fileID: 5138144268626277194}
   - component: {fileID: 1950723265641085522}
   - component: {fileID: 4506238034219970153}
-  m_Layer: 0
+  - component: {fileID: 3661410752558866598}
+  - component: {fileID: 595028693025571774}
+  m_Layer: 6
   m_Name: rug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5138144268626277194
 Transform:
@@ -81,3 +83,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3661410752558866598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169202766632288715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bc57902a507a54ba71f60b168f6df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallSoundReduction: 0
+  floorSoundIncrement: 0
+  objectType: 0
+  floorType: 1
+  level: 0
+--- !u!64 &595028693025571774
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169202766632288715}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 362942330529586645, guid: e11b1a3a23132a946a10d8376e130101, type: 3}

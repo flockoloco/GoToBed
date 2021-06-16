@@ -738,8 +738,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 401801975396581937}
+  - component: {fileID: 8445791820413942745}
   m_Layer: 0
-  m_Name: bar_stool
+  m_Name: Stool Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,3 +769,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8445791820413942745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523373518074300940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.384531, y: 0.77103937, z: 0.34984368}
+  m_Center: {x: -0.08847518, y: -0.18979937, z: -0.07645075}

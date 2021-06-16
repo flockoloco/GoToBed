@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 5650808469462741172}
   - component: {fileID: 7369152709200004165}
   - component: {fileID: 3491890727176192349}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cuchion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5650808469462741172
 Transform:
@@ -92,12 +92,13 @@ GameObject:
   - component: {fileID: 3506675611264286125}
   - component: {fileID: 7972287031589896791}
   - component: {fileID: 734656743340373571}
-  m_Layer: 0
+  - component: {fileID: 7886265414737570239}
+  m_Layer: 6
   m_Name: sofa_small_1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3506675611264286125
 Transform:
@@ -163,3 +164,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7886265414737570239
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6524820976896646514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49993128, y: 0.76877743, z: 0.60279584}
+  m_Center: {x: 0.042946722, y: 0.21570191, z: -3.6408382e-10}

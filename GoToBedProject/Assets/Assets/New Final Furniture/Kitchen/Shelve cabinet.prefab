@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6796393750452262830}
   - component: {fileID: 8083035509168005621}
   - component: {fileID: 1012932684150129148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6796393750452262830
 Transform:
@@ -92,12 +92,12 @@ GameObject:
   - component: {fileID: 9114787197943777187}
   - component: {fileID: 2612726413220556203}
   - component: {fileID: 101100036922427353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: handle_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9114787197943777187
 Transform:
@@ -173,12 +173,13 @@ GameObject:
   - component: {fileID: 3502149184946238600}
   - component: {fileID: 2913487403394704710}
   - component: {fileID: 2102947644478947345}
-  m_Layer: 0
+  - component: {fileID: 2039357554221466319}
+  m_Layer: 6
   m_Name: Cube_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3502149184946238600
 Transform:
@@ -243,6 +244,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2039357554221466319
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484745906440974255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1704169764140650982, guid: 140acc564aa62834faf99dc6fd64f125, type: 3}
 --- !u!1 &4680533166931591011
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,12 +269,13 @@ GameObject:
   - component: {fileID: 2061386493086753745}
   - component: {fileID: 6418063809735614262}
   - component: {fileID: 6522064650957823961}
-  m_Layer: 0
+  - component: {fileID: 5750093576926037097}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2061386493086753745
 Transform:
@@ -324,6 +340,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5750093576926037097
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4680533166931591011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 140acc564aa62834faf99dc6fd64f125, type: 3}
 --- !u!1 &7116433921305318013
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,12 +363,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8080724587925767085}
-  m_Layer: 0
-  m_Name: shelve_cabinet
+  m_Layer: 6
+  m_Name: Shelve cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8080724587925767085
 Transform:
@@ -370,12 +400,13 @@ GameObject:
   - component: {fileID: 6403037770936989874}
   - component: {fileID: 3334701828234113377}
   - component: {fileID: 1876952304581420082}
-  m_Layer: 0
+  - component: {fileID: 4123281068697630738}
+  m_Layer: 6
   m_Name: Cube_1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6403037770936989874
 Transform:
@@ -440,3 +471,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4123281068697630738
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854541088485735205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3720718609502468921, guid: 140acc564aa62834faf99dc6fd64f125, type: 3}
