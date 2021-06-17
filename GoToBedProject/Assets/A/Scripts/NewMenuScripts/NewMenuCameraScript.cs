@@ -32,7 +32,7 @@ transform.parent.position = Vector3.Lerp(transform.parent.position,_wayPointList
                 _startAnimation = false;
                 if (_canvasToGoTo == 3)
                 {
-                    levelLoader.LoadScene("pogScene");
+                    levelLoader.LoadScene("GoToBed");
                 }
                 _canvasToGoTo = -1;
                 

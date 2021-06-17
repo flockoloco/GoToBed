@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/A/Scenes/EvenPoggierScene.unity
     guid: 415573eed5840db4d8bc6ab4f3c9795d
   - enabled: 1
-    path: Assets/Scenes/pogScene.unity
-    guid: bf2cfade33b2f684d8c417f8f8a86f9a
+    path: Assets/A/Scenes/GoToBed.unity
+    guid: bb66e531e647a6b4a979dae494cbc2ee
   m_configObjects: {}
