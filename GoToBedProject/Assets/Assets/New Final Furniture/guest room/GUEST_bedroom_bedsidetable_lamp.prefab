@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1038725887755955137}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GUEST_bedroom_bedsidetable_lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1038725887755955137
 Transform:
@@ -42,12 +42,12 @@ GameObject:
   - component: {fileID: 453527946835644638}
   - component: {fileID: 8692063398292585413}
   - component: {fileID: 7785108225779405127}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &453527946835644638
 Transform:
@@ -123,12 +123,12 @@ GameObject:
   - component: {fileID: 8847623120137430319}
   - component: {fileID: 647422773243296520}
   - component: {fileID: 4933091807726640595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8847623120137430319
 Transform:
@@ -204,12 +204,12 @@ GameObject:
   - component: {fileID: 9215283796716905790}
   - component: {fileID: 8932390766512977017}
   - component: {fileID: 5968951741053092220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9215283796716905790
 Transform:
@@ -285,12 +285,12 @@ GameObject:
   - component: {fileID: 7061395091764938446}
   - component: {fileID: 3401981099267471790}
   - component: {fileID: 7002939888753252218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7061395091764938446
 Transform:
@@ -364,12 +364,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1238253095463005037}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Small_lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1238253095463005037
 Transform:
@@ -399,12 +399,12 @@ GameObject:
   - component: {fileID: 6537289106725423124}
   - component: {fileID: 5463010842408302363}
   - component: {fileID: 2713844763592285439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6537289106725423124
 Transform:
@@ -478,12 +478,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4439690839636460876}
-  m_Layer: 0
+  - component: {fileID: 6122270694210644824}
+  m_Layer: 6
   m_Name: bed_side_table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4439690839636460876
 Transform:
@@ -507,6 +508,19 @@ Transform:
   m_Father: {fileID: 1038725887755955137}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &6122270694210644824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518722485314813621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36996388, y: 0.757013, z: 0.55478495}
+  m_Center: {x: 0.024915338, y: 0.11689644, z: -0.18864681}
 --- !u!1 &5389339637326221019
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,12 +532,12 @@ GameObject:
   - component: {fileID: 4155251376812191591}
   - component: {fileID: 7802678568384111753}
   - component: {fileID: 8255539534336652120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4155251376812191591
 Transform:
@@ -599,12 +613,12 @@ GameObject:
   - component: {fileID: 5218644396326179190}
   - component: {fileID: 5678690816469299810}
   - component: {fileID: 3974192070185227045}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5218644396326179190
 Transform:
@@ -680,12 +694,12 @@ GameObject:
   - component: {fileID: 2757161416019806105}
   - component: {fileID: 7987380143565574846}
   - component: {fileID: 4900227626338953820}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2757161416019806105
 Transform:
@@ -761,12 +775,12 @@ GameObject:
   - component: {fileID: 1417566972938541118}
   - component: {fileID: 3326358368646190582}
   - component: {fileID: 80919834497383762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1417566972938541118
 Transform:
@@ -842,12 +856,12 @@ GameObject:
   - component: {fileID: 9008017384647860843}
   - component: {fileID: 7565482521349052519}
   - component: {fileID: 1771757426997417130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9008017384647860843
 Transform:

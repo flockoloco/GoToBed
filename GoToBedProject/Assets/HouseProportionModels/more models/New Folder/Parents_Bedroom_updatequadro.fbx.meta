@@ -3,7 +3,67 @@ guid: 34f27b97e2a91124a9f12198804ac3a2
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: ce9669d4689cfa3468373de601fc7cc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1
+    second: {fileID: 2100000, guid: 2859c7b78c9dab94692ad38892eee8bb, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 091a458d76d2f44a129d2f7f64b1a361
+    second: {fileID: 2800000, guid: e14b6bee7d352ff4991ae6c146d97c6f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 2d4379d92bd2c4bdce5b559ee9e9a911
+    second: {fileID: 2800000, guid: 75da67a588d01b04baf80ac7af325698, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 63de5a222d58aa3a444fe8d23964cfa1
+    second: {fileID: 2800000, guid: 42b9311aa84b1224c845002b3b284c72, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Moss_BaseColor
+    second: {fileID: 2800000, guid: 0cb8bec95eb61c644aa0b08fe600da3c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Moss_Height
+    second: {fileID: 2800000, guid: db0f376c759dc1b46942c40deba9eab6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Moss_Normal
+    second: {fileID: 2800000, guid: dfe2823e12ae5ba4499881a6318ef5d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_wood_planks_02_basecolor
+    second: {fileID: 2800000, guid: 00791d7ed1cdf9146af07b8761ee5514, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_wood_planks_02_normal
+    second: {fileID: 2800000, guid: 90f1455269701bd48a505bb52d0fb52d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: subtle_wood_03_basecolor
+    second: {fileID: 2800000, guid: 8174c8d8b4d172e4ba56a8f55fc14499, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: subtle_wood_03_normal
+    second: {fileID: 2800000, guid: 9cf54b8e835358c4cb13df1c9d7bb728, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

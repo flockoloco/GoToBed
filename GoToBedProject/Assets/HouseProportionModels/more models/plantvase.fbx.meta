@@ -3,7 +3,77 @@ guid: 4159e716c56e0d54d99fa77588855161
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.2
+    second: {fileID: 2100000, guid: 6020f4b5c2dbea042a09b6919f0a98d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.3
+    second: {fileID: 2100000, guid: 2f04b84fbb617524595f05309d6d069c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.4
+    second: {fileID: 2100000, guid: 84fced40a0564054aaa8bf97e9103f63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Moss 01
+    second: {fileID: 2100000, guid: 8e6f62f35894d834bbed6fe244ebc745, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 755ce0de79c3e1e864d8adaaa484f2f6
+    second: {fileID: 2800000, guid: 3cff7b5d29d7bdd4f9a4f3d9ef40e725, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9718e3d1aa98f19fee2e9aced1d0bda7
+    second: {fileID: 2800000, guid: af7a5e8d829ba784e98ea9b952288d22, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 9e5f0cb39fb8ec1294539c850d38f1bb
+    second: {fileID: 2800000, guid: 09d2b3493916b50439969557d4db035a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Moss_BaseColor
+    second: {fileID: 2800000, guid: 388fc9e833250fb448177565ed17e3a2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Moss_Height
+    second: {fileID: 2800000, guid: 40908031456483c43b9d4113c7ad890e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Moss_Normal
+    second: {fileID: 2800000, guid: 5a067de0366c96849b905e4a5ce266b6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_wood_planks_02_basecolor
+    second: {fileID: 2800000, guid: da4c23f8029fcfb43b4915f6ecf3da6c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_wood_planks_02_normal
+    second: {fileID: 2800000, guid: 969f5c8650f82ed4bb589cd3ff64830c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: subtle_wood_03_basecolor
+    second: {fileID: 2800000, guid: b2bdd835537b265469113397438cfc4f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: subtle_wood_03_normal
+    second: {fileID: 2800000, guid: 2869a4f033bf5654fa1a1bba251f265c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,132 @@ guid: e24ded9689bb9d34a8f2bbbc4cd49e60
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark Wood Planks 02
+    second: {fileID: 2100000, guid: 866c515b9eef8e34fa14f1aad706c13e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: b09601924b131b04e95177ac40a7ed65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1
+    second: {fileID: 2100000, guid: dcdd41aff9d304546854c1f114b24ace, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.10
+    second: {fileID: 2100000, guid: a09968fc4346af141952e9955e93569a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.11
+    second: {fileID: 2100000, guid: 235f51b2ebf47a94282b94872d1eb677, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.12
+    second: {fileID: 2100000, guid: 5b6a466778425a74caadc484666874d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.13
+    second: {fileID: 2100000, guid: cebb897a56eb8584bb45ead42bd7ef01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.2
+    second: {fileID: 2100000, guid: 5d1ebaa2d46e2ec44a96cd0197205617, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.3
+    second: {fileID: 2100000, guid: d856a59dd30882d4fba60e7c220d2d57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.4
+    second: {fileID: 2100000, guid: 946cf5fca5ae5aa419c85b45604bd450, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.5
+    second: {fileID: 2100000, guid: 29c1b881d74180e43931cbc2e92200bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.6
+    second: {fileID: 2100000, guid: e584f24fcbe6e6f47813a7f60873329f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.7
+    second: {fileID: 2100000, guid: d24dd2b09149aad4a90dbeb7deeaf234, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.8
+    second: {fileID: 2100000, guid: 382bcbaef0d4b4c45a04cc737ed388c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Subtle Wood 03
+    second: {fileID: 2100000, guid: 6f4f20d6bf7f34d4d94ea69dbdfff815, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 091a458d76d2f44a129d2f7f64b1a361
+    second: {fileID: 2800000, guid: cf1129b45ddde6c47a1f476963beee29, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 5ca56e2b78f8f28e232e5e177d8eece3
+    second: {fileID: 2800000, guid: 8e7843a3dba0c5441b949b2960ac9974, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 6863f5f4643b04935387116e99095280
+    second: {fileID: 2800000, guid: eeb3a0bbe881fec45a20e6cc65885216, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 68bb9daf9ceb164c36c91cad457368b2
+    second: {fileID: 2800000, guid: eb9911173b9a531419055b03f9751660, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: WhatsApp Image 2021-05-17 at 13.21.54 (2)
+    second: {fileID: 2800000, guid: bca8e14290949874eacbc52990f6cffc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_wood_planks_02_basecolor
+    second: {fileID: 2800000, guid: 579fb86233a7b94489340c8e88e1e5a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_wood_planks_02_normal
+    second: {fileID: 2800000, guid: 7e574c42cb65d674295dbe6a32149b2b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ebc85293bc62e762efd04b310ada870d
+    second: {fileID: 2800000, guid: 5b2a294e8aaf70c42850c081584d8ce1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: subtle_wood_03_basecolor
+    second: {fileID: 2800000, guid: 21dc48afebac4d34c819e3d1e521e65f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: subtle_wood_03_normal
+    second: {fileID: 2800000, guid: c363ca7615ed92842a64c77aa1b59b96, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
