@@ -17,6 +17,8 @@ public class canvasScript : MonoBehaviour
     private GameObject _doorLamp;
     [SerializeField]
     private bool _sleepyTime = false;
+    [SerializeField]
+    private Animator objectAnimator;
     private void Start()
     {
         Time.timeScale = 1;
@@ -111,5 +113,17 @@ public class canvasScript : MonoBehaviour
                 Application.Quit();
             }
         }
+    }
+    public void OpenBook()
+    {
+        Debug.Log("book Opening");
+        objectAnimator.SetBool("Closing", false);
+        objectAnimator.SetBool("Opening", true);
+    }
+    public void CloseBook(bool boolean)
+    {
+        Debug.Log("book closing");
+        objectAnimator.SetBool("Opening", !boolean);
+        objectAnimator.SetBool("Closing", boolean);
     }
 }

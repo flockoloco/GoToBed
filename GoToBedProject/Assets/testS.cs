@@ -13,6 +13,6 @@ public class testS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(GetComponent<Renderer>().isVisible);
+        //print(GetComponent<Renderer>().isVisible);
     }
 }
