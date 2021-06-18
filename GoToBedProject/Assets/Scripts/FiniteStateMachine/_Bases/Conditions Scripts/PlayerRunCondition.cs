@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.VectorGraphics;
 
 [CreateAssetMenu(menuName = "Finite State Machine/Conditions/Player Run Condition")]
 public class PlayerRunCondition : Condition
@@ -17,7 +18,7 @@ public class PlayerRunCondition : Condition
                 Debug.Log("leaving run state");
                 return !negation;
             }
-            else if (playerStats.StaminaObject.GetComponent<Image>().fillAmount <= 0.001f)
+            else if (playerStats.StaminaObject.GetComponent<SVGImage>().color.a >= 1-0.001f)
             {
                 return !negation;
             }
@@ -33,7 +34,7 @@ public class PlayerRunCondition : Condition
         }
         else if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (playerStats.StaminaObject.GetComponent<Image>().fillAmount > 0.5f)
+            if (playerStats.StaminaObject.GetComponent<SVGImage>().color.a < 0.5f)
             {
                 if (Input.GetAxis("Vertical") > 0)
                 {

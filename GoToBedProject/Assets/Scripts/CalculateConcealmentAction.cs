@@ -65,12 +65,12 @@ public class CalculateConcealmentAction : Action
             this.surfaceColor = surfaceColor;
 
             playerStats.NoiseValue = playerStats.PlayerCurrentVelocity * hit.collider.gameObject.GetComponent<LevelObjectInfo>().floorSoundIncrement;
+            Debug.Log(playerStats.NoiseValue);
             playerStats.CurrentLevel = hit.collider.GetComponent<LevelObjectInfo>().level;
         }
         
         // BRIGHTNESS APPROX
         float br1 = (surfaceColor.r + surfaceColor.r + surfaceColor.b + surfaceColor.g + surfaceColor.g + surfaceColor.g) / 6;
-        
         //brightness1 = (br1 - 0.4f) / (5f - 0.4f);
         //if (brightness1 < 0.4f)
         //{

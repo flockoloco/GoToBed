@@ -17,21 +17,9 @@ public class PlayerEarChanger : MonoBehaviour
     }
     private void Update()
     {
-       if(player.GetComponent<PlayerStats>().NoiseValue == 0f)
-       {
-            earImage.sprite = lowEar;
-       }
-        else if (player.GetComponent<PlayerStats>().NoiseValue < 4f)
-        {
-            earImage.sprite = mediumEar; //change to middle ear
-        }
-        else if(player.GetComponent<PlayerStats>().NoiseValue >= 4f && player.GetComponent<PlayerStats>().NoiseValue < 8f)
-       {
-            earImage.sprite = highEar;
-       }
-       else if(player.GetComponent<PlayerStats>().NoiseValue >= 8f)
-       {
-            earImage.sprite = extraHighEar;
-       }
+        float value = (player.GetComponent<PlayerStats>().NoiseValue - 0) / (10.9f - 0);
+        earImage.color = new Color(1, 1, 1, Mathf.Clamp(value,0,1));
+
+
     }
 }
