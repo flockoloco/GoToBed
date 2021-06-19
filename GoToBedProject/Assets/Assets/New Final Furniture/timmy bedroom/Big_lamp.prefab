@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8146472647624659762}
   - component: {fileID: 464083243395468484}
   - component: {fileID: 8754423247646997753}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Cube_5_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6138489281002610657}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.1779714, y: -0.069200136, z: 1.7230786}
+  m_LocalPosition: {x: 0, y: 0.345, z: 0.168}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 3531816151286825331}
@@ -173,13 +173,13 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
