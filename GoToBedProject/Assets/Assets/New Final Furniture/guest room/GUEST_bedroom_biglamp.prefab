@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 8035470244739085029}
   - component: {fileID: 749753235253796719}
   - component: {fileID: 5500577162879663396}
-  - component: {fileID: 7744702852718495586}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1792539558728417982, guid: fe72d92dd06addf4f826dc28229e31c7, type: 3}
+  - {fileID: 2100000, guid: dd31fd7dc8e41884d90654e4b4624888, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7744702852718495586
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709590815423670302}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.33765423, y: 1.2912793, z: 0.2448004}
-  m_Center: {x: -0.000003814697, y: -0.4887021, z: 0.0000003528604}
 --- !u!1 &2786605458143636122
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +90,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3307843670746640416}
-  m_Layer: 0
+  - component: {fileID: 3897093405635438130}
+  m_Layer: 6
   m_Name: GUEST_bedroom_biglamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,6 +114,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &3897093405635438130
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786605458143636122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.31679842, y: 1.633561, z: 0.42763063}
+  m_Center: {x: -0.00073165895, y: 0.08187943, z: -0.004473877}
 --- !u!1 &4397886126257027012
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 7166335275616500036}
   - component: {fileID: 1324342538659948133}
   - component: {fileID: 4664317378897470919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7209514650377959485, guid: fe72d92dd06addf4f826dc28229e31c7, type: 3}
+  - {fileID: 2100000, guid: 2eb853c53c7d4574792161ff711a499c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 5584183893801950945}
   - component: {fileID: 5808876113198625344}
   - component: {fileID: 93047851100561422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7209514650377959485, guid: fe72d92dd06addf4f826dc28229e31c7, type: 3}
+  - {fileID: 2100000, guid: 2eb853c53c7d4574792161ff711a499c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6139731692185135229}
   - component: {fileID: 5159941341867099644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8142209807865649802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.071, y: 0.679, z: 0}
+  m_LocalPosition: {x: 0.028, y: 0.679, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3307843670746640416}
@@ -332,7 +332,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 20
+  m_Intensity: 10
   m_Range: 40
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -369,7 +369,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8183
   m_RenderingLayerMask: 1
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
@@ -391,7 +391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8833119771990105943}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Big_lamp_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
