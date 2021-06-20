@@ -2428,6 +2428,7 @@ GameObject:
   - component: {fileID: 7324004126094687660}
   - component: {fileID: 1138100226654931701}
   - component: {fileID: 5310476455276686623}
+  - component: {fileID: 4089208172069322453}
   m_Layer: 6
   m_Name: kitchen
   m_TagString: Untagged
@@ -2510,6 +2511,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4089208172069322453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7965170641931675771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33045372, y: 0.9402587, z: 2.0000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8096440612923109418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2683,6 +2697,7 @@ GameObject:
   - component: {fileID: 7496508041556458539}
   - component: {fileID: 8994081178070304693}
   - component: {fileID: 5843028896832676226}
+  - component: {fileID: 4489599539932257409}
   m_Layer: 6
   m_Name: bar
   m_TagString: Untagged
@@ -2761,6 +2776,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4489599539932257409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301815805975133026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33045372, y: 0.9402587, z: 2.0000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8320139073043269495
 GameObject:
   m_ObjectHideFlags: 0
