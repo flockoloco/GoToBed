@@ -125,7 +125,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 20
+  m_Intensity: 2
   m_Range: 25
   m_SpotAngle: 179
   m_InnerSpotAngle: 0
@@ -164,7 +164,7 @@ Light:
     serializedVersion: 2
     m_Bits: 8183
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
