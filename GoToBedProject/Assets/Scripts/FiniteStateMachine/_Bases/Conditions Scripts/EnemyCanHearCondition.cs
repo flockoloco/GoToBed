@@ -23,7 +23,9 @@ public class EnemyCanHearCondition : Condition
             if (Physics.Raycast(enemyStats.transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("LevelCollider")))
             {
                 Debug.DrawRay(new Vector3(enemyStats.transform.position.x, enemyStats.transform.position.y , enemyStats.transform.position.z), Vector3.down, Color.red);
-                if (hit.collider.GetComponent<LevelObjectInfo>().level == enemyStats.Target.gameObject.GetComponent<PlayerStats>().CurrentLevel)
+                if (hit.collider.GetComponent<LevelObjectInfo>())
+                {
+if (hit.collider.GetComponent<LevelObjectInfo>().level == enemyStats.Target.gameObject.GetComponent<PlayerStats>().CurrentLevel)
                 {
                     float lookingDirection = Vector3.Angle(fsm.gameObject.transform.forward, (enemyStats.Target.transform.position - fsm.gameObject.transform.position).normalized);
                     float distance = Vector3.Distance(enemyStats.Target.transform.position, enemyStats.gameObject.transform.position);
@@ -59,6 +61,8 @@ public class EnemyCanHearCondition : Condition
                         }
                     }
                 }
+                }
+                
             }
         }
         return negation;

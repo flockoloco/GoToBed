@@ -73,7 +73,7 @@ MonoBehaviour:
   _open: 0
   _animator: {fileID: 3636207893531846870}
   _unlockText: Unlock!
-  _obstacleComponent: {fileID: 933496216832181400}
+  _obstacleComponent: {fileID: 5202333763957597079}
   _doorAudio: {fileID: 5961663488496540664}
   _doorSoundClip: {fileID: 8300000, guid: f449b6a39678fe94ebe47777675d957c, type: 3}
 --- !u!82 &5961663488496540664
@@ -172,22 +172,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!208 &933496216832181400
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6447680088849263302}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.05, y: 0.755, z: 0.45}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1001 &4417041629585365614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,5 +277,10 @@ GameObject:
 --- !u!4 &5922535109902758012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8033693549730212370, guid: 896edbd460523a942a53f30bd0d544d5, type: 3}
+  m_PrefabInstance: {fileID: 4417041629585365614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &5202333763957597079 stripped
+NavMeshObstacle:
+  m_CorrespondingSourceObject: {fileID: 8466236284367206905, guid: 896edbd460523a942a53f30bd0d544d5, type: 3}
   m_PrefabInstance: {fileID: 4417041629585365614}
   m_PrefabAsset: {fileID: 0}

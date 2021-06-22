@@ -720,7 +720,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   heardSomething: 0
-  currentStatusTextMesh: {fileID: 0}
+  currentStatusTextMesh: {fileID: 2847826504950280715}
   _animator: {fileID: 3058186175695320731}
   _enemyName: 0
   _eyesPosition: {fileID: 8671918659460304595}

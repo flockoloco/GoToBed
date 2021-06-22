@@ -24,7 +24,7 @@ public class PlayerCanSeeEnemyCondition : Condition
             {
 
                 Ray ray = new Ray(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position, (enemyStats.transform.position - enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position).normalized);
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Enemy", "LevelCollider","Interactable")))
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Enemy", "LevelCollider","Interactable","DoorLayer")))
                 {
                     if (hit.transform.tag == enemyStats.gameObject.tag)
                     {

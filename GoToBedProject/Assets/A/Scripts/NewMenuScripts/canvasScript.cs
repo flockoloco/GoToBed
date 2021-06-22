@@ -104,26 +104,14 @@ public class canvasScript : MonoBehaviour
     }
     private void Update()
     {
-        if (_sleepyTime == true)        
+        if (_sleepyTime == true)
         {
-            _canvasList[5].gameObject.transform.GetChild(1).GetComponent<Image>().color =  Color.Lerp(_canvasList[5].gameObject.transform.GetChild(1).GetComponent<Image>().color,Color.black,Time.deltaTime * 1.5f);
+            _canvasList[5].gameObject.transform.GetChild(1).GetComponent<Image>().color = Color.Lerp(_canvasList[5].gameObject.transform.GetChild(1).GetComponent<Image>().color, Color.black, Time.deltaTime * 1.5f);
             if (_canvasList[5].gameObject.transform.GetChild(1).GetComponent<Image>().color.a >= 0.9f)
             {
                 Debug.Log("quitei ");
                 Application.Quit();
             }
         }
-    }
-    public void OpenBook()
-    {
-        Debug.Log("book Opening");
-        objectAnimator.SetBool("Closing", false);
-        objectAnimator.SetBool("Opening", true);
-    }
-    public void CloseBook(bool boolean)
-    {
-        Debug.Log("book closing");
-        objectAnimator.SetBool("Opening", !boolean);
-        objectAnimator.SetBool("Closing", boolean);
     }
 }

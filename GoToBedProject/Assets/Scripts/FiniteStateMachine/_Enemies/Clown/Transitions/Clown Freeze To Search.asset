@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Clown Freeze To Search
   m_EditorClassIdentifier: 
   decision: {fileID: 11400000, guid: 7c97849124f748545bf7941832c6e3f2, type: 2}
-  action: {fileID: 0}
+  action: {fileID: 11400000, guid: 7039c4b9bc860614081a73e798ff9033, type: 2}
   targetState: {fileID: 11400000, guid: b0a7f97573fba084f8644bbd1f443fa9, type: 2}
