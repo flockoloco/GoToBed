@@ -41,6 +41,7 @@ public class CameraMovement : MonoBehaviour
 
     void OnPreRender()
     {
+        Debug.Log("yo hello?");
         _handObjecScript.HandToPivotTranslate();
     }
 
@@ -49,7 +50,8 @@ public class CameraMovement : MonoBehaviour
 
     // Update is called once per frame
     void LateUpdate()
-    { 
+    {
+        _handObjecScript.HandToPivotTranslate();
         if (_cameraState.Equals(1))
         {
             if (Cursor.lockState == CursorLockMode.Locked)

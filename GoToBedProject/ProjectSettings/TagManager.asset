@@ -22,6 +22,8 @@ TagManager:
   - TeddyBear
   - Rope
   - WebFromSpider
+  - Battery
+  - NoLightFlashLight
   layers:
   - Default
   - TransparentFX

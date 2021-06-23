@@ -9,8 +9,9 @@ public class handplacementscript : MonoBehaviour
 
     public void HandToPivotTranslate()
     {
-        gameObject.transform.rotation = _pivotPoint.transform.rotation;
-        gameObject.transform.position = _pivotPoint.transform.position;
+        Debug.Log("aaaaaaaaaaaaaaa");
+        gameObject.transform.rotation = _pivotPoint.transform.parent.rotation;
+        gameObject.transform.position = _pivotPoint.transform.parent.position;
 
 
     }

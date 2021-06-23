@@ -35,7 +35,9 @@ public static class Globals
         Door,
         Key,
         DarkZone,
-        TeddyBear
+        TeddyBear,
+        Battery,
+        NoLightFlashLight
     }
     public enum InteractingObjects
     {

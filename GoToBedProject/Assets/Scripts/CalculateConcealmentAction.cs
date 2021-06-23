@@ -65,7 +65,6 @@ public class CalculateConcealmentAction : Action
             this.surfaceColor = surfaceColor;
 
             playerStats.NoiseValue = playerStats.PlayerCurrentVelocity * hit.collider.gameObject.GetComponent<LevelObjectInfo>().floorSoundIncrement;
-            Debug.Log(playerStats.NoiseValue);
             playerStats.CurrentLevel = hit.collider.GetComponent<LevelObjectInfo>().level;
         }
         
