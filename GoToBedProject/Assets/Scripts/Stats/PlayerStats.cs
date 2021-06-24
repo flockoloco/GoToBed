@@ -66,6 +66,8 @@ public sealed class PlayerStats : Stats
     private GameObject _winMenu;
     [SerializeField]
     private Animator _animatorController;
+    [SerializeField]
+    private SkinnedMeshRenderer _timmyRenderer;
 
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
@@ -94,6 +96,7 @@ public sealed class PlayerStats : Stats
     public bool PlayerWon { get => _playerWon; set => _playerWon = value; }
     public bool PlayerIsWebbed { get => _playerIsWebbed; set => _playerIsWebbed = value; }
     public Animator AnimatorController { get => _animatorController; set => _animatorController = value; }
+    public SkinnedMeshRenderer TimmyRenderer { get => _timmyRenderer; set => _timmyRenderer = value; }
 
     private void Update()
     {

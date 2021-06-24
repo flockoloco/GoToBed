@@ -30,7 +30,33 @@ public class PlayerMoveAction : Action
         { 
             move = move.normalized;
         }
-        
+   
+        if ((move.magnitude > 0.001))
+        {
+            if (fsm.CurrentState.StateDisplayName.Equals("Stand"))
+            {
+                playerStats.TurnOffThenTurnOnAnimation("Walking");
+            }
+            else if (fsm.CurrentState.StateDisplayName.Equals("Run"))
+            {
+                playerStats.TurnOffThenTurnOnAnimation("Running");
+            }
+            else if (fsm.CurrentState.StateDisplayName.Equals("Crouch"))
+            {
+                playerStats.TurnOffThenTurnOnAnimation("Crouch Walking");
+            }
+        }
+        else
+        {
+            if (fsm.CurrentState.StateDisplayName.Equals("Crouch"))
+            {
+                playerStats.TurnOffThenTurnOnAnimation("Crouch");
+            }
+            else
+            {
+                playerStats.TurnOffThenTurnOnAnimation("Breathing");
+            }
+        }
         
 
         moveDirection = move;

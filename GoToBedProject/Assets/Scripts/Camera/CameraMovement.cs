@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -39,9 +40,22 @@ public class CameraMovement : MonoBehaviour
 
     
 
-    void OnPreRender()
+
+    void OnEnable()
     {
-        Debug.Log("yo hello?");
+        RenderPipelineManager.endCameraRendering += RenderPipelineManager_endCameraRendering;
+    }
+    void OnDisable()
+    {
+        RenderPipelineManager.endCameraRendering -= RenderPipelineManager_endCameraRendering;
+    }
+    private void RenderPipelineManager_endCameraRendering(ScriptableRenderContext context, Camera camera)
+    {
+        OnPostRender();
+    }
+
+    private void OnPostRender()
+    {
         _handObjecScript.HandToPivotTranslate();
     }
 

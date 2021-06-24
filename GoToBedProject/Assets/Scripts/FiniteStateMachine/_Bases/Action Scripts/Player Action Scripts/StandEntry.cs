@@ -13,7 +13,6 @@ public class StandEntry : Action
         Vector3 postFeetPosition = playerStats.GroundCheck.position;
         playerStats.gameObject.transform.position -= (postFeetPosition - initialFeetPosition) * 0.9f;
         playerStats.MoveSpeed = 6;
-        playerStats.TurnOffThenTurnOnAnimation("Breathing");
     }
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {

@@ -15,7 +15,7 @@ public class PlayerCrouchedCondition : Condition
             {
                 Debug.Log(fsm.CurrentState.name + " is the state name");
                 RaycastHit[] hits;
-                hits = Physics.RaycastAll(playerStats.transform.position, Vector3.up, playerStats.gameObject.GetComponent<MeshRenderer>().bounds.size.y / 2 * 3.1f); //change constants if the % of the crouch changes
+                hits = Physics.RaycastAll(playerStats.transform.position, Vector3.up,playerStats.TimmyRenderer.bounds.size.y / 2 * 3.1f,LayerMask.GetMask("LevelCollider")); //change constants if the % of the crouch changes
                 Debug.Log(hits);
                 foreach (RaycastHit hit in hits)
                 {
