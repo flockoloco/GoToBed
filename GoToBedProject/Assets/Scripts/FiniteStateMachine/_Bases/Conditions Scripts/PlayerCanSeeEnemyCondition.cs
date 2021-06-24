@@ -22,20 +22,17 @@ public class PlayerCanSeeEnemyCondition : Condition
             RaycastHit hit;
             if (Vector3.Angle(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.forward,(enemyStats.transform.position - enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position).normalized) < 60)
             {
-
                 Ray ray = new Ray(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position, (enemyStats.EyesPosition.transform.position - enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position).normalized);
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Enemy", "LevelCollider","Interactable","DoorLayer")))
                 {
                     Debug.DrawLine(enemyStats.Target.GetComponent<PlayerStats>().PlayerCamera.transform.position, hit.point);
                     if (hit.transform.tag == enemyStats.gameObject.tag)
                     {
-                        Debug.Log("GOING IN AAAAAA");
                         return !negation;
                     }
                 }
             }
         }
-        
         return negation;
     }
 

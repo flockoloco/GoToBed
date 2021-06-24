@@ -252,7 +252,6 @@ Transform:
   - {fileID: 4558428438500522156}
   - {fileID: 7815155967204848165}
   - {fileID: 1278805772158744384}
-  - {fileID: 1976905356936017926}
   - {fileID: 5947870238370410774}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -525,7 +524,7 @@ Transform:
   - {fileID: 7498077393405085225}
   - {fileID: 6261109182211408517}
   m_Father: {fileID: 2223448611149173122}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1675217288709840668
 GameObject:
@@ -1111,7 +1110,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.76114804, z: -0.093939446}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1976905356936017926}
   m_Father: {fileID: 5239890115708633857}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1573,9 +1573,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1976905356936017926}
+  - component: {fileID: 151744000965308620}
   m_Layer: 11
   m_Name: eyesspot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1587,13 +1588,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5223860861254162494}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 3.206, z: 0.562}
-  m_LocalScale: {x: 0.84999996, y: 0.84999996, z: 0.84999996}
+  m_LocalRotation: {x: -0.003650121, y: -0.044196025, z: 0.023723904, w: 0.9987345}
+  m_LocalPosition: {x: 0.06, y: -0.448, z: 0.291}
+  m_LocalScale: {x: 0.8500001, y: 0.8500001, z: 0.84999996}
   m_Children: []
-  m_Father: {fileID: 2223448611149173122}
-  m_RootOrder: 3
+  m_Father: {fileID: 7056748549567924207}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &151744000965308620
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223860861254162494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5347284516081340574
 GameObject:
   m_ObjectHideFlags: 0
