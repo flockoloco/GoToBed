@@ -345,6 +345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154289666180143203}
+  - component: {fileID: 5111346545050042193}
   m_Layer: 6
   m_Name: bed_1
   m_TagString: Untagged
@@ -377,6 +378,19 @@ Transform:
   m_Father: {fileID: 1161727446747477834}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5111346545050042193
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726568085297180571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1161072, y: 0.9405226, z: 1.208854}
+  m_Center: {x: -1.4717194, y: 0.19188528, z: 2.2212026}
 --- !u!1 &4028752184431230943
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +613,6 @@ GameObject:
   - component: {fileID: 7717147380968046475}
   - component: {fileID: 2116912355288042460}
   - component: {fileID: 1163117420025204553}
-  - component: {fileID: 1663132380065546627}
   m_Layer: 8
   m_Name: interactable object
   m_TagString: Interactable
@@ -670,19 +683,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1663132380065546627
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5707882326855644198}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0.0000076293945}
 --- !u!1 &6173012347183533675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,6 @@ GameObject:
   - component: {fileID: 6031562615088851100}
   - component: {fileID: 2071163077386567299}
   - component: {fileID: 1950784646475579130}
-  - component: {fileID: 3700791297837914397}
   m_Layer: 8
   m_Name: interactable object (1)
   m_TagString: Interactable
@@ -1087,19 +1086,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3700791297837914397
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8520896247012826320}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0.0000076293945}
 --- !u!1 &8574666819818459196
 GameObject:
   m_ObjectHideFlags: 0

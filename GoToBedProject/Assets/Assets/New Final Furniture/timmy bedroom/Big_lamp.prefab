@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 3399010935501732445}
   - component: {fileID: 8146472647624659762}
   - component: {fileID: 464083243395468484}
-  - component: {fileID: 8754423247646997753}
   m_Layer: 13
   m_Name: Cube_5_8
   m_TagString: Untagged
@@ -116,20 +115,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8754423247646997753
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3938286465586899968}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8653955288609077856, guid: a6b9d8dd092656740af85af0d998a870, type: 3}
 --- !u!1 &6138489281002610657
 GameObject:
   m_ObjectHideFlags: 0

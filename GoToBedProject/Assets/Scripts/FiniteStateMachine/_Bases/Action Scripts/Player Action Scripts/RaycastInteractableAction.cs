@@ -122,7 +122,7 @@ public class RaycastInteractableAction : Action
         {
             playerStats.UIInteractionTextObject.gameObject.SetActive(true);
             
-                playerStats.UIInteractionTextObject.ChangeText("Hide!");
+                playerStats.UIInteractionTextObject.ChangeText("Hide");
             
            
         }
@@ -131,12 +131,12 @@ public class RaycastInteractableAction : Action
             if (!playerStats.EquippedItem)
             {
                 playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-                playerStats.UIInteractionTextObject.ChangeText("Pick Up!");
+                playerStats.UIInteractionTextObject.ChangeText("Pick Up");
             }
             else
             {
                 playerStats.UIInteractionTextObject.gameObject.SetActive(true);
-                playerStats.UIInteractionTextObject.ChangeText("Drop & Pick!");
+                playerStats.UIInteractionTextObject.ChangeText("Drop & Pick");
             }
         }
         else if (playerStats.LookingAtInteractable.Equals(Globals.InteractingObjects.Objective))
