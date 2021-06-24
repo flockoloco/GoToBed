@@ -64,6 +64,8 @@ public sealed class PlayerStats : Stats
     private GameObject _winPanel;
     [SerializeField]
     private GameObject _winMenu;
+    [SerializeField]
+    private Animator _animatorController;
 
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
     public float StaminaValue { get => _staminaValue; set => _staminaValue = value; }
@@ -91,6 +93,7 @@ public sealed class PlayerStats : Stats
     public bool PlayerDead { get => _playerDead; set => _playerDead = value; }
     public bool PlayerWon { get => _playerWon; set => _playerWon = value; }
     public bool PlayerIsWebbed { get => _playerIsWebbed; set => _playerIsWebbed = value; }
+    public Animator AnimatorController { get => _animatorController; set => _animatorController = value; }
 
     private void Update()
     {
@@ -120,6 +123,16 @@ public sealed class PlayerStats : Stats
             Cursor.lockState = CursorLockMode.None;
             _winMenu.SetActive(true);
         }
+    }
+
+    public void TurnOffThenTurnOnAnimation(string boolName)
+    {
+        //me recuso a dar false um por um 2.0
+        foreach (AnimatorControllerParameter parameter in _animatorController.parameters)
+        {
+            _animatorController.SetBool(parameter.name, false);
+        }
+        _animatorController.SetBool(boolName, true);
     }
 
 }

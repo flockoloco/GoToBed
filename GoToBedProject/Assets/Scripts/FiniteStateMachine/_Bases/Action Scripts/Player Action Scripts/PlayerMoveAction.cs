@@ -30,10 +30,10 @@ public class PlayerMoveAction : Action
         { 
             move = move.normalized;
         }
+        
+        
 
-
-
-         moveDirection = move;
+        moveDirection = move;
 
         playerStats.PlayerController.Move(move * Time.deltaTime * playerStats.MoveSpeed);
       
