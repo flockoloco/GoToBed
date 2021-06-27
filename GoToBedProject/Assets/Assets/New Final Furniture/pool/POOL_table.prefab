@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 675628222086344443}
   - component: {fileID: 6111432528187427301}
   - component: {fileID: 2596596043239558292}
+  - component: {fileID: 7354904778090774655}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Interactable
@@ -246,6 +247,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7354904778090774655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067763684989604492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: 0.0000009536743, y: 0, z: 0.000015258789}
 --- !u!1 &1081534304661332553
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,7 +946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3919696454695821894}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.83, y: 0, z: 0.593}
+  m_LocalPosition: {x: 3.83, y: -1.578, z: 0.593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3777612649112271882}
@@ -949,6 +963,7 @@ GameObject:
   - component: {fileID: 3100886124523171964}
   - component: {fileID: 5481560287191148119}
   - component: {fileID: 860541322181879575}
+  - component: {fileID: 4270373506004950142}
   m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Interactable
@@ -1019,6 +1034,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4270373506004950142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167533060264218073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000002}
+  m_Center: {x: -0.0000009536743, y: 0, z: 0.000015258789}
 --- !u!1 &4222381997920529995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4587919067336205370}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.431, y: 0, z: 0.975}
+  m_LocalPosition: {x: -4.431, y: -1.557, z: 0.975}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1801304408618364755}
@@ -1154,7 +1182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5163853046543370040}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.25, y: -1.8, z: 0.5930023}
+  m_LocalPosition: {x: 0.25, y: -3.66, z: 0.5930023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3777612649112271882}

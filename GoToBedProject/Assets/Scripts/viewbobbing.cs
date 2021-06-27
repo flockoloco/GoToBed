@@ -21,17 +21,22 @@ public class viewbobbing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Abs(controller.moveDirection.x) > 0.1f || Mathf.Abs(controller.moveDirection.z) > 0.1f)
+        if (gameObject.GetComponent<CameraMovement>().CameraState == 1)
         {
-            //Player is moving
-            timer += Time.deltaTime * walkingBobbingSpeed;
-            transform.localPosition = new Vector3(transform.localPosition.x, defaultPosY + Mathf.Sin(timer) * bobbingAmount, transform.localPosition.z);
-        }
-        else
-        {
-            //Idle
-            timer = 0;
-            transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, defaultPosY, Time.deltaTime * walkingBobbingSpeed), transform.localPosition.z);
+
+
+            if (Mathf.Abs(controller.moveDirection.x) > 0.1f || Mathf.Abs(controller.moveDirection.z) > 0.1f)
+            {
+                //Player is moving
+                timer += Time.deltaTime * walkingBobbingSpeed;
+                transform.localPosition = new Vector3(transform.localPosition.x, defaultPosY + Mathf.Sin(timer) * bobbingAmount, transform.localPosition.z);
+            }
+            else
+            {
+                //Idle
+                timer = 0;
+                transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, defaultPosY, Time.deltaTime * walkingBobbingSpeed), transform.localPosition.z);
+            }
         }
     }
 }
