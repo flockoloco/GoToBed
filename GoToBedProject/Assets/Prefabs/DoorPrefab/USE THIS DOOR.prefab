@@ -38,6 +38,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3131855396059237868}
     m_Modifications:
+    - target: {fileID: 2834110200185787531, guid: ae4a7146b9e0ae041b22e807b957fc63, type: 3}
+      propertyPath: _wrongItemText
+      value: I need a key
+      objectReference: {fileID: 0}
     - target: {fileID: 5745293431008264618, guid: ae4a7146b9e0ae041b22e807b957fc63, type: 3}
       propertyPath: m_RootOrder
       value: 0

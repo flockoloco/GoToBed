@@ -231,9 +231,9 @@ GameObject:
   - component: {fileID: 719613316301051437}
   - component: {fileID: 4861842246747107433}
   - component: {fileID: 5398434493245346399}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Clown
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
