@@ -17,8 +17,29 @@ public class TeddyCanvasScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _timer += Time.deltaTime * 5;
-        float result = Mathf.Sin(_timer);
+
+        if ( _timer < 1)
+        {
+            _timer += Time.deltaTime * 15;
+            if ( _timer > 1)
+            {
+                _timer = 1;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _timer = 0;
+        }
+        
+        
+        float result =  2 * Mathf.Sin(_timer);
+
+        if ( result < 0)
+        {
+            result *= -1;
+        }
+        result = Mathf.Clamp(result, 0.9f, 2f);
+
         interactImage.transform.localScale = new Vector3(result,result,result);
     }
 }

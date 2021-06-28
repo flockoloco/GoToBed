@@ -68,10 +68,8 @@ public sealed class PlayerStats : Stats
     private Animator _animatorController;
     [SerializeField]
     private SkinnedMeshRenderer _timmyRenderer;
-    [SerializeField]
-    private GameObject _teddyPrefab;
-    [SerializeField]
-    private bool _grabTeddyOnce = false;
+
+
 
 
     public float ConcealmentValue { get => _concealmentValue; set => _concealmentValue = value; }
@@ -105,14 +103,7 @@ public sealed class PlayerStats : Stats
 
     private void Update()
     {
-        if (_equippedItem && _equippedItem.tag == "TeddyBear")
-        {
-            if ( _playerWon == false && _grabTeddyOnce == false)
-            {
-                PlayerGrabbedTeddy();
-            }
-            
-        }
+        
         if ( _playerWon == true)
         {
             PlayerWonGame();
@@ -129,12 +120,6 @@ public sealed class PlayerStats : Stats
                 _deathMenu.SetActive(true);
             }
         } 
-    }
-    public void PlayerGrabbedTeddy()
-    {
-        _grabTeddyOnce = true;
-        GameObject _teddy = Instantiate(_teddyPrefab, transform.position, Quaternion.identity);
-
     }
     public void PlayerWonGame()
     {
