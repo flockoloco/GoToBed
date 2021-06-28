@@ -10,6 +10,8 @@ public class objectiveobjectinfo : ItemObjectiveObjectInfoBase
     private string _wrongItemText;
     [SerializeField]
     private string _correctItemText;
+    [SerializeField]
+    private GameObject prefabObject;
 
     public Globals.GameTags UsableTag { get => _usableTag; set => _usableTag = value; }
     public string WrongItemText { get => _wrongItemText; set => _wrongItemText = value; }
@@ -21,6 +23,18 @@ public class objectiveobjectinfo : ItemObjectiveObjectInfoBase
         {
 
             Destroy(playerStats.EquippedItem);
+            Destroy(gameObject);
+        }
+        else if (gameObject.CompareTag(Globals.GameTags.Ladder.ToString()))
+        {
+            Destroy(playerStats.EquippedItem);
+            //rotate
+        }
+        else if (gameObject.CompareTag(Globals.GameTags.NoLightFlashLight.ToString()))
+        {
+            Destroy(playerStats.EquippedItem);
+            
+            GameObject newLight = Instantiate(prefabObject,gameObject.transform.position,Quaternion.identity);
             Destroy(gameObject);
         }
         else if (gameObject.CompareTag(Globals.GameTags.Ladder.ToString()))

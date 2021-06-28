@@ -11,7 +11,7 @@ public class PlayerRunEntry : Action
         //playerStats.gameObject.transform.localScale = new Vector3(1, 1.253025f, 1);
         Vector3 postFeetPosition = playerStats.GroundCheck.position;
         playerStats.gameObject.transform.position -= (postFeetPosition - initialFeetPosition) * 0.9f;
-        playerStats.MoveSpeed = 9;
+        playerStats.MoveSpeed = 6;
     }
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
     {

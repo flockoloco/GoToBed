@@ -8,7 +8,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3069209346671221083}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.2
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 7371959588545457921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.242859, y: 4.95, z: 14.71}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 3069209346670986619}
   m_Father: {fileID: 0}
@@ -61,6 +61,7 @@ MonoBehaviour:
   _usableTag: 23
   _wrongItemText: Needs Batteries!
   _correctItemText: Place Batteries!
+  prefabObject: {fileID: 7371959588545457921, guid: 4084ee519e18c0e4eb231d6c2ee3b78d, type: 3}
 --- !u!1001 &3069209346671124475
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ public class CrouchEntryAction : Action
         Vector3 initialFeetPosition = playerStats.GroundCheck.position;
         playerStats.gameObject.transform.localScale = new Vector3(1, 1f - 0.25f, 1);
         Vector3 postFeetPosition = playerStats.GroundCheck.position;
-        playerStats.gameObject.transform.position -= (postFeetPosition - initialFeetPosition) * 0.9f;
-        playerStats.MoveSpeed = 3;
+        //playerStats.gameObject.transform.position -= (postFeetPosition - initialFeetPosition) * 0.9f;
+        playerStats.MoveSpeed = 2;
     }
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)
