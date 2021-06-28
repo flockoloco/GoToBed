@@ -24,6 +24,7 @@ public class EnemyCanAttack : Condition
             if (useRaycast)
             {
                 RaycastHit hit;
+
                 if (Physics.Raycast(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, out hit, Mathf.Infinity, LayerMask.GetMask("Player")))
                 {
                     Debug.DrawRay(fsm.gameObject.transform.position, enemyStats.Target.transform.position - fsm.gameObject.transform.position, Color.green);

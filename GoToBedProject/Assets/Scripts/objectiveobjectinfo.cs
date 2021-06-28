@@ -42,6 +42,12 @@ public class objectiveobjectinfo : ItemObjectiveObjectInfoBase
             Destroy(playerStats.EquippedItem);
             //rotate
         }
+        else if (gameObject.CompareTag(Globals.GameTags.DarkZone.ToString()))
+        {
+            Destroy(playerStats.EquippedItem);
+            Destroy(gameObject);
+            //rotate
+        }
     }
 
 }

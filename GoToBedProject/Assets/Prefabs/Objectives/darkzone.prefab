@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collidableChild: {fileID: 5416614572786700741}
-  _usableTag: 18
+  _usableTag: 11
   _wrongItemText: Its too dark!
-  _correctItemText: 
+  _correctItemText: Light up the room!
   prefabObject: {fileID: 0}
 --- !u!1 &5416614572786700741
 GameObject:
