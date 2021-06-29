@@ -2172,7 +2172,7 @@ MonoBehaviour:
   _moveSpeed: 4
   _gravity: -9.81
   _visionDetection: 2
-  _hearingCapability: 3.2
+  _hearingCapability: 0.5
   _target: {fileID: 0}
   _agent: {fileID: 8119671556598561149}
   _defaultWaypoints: []

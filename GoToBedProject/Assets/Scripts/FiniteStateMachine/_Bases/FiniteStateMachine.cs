@@ -13,6 +13,7 @@ public class FiniteStateMachine : MonoBehaviour
     private State _initialState;
     [SerializeField]
     private State _currentState;
+    int Timer = 0;
 
     [SerializeField] private PlayerStats playerStats;
     [SerializeField] private EnemyStats enemyStats;
@@ -52,11 +53,14 @@ public class FiniteStateMachine : MonoBehaviour
                 }
                 else
                 {
-                    if (t.IsTriggered(this, enemyStats))
-                    {
-                        triggeredTransition = t;
-                        break;
-                    }
+                   
+                
+                        if (t.IsTriggered(this, enemyStats))
+                        {
+                            triggeredTransition = t;
+                            break;
+                        }
+                     
                 }
             }
         }

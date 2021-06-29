@@ -11,33 +11,42 @@ public class CalculateConcealmentAction : Action
     public float brightness1; // http://stackoverflow.com/questions/596216/formula-to-determine-brightness-of-rgb-color 
     [SerializeField]
     public LayerMask layerMask;
+    int Timer = 0;
 
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-       
-        if (fsm.CurrentState.name == "Stand")
+        if (Timer != 5)
         {
-            Calculate(fsm,playerStats);
-            playerStats.ConcealmentValue = brightness1;
+            Timer++;
         }
-        else if(fsm.CurrentState.name == "Crouch")
+        else
         {
-            Calculate(fsm, playerStats);
-            playerStats.ConcealmentValue = brightness1 / 1.5f;
-        }
-        else if(fsm.CurrentState.name == "Run")
-        {
-            Calculate(fsm, playerStats);
-            playerStats.ConcealmentValue = brightness1 * 1.5f;
-        }
-        else if (fsm.CurrentState.name == "Hide")
-        {
+            if (fsm.CurrentState.name == "Stand")
+            {
+                Calculate(fsm, playerStats);
+                playerStats.ConcealmentValue = brightness1;
+            }
+            else if (fsm.CurrentState.name == "Crouch")
+            {
+                Calculate(fsm, playerStats);
+                playerStats.ConcealmentValue = brightness1 / 1.5f;
+            }
+            else if (fsm.CurrentState.name == "Run")
+            {
+                Calculate(fsm, playerStats);
+                playerStats.ConcealmentValue = brightness1 * 1.5f;
+            }
+            else if (fsm.CurrentState.name == "Hide")
+            {
 
 
-            playerStats.NoiseValue = 0;
-            playerStats.ConcealmentValue = 0;
+                playerStats.NoiseValue = 0;
+                playerStats.ConcealmentValue = 0;
+            }
+            Timer = 0;
         }
+        
     }
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)

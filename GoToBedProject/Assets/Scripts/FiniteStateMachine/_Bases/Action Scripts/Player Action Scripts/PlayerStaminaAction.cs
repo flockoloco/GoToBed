@@ -13,7 +13,7 @@ public class PlayerStaminaAction : Action
         SVGImage staminaImage = playerStats.StaminaObject.GetComponent<SVGImage>();
         if (staminaImage.color.a < 1- 0.002f)
         {
-            float newAValue = Mathf.Clamp( staminaImage.color.a + (0.4f * Time.deltaTime),0,1);
+            float newAValue = Mathf.Clamp(staminaImage.color.a + (0.2f * Time.deltaTime),0,1);
 
 
             staminaImage.color =  new Color(staminaImage.color.r, staminaImage.color.g, staminaImage.color.b, newAValue);

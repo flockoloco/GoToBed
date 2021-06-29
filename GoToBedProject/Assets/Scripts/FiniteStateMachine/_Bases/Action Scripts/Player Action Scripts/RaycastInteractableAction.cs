@@ -4,88 +4,97 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Finite State Machine/Actions/Player/Raycast Interactable Action")]
 public class RaycastInteractableAction : Action
 {
+    int Timer = 0;
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats)
     {
-        RaycastHit hit;
-        if (Physics.Raycast(playerStats.PlayerCamera.gameObject.transform.position, playerStats.PlayerCamera.gameObject.transform.forward,out hit, playerStats.InteractRange,LayerMask.GetMask("Interactable","DoorLayer","LevelCollider")))
+        if(Timer != 3)
         {
-            if (hit.collider.CompareTag(Globals.GameTags.Interactable.ToString()))
+            Timer++;
+        }
+        else
+        {
+            Timer = 0;
+            RaycastHit hit;
+            if (Physics.Raycast(playerStats.PlayerCamera.gameObject.transform.position, playerStats.PlayerCamera.gameObject.transform.forward, out hit, playerStats.InteractRange, LayerMask.GetMask("Interactable", "DoorLayer", "LevelCollider")))
             {
-               /* RaycastHit secondHitCheck;
-                if ( !Physics.Raycast(playerStats.PlayerCamera.gameObject.transform.position, playerStats.PlayerCamera.gameObject.transform.forward, out secondHitCheck, playerStats.InteractRange, LayerMask.GetMask("LevelCollider"))||
-                    (Vector3.Distance(playerStats.transform.position, secondHitCheck.point) > Vector3.Distance(playerStats.transform.position, hit.point)))
-                { */
-                
-                    //add canvas thing saying "Interact"
-                if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Closet.ToString(), playerStats) != null)
+                if (hit.collider.CompareTag(Globals.GameTags.Interactable.ToString()))
                 {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Table.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Lantern.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Scissors.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Bed.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Web.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Door.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Door;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Key.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.DarkZone.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.TeddyBear.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.NoLightFlashLight.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
-                }
-                else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Battery.ToString(), playerStats) != null)
-                {
-                    playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
-                }
+                    /* RaycastHit secondHitCheck;
+                     if ( !Physics.Raycast(playerStats.PlayerCamera.gameObject.transform.position, playerStats.PlayerCamera.gameObject.transform.forward, out secondHitCheck, playerStats.InteractRange, LayerMask.GetMask("LevelCollider"))||
+                         (Vector3.Distance(playerStats.transform.position, secondHitCheck.point) > Vector3.Distance(playerStats.transform.position, hit.point)))
+                     { */
 
-                //}
+                    //add canvas thing saying "Interact"
+                    if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Closet.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Table.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Lantern.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Scissors.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Bed.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Hiding;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Web.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Door.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Door;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Key.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.DarkZone.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.TeddyBear.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.NoLightFlashLight.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Objective;
+                    }
+                    else if (FindParentWithTag(hit.collider.gameObject, Globals.GameTags.Battery.ToString(), playerStats) != null)
+                    {
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.Item;
+                    }
+
+                    //}
+                    else
+                    {
+                        playerStats.InteractingObject = null;
+                        playerStats.LookingAtInteractable = Globals.InteractingObjects.None;
+                    }
+
+                }
                 else
                 {
                     playerStats.InteractingObject = null;
                     playerStats.LookingAtInteractable = Globals.InteractingObjects.None;
                 }
-
             }
             else
             {
                 playerStats.InteractingObject = null;
                 playerStats.LookingAtInteractable = Globals.InteractingObjects.None;
             }
+            AddInteractText(playerStats);
         }
-        else
-        {
-            playerStats.InteractingObject = null;
-            playerStats.LookingAtInteractable = Globals.InteractingObjects.None;
-        }
-        AddInteractText(playerStats);
     }
 
     public override void Act(FiniteStateMachine fsm, EnemyStats enemyStats)

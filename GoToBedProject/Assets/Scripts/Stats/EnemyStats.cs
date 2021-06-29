@@ -74,7 +74,7 @@ public class EnemyStats : Stats
 
     public void GoToNextWaypoint(List<WayPointInfo> list)
     {
-
+        
         if (_currentWaypoint >= (list.Count - 1))
         {
             _currentWaypoint = 0;
@@ -83,9 +83,11 @@ public class EnemyStats : Stats
         {
             _currentWaypoint++;
         }
+        
         if ( !list.Count.Equals(0))
         {
             _agent.isStopped = false;
+            Debug.Log(gameObject.name + "oi estou ind ao waypoint " + list[_currentWaypoint]);
             _agent.SetDestination(list[_currentWaypoint].wpPosition);
         }
         else
