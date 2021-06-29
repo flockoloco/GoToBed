@@ -34,6 +34,7 @@ public class EnemySearchEntry : Action
             if (enemyStats.SearchWaypoints != null) //remove later
             {
                 enemyStats.SearchWaypoints.Clear();
+                enemyStats.SearchWaypoints.TrimExcess();
             }
             enemyStats.PlayerWayPoint.transform.position = enemyStats.Target.transform.position;
             enemyStats.PlayerWayPoint.UpdatePosition();
@@ -69,7 +70,7 @@ public class EnemySearchEntry : Action
 
             foreach (Transform childWaypoint in closestWaypointObject.GetComponent<MainWaypoint>().waypoints) //then give a chance for each, rn it can repeat one if its already picked above, but it wont matter as the player is caught anyways
             {
-                if (Random.Range(0,1) < 0.4f)
+                if (Random.Range(0f,1f) < 0.5f)
                 {
                     enemyStats.SearchWaypoints.Add(childWaypoint.gameObject.GetComponent<WayPointInfo>());
                 }
@@ -78,7 +79,6 @@ public class EnemySearchEntry : Action
             enemyStats.CurrentWaypoint = int.MaxValue;
             enemyStats.GoToNextWaypoint(enemyStats.SearchWaypoints);
         }
-        
     }
 
     public override void Act(FiniteStateMachine fsm, PlayerStats playerStats, EnemyStats[] allEnemyStats)

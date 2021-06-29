@@ -87,7 +87,6 @@ public class EnemyStats : Stats
         if ( !list.Count.Equals(0))
         {
             _agent.isStopped = false;
-            Debug.Log(gameObject.name + "oi estou ind ao waypoint " + list[_currentWaypoint]);
             _agent.SetDestination(list[_currentWaypoint].wpPosition);
         }
         else

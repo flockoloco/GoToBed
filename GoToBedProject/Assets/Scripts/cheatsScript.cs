@@ -9,7 +9,10 @@ public class cheatsScript : MonoBehaviour
     [SerializeField]
     public GameObject keyPrefab;
     [SerializeField]
-    public GameObject bearPrefab;
+    public GameObject flashLightPrefab;
+    [SerializeField]
+    public GameObject batteriesPrefab;
+
 
     private void Update()
     {
@@ -23,7 +26,11 @@ public class cheatsScript : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.M))
         {
-            Instantiate(bearPrefab, transform.position, Quaternion.identity);
+            Instantiate(flashLightPrefab, transform.position, Quaternion.identity);
+        }
+        else if (Input.GetKeyDown(KeyCode.V))
+        {
+            Instantiate(batteriesPrefab, transform.position, Quaternion.identity);
         }
     }
 }
